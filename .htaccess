@@ -1,3 +1,0 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^lucakl.io [NC]
-RewriteRule ^$ https://www.lucakl1.github.io/index.html [L,R=301]
