@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca's Portfolie - Kodning & webudvikling</title>
+    <!-- Font start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 
+        font-family: 'Inconsolata', monospace;
+        font-family: 'Roboto', sans-serif; 
+    -->
+    <!-- Font slut -->
+
+    <link rel="icon" href="Logo2.png">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f1ab3b6e20.js" crossorigin="anonymous"></script>
+    <!-- Font awesome -->
+
+    <link rel="stylesheet" href="flows.css">
+
+    <script>
+
+        //bruges til min egen buger menu (variablen)
+        var is_shown = false;
+
+        //taget kode herfra, og lavet om (start).
+        //https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+        window.onscroll = function() {
+            if(this.oldScroll > this.scrollY || this.scrollY < 20){
+                document.getElementById("header").classList = "show";
+            }
+            else{
+                document.getElementById("header").classList = "noshow";
+                document.getElementById("menu").classList = "right_header";
+                document.getElementById("menu_icon").classList = "fa-solid fa-bars";
+                is_shown = false;
+            }
+
+            // print "false" if direction is down and "true" if up <-- denne kommentar er ikke gældende længere
+            //gør at den kan se om du har skiftet retning for scrool
+            this.oldScroll = this.scrollY;
+        }
+        //taget kode herfra, og lavet om (slut).
+        //https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+
+        function open_menu(){
+            is_shown = !is_shown;
+
+            if(is_shown){
+                document.getElementById("menu").classList += " responsiv";
+                document.getElementById("menu_icon").classList = "fa-solid fa-x";
+            }
+            else{
+                document.getElementById("menu").classList = "right_header";
+                document.getElementById("menu_icon").classList = "fa-solid fa-bars";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="left_header">
+            <a href="index.html">
+                <img src="Logo2.png" alt="logo">
+            </a>
+            <!-- "&nbsp;" er et mellemrum -->
+            <h1> <a href="om_mig.html">Luca&nbsp;Klæø </a> &nbsp;</h1> 
+            <h1>/&nbsp;<a href="index.html"> Forside </a> &nbsp;</h1>
+            <h1>/&nbsp;<a href="flow3.html"> Flow&nbsp;3 </a> &nbsp;</h1>
+        </div>
+        <div class="left_header">
+            <div class="right_header" id="menu">
+                <h1> <a href="#et">HTML </a> &nbsp;</h1> 
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#to"> CSS </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#tre"> Responsiv&nbsp;desgin </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#fire"> Javascript </a> &nbsp;</h1>
+            </div>
+            <div onclick="open_menu()" class="buger_menu_icon">
+                <i id="menu_icon" class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Space der gemmer sig under menubaren -->
+    <div class="empty_space"></div>
+
+    <main>
+        <div id="et" class="et">
+            <div class="image">
+                <img src="cards/html.png" alt="html logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>HTML</h1>
+                    <p>HTML eller "Hyper Text Markup Language" er sproget som alle hjemmesider er bygget op omkring, HTML's "job" er at fortælle browseren hvad der findes på siden. I HTML har jeg lært vigtigheden af opbygningen/opsætningen af koden, samt det at kode HTML generelt. </p>
+                </div>
+                <div class="vertical_image">
+                    <img src="flow3/html.JPG" alt="html image">
+                </div>
+            </div>
+        </div>
+        <div id="to" class="to">
+            <div class="image">
+                <img src="cards/css.png" alt="css logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>CSS</h1>
+                    <p>CSS eller "Cascading Style Sheets" er HTML's bedste ven og virker i praksis ved at "fortælle" hvordan noget skal se ud. Jeg har fået en stor forståelse af CSS, herunder også kunne se at CSS er meget større end som så. Mine færdigheder med CSS er bl.a.: <br> - Placering <br> - Responsivt design (se evt under) <br> - Styling <br> - Boksmodellen</p>
+                </div>
+                <div class="vertical_image">
+                    <img src="flow3/css.JPG" alt="css image">
+                </div>
+            </div>
+        </div>
+        <div id="tre" class="tre">
+            <div class="image">
+                <img src="cards/responsive.png" alt="responsive logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>Responsiv design</h1>
+                    <p>Responsive design er ikke en selvfølge på hjemmesider, selvom nogle elementer automatisk skalerer til forskellige skærmstørrelser, er det langt fra alle. Man kan derfor i  CSS-koden bruge nogle forskellige strategier, herunder: <br> - Værdier som skalerer skærmbredde (%,&nbsp;vw) <br> - Media queries <br> - Flexbox eller grids</p>
+                    <a href="gamleforside/Politik/index.html" target="_blank"> Se "politikker hjemmeside" projektet i browseren</a>
+                </div>
+                <div class="horizontal_image">
+                    <img src="flow3/responsiv.JPG" alt="responsive image">
+                </div>
+            </div>
+        </div>
+        <div id="fire" class="fire">
+            <div class="image">
+                <img src="cards/javascript.png" alt="javascript logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>Javascript</h1>
+                    <p>Javascript er den underlige fætter. Sproget lægger sig tæt op af HTML  og CSS og bruges i samarbejde  med dem begge. Det anvendes  til at lave specialfunktioner på en webside. Billedet er af Javascript, som bruges til nuværende header i toppen (navigationsbaren). Selvom vi ikke har skulle lære dette sprog endnu, har jeg selv noget erfaring og kan derfor det mest basale i det.</p>
+                </div>
+                <div class="horizontal_image">
+                    <img src="flow3/javascript.JPG" alt="javascript image">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h1 id="Kontakt">Kontakt</h1>
+            <div class="flex_text">
+                <i class="fa-solid fa-envelope"></i> 
+                <p>&nbsp;Lucaklaeoe@gmail.com</p>
+            </div>
+
+            <div class="flex_text">
+                <i class="fa-solid fa-phone"></i> 
+                <p>&nbsp;42&nbsp;37&nbsp;87&nbsp;32</p>
+            </div>
+        </div>
+        <div>
+            <h1> Andet</h1>
+            <div class="flex_text">
+                <i class="fa-solid fa-user"></i> 
+                <p><a href="om_mig.html"> Om mig </a></p>
+            </div>
+            <div class="flex_text">
+                <i class="fa-solid fa-newspaper"></i> 
+                <p><a href="dok.html"> Dokumentation </a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

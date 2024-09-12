@@ -1,0 +1,307 @@
+/* Reset */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #2bdada;
+    --rose: #f35982;
+    --orange: #f27559;
+    --beach: #f2ecd9;
+    --white: #f2f2f2;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body{
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, var(--blue),var(--white));
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Header -------------------------------------------------------------------------- */
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+}
+header a img{
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+header a img:hover{
+    transform: rotate(1turn);
+    transition: 5s;
+}
+header a{
+    padding-right: 1%;
+}
+header h1{
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    display: flex;
+    width: fit-content;
+}
+header h1 a{
+    color: black;
+    border-bottom: solid 2px black;
+    text-decoration: none;
+}
+header h1 a:hover{
+    color: var(--orange);
+    border-bottom: solid 2px var(--orange);
+}
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    header h1{
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
+}
+/* Header -------------------------------------------------------------------------- */
+
+/* Skyer -------------------------------------------------------------------------- */
+.bagrunds_skyer{
+    width: 100%;
+    position: relative;
+}
+
+.bagrunds_skyer .sky{
+    position: absolute;
+    z-index: -1;
+}
+
+.sky1{
+    width: calc(100vw - 50%);
+    margin-top: -28vw;
+    margin-left: -5vw;
+}
+
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    .sky1{
+        width: calc(100vw - 40%);
+        margin-top: -30vw;
+        margin-left: 0;
+    }
+}
+/* Når mindre end tablet */
+@media screen and (max-width: 530px){
+    .sky1{
+        width: calc(100vw + 20%);
+        margin-top: -65vw;
+        margin-left: -10vw;
+    }
+}
+/* Skyer -------------------------------------------------------------------------- */
+
+/* Content -------------------------------------------------------------------------- */
+section{
+    margin-top: 50px;
+    padding: 2%;
+    font-size: 2vw;
+    font-weight: 500;
+    width: 56%;
+}
+.image_mig1{
+    display: none;
+}
+.image_mig1 p{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+.break{
+    display: none;
+}
+.long_version{
+    display: block;
+}
+.short_version{
+    display: none;
+}
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    section{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+    .image_mig1{
+        display: flex;
+        position: relative;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 50%;
+        margin-top: -100px;
+    }
+    .image_mig1 img{
+        width: 100%;
+    }
+    .image_mig1 p{
+        font-size: 4vw;
+    }
+    .text{
+        font-size: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+    .break{
+        display: block;
+    }
+    .long_version{
+        display: none;
+    }
+    .short_version{
+        display: block;
+    }
+}
+/* Når mindre end tablet */
+@media screen and (max-width: 530px){
+    section{
+        display: none;
+    }
+}
+
+/* Top content */
+/* Botton content */
+
+main{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    padding-left: 2%;
+}
+.video{
+    position: relative;
+    width: 60%;
+    padding-right: 1%;
+}
+.video video{
+    width: 100%;
+    border-radius: 10px;
+}
+.image_mig2{
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -200px;
+    margin-bottom: 100px;
+}
+.image_mig2 p{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+@media screen and (max-width: 1000px){
+    .image_mig2{
+        display: none;
+    }
+    main{
+        padding: 3%;
+    }
+    .video{
+        width: 100%;
+        padding: 0;
+    }
+}
+/* Når mindre end tablet */
+@media screen and (max-width: 530px){
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 2%;
+        margin-bottom: 30px;
+    }
+    .image_mig2{
+        display: block;
+        width: 100%;
+        margin: 100px 0 40px 0;
+    }
+    .image_mig2 img{
+        width: 100%;
+    }
+    .image_mig2 p{
+        text-align: center;
+        font-size: 10vw;
+        font-weight: 500;
+    }
+}
+
+
+/* </div> --------------------------------------------------------------------------*/
+
+/* Footer -------------------------------------------------------------------------- */
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 50px 20px 50px 20px;
+    flex-wrap: wrap;
+    background-color: var(--beach);
+    height: fit-content;
+}
+
+footer div{
+    width: 40vw;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1000px){
+    footer div{
+        font-size: 2.3vw;
+    }
+}
+
+@media screen and (max-width: 530px){
+    footer div{
+        font-size: 3vw;
+        width: 100%;
+    }
+}
+
+.flex_text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.flex_text p{
+    text-align: start;
+    font-weight: 500;
+}
+
+.flex_text p a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex_text p a:hover{
+    text-decoration: none;
+    color:var(--blue);
+}
+
+i{
+    width: 40px;
+}
+@media screen and (max-width: 1000px){
+    i{
+        width: 15%;
+    }
+}
+/* Footer -------------------------------------------------------------------------- */

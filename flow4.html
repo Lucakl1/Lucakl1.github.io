@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca's Portfolie - Video produktion</title>
+    <!-- Font start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- 
+        font-family: 'Inconsolata', monospace;
+        font-family: 'Roboto', sans-serif; 
+    -->
+    <!-- Font slut -->
+
+    <link rel="icon" href="Logo2.png">
+
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/f1ab3b6e20.js" crossorigin="anonymous"></script>
+    <!-- Font awesome -->
+
+    <link rel="stylesheet" href="flows.css">
+
+    <script>
+
+        //bruges til min egen buger menu (variablen)
+        var is_shown = false;
+
+        //taget kode herfra, og lavet om (start).
+        //https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+        window.onscroll = function() {
+            if(this.oldScroll > this.scrollY || this.scrollY < 20){
+                document.getElementById("header").classList = "show";
+            }
+            else{
+                document.getElementById("header").classList = "noshow";
+
+                //til buger bar
+                document.getElementById("menu").classList = "right_header";
+                document.getElementById("menu_icon").classList = "fa-solid fa-bars";
+                is_shown = false;
+            }
+            
+
+            // print "false" if direction is down and "true" if up <-- tidligere kommentar (ikke gældende længere)
+            //gør at den kan se om du har skiftet retning for scrool
+            this.oldScroll = this.scrollY;
+        }
+        //taget kode herfra, og lavet om (slut).
+        //https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+
+        function open_menu(){
+            is_shown = !is_shown;
+
+            if(is_shown){
+                document.getElementById("menu").classList += " responsiv";
+                document.getElementById("menu_icon").classList = "fa-solid fa-x";
+            }
+            else{
+                document.getElementById("menu").classList = "right_header";
+                document.getElementById("menu_icon").classList = "fa-solid fa-bars";
+            }
+        }
+
+        var current_image = 0;
+        var images = [
+            "1.JPG",
+            "2.JPG",
+            "3.JPG",
+            "4.JPG",
+            "5.JPG",
+            "6.JPG",
+            "7.JPG",
+            "8.JPG",
+            "9.JPG",
+            "10.JPG",
+            "11.JPG",
+            "12.JPG",
+            "13.JPG",
+            "14.JPG",
+            "15.JPG",
+            "16.JPG",
+            "17.JPG"
+        ];
+
+        function powerpoint(number){
+            current_image += number;
+            if(current_image <= -1){
+                current_image = images.length -1;
+            }
+            if(current_image > images.length -1){
+                current_image = 0;
+            }
+
+            document.getElementById("indicator").innerText = (current_image + 1) + "/" + images.length;
+            document.getElementById("switch_images").src = "flow4/PP/" + images[current_image];   
+        }
+
+    </script>
+</head>
+<body>
+    <header id="header">
+        <div class="left_header">
+            <a href="index.html">
+                <img src="Logo2.png" alt="logo">
+            </a>
+            <!-- "&nbsp;" er et mellemrum -->
+            <h1> <a href="om_mig.html">Luca&nbsp;Klæø </a> &nbsp;</h1> 
+            <h1>/&nbsp;<a href="index.html"> Forside </a> &nbsp;</h1>
+            <h1>/&nbsp;<a href="flow4.html"> Flow&nbsp;4 </a> &nbsp;</h1>
+        </div>
+        <div class="left_header">
+            <div class="right_header" id="menu">
+                <h1> <a href="#et">Premiere&nbsp;Pro </a> &nbsp;</h1> 
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#to"> Reaserch </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#tre"> Gruppekontrakt </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#fire"> Filming </a> &nbsp;</h1>
+            </div>
+            <div onclick="open_menu()" class="buger_menu_icon">
+                <i id="menu_icon" class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Space der gemmer sig under menubaren -->
+    <div class="empty_space"></div>
+
+    <main>
+        <div id="et" class="et">
+            <div class="image">
+                <img src="cards/prpro.png" alt="prpro logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>Premiere Pro</h1>
+                    <p>Premiere Pro er Adobes videoredigeringsprogram og det kan en hel masse inden for det, herunder: <br> - Farveredigering  <br> - Filmiske virkemidler <br> - Overlay grafik</p>
+                    <br>
+                    <p>Vi har også til videoerne lavet storyboards som skal forestille at være repræsentationen af hvordan videoen kommer til at se ud til slut.</p>
+                    <a href="https://docs.google.com/presentation/d/12YkWJfrmIaCpRuucfM0TSGKwmh9kgfL3CFksJ0TRFNU/edit?usp=sharing" target="_blank">Se storyboardet i Google Drev</a>
+                </div>
+                <div class="horizontal_image">
+                    <img src="flow4/prpro.JPG" alt="prpro image">
+                </div>
+            </div>
+        </div>
+        <div id="to" class="to">
+            <div class="image">
+                <img src="cards/research.png" alt=" research logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>Research</h1>
+                    <p>Under dette projekt lærte vi vigtigheden af research, heriblandt research af afsender- og modtagerforhold samt kundens præferencer.</p>
+                    <a href="https://www.figma.com/file/yLovfB43ev8GuYFDxC5KLi/Brainstorm?type=whiteboard&node-id=0%3A1&t=18Q4acaH7rbjfNs0-1" target="_blank">Se Udvikling i FigJam</a>
+                </div>
+                <div class="horizontal_image">
+                    <div class="slider">
+                        <i class="fa-solid fa-arrow-left arrow1" onclick="powerpoint(-1)"></i>
+                        <img src="flow4/PP/1.JPG" alt="powerpoint ikea" id="switch_images">
+                        <p class="indicator" id="indicator">1/17</p>
+                        <i class="fa-solid fa-arrow-right arrow2" onclick="powerpoint(1)"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tre" class="tre">
+            <div class="image">
+                <img src="cards/kontrakt.png" alt="kontrakt logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>Gruppekontrakt</h1>
+                    <p>Vi har lært at lave gruppekontrakter. Kontrakten sørger for, at alle er på "samme side" i forhold til: <br> - Ambitionsniveau <br> - Arbejdsmængde <br> - Mødetid <br> og de er derfor en vigtig del af gruppen så den fortsætter med at fungere.</p>
+                    <a href="https://drive.google.com/file/d/15_bFdsLE_8EKtkJIdJMOBbF2OE91AH08/view?usp=sharing" target="_blank"> Se gruppekontrakt i Google Drev</a>
+                </div>
+                <div class="vertical_image">
+                    <img src="flow4/gruppekontrakt.JPG" alt="kontrakt image">
+                </div>
+            </div>
+        </div>
+        <div id="fire" class="fire">
+            <div class="image">
+                <img src="cards/film.png" alt="film logo">
+            </div>
+            <div class="content">
+                <div class="text">
+                    <h1>Filming</h1>
+                    <p>Når man  filmer, bør man tage højde for forskellige filmiske virkemidler. Det kan både hjælpe i post, men  også med at få videoen til at se  mere naturlig ud. Ting, som er værd at tage med, er bl.a.: <br> - Lys <br> - Tidspunkt på dagen <br> - Det gyldne snit/spiral</p>
+                    <a href="gamleforside/Ikea/index.html" target="_blank">Se "ikea" projektet i browseren</a>
+                </div>
+                <div class="horizontal_image">
+                    <img src="flow4/gylden_spiral.JPG" alt="film image">
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h1 id="Kontakt">Kontakt</h1>
+            <div class="flex_text">
+                <i class="fa-solid fa-envelope"></i> 
+                <p>&nbsp;Lucaklaeoe@gmail.com</p>
+            </div>
+
+            <div class="flex_text">
+                <i class="fa-solid fa-phone"></i> 
+                <p>&nbsp;42&nbsp;37&nbsp;87&nbsp;32</p>
+            </div>
+        </div>
+        <div>
+            <h1> Andet</h1>
+            <div class="flex_text">
+                <i class="fa-solid fa-user"></i> 
+                <p><a href="om_mig.html"> Om mig </a></p>
+            </div>
+            <div class="flex_text">
+                <i class="fa-solid fa-newspaper"></i> 
+                <p><a href="dok.html"> Dokumentation </a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

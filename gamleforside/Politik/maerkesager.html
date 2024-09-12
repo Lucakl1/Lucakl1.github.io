@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome for bar w3 schools-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f1ab3b6e20.js" crossorigin="anonymous"></script>
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/mvt5ukr.css">
+    <!-- Stylesheet (css) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Logo -->
+    <link rel="icon" href="logo.png">
+    <title>Marie Stærke</title>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          var y = document.getElementById("maerkesager");
+          var z = document.getElementById("bar_tegn");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+            y.className = "button";
+            z.className = "fa fa-align-right";
+          } else {
+            x.className = "topnav";
+            y.classList = "button visable_tablet";
+            z.className = "fa fa-align-justify";
+          }
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="socialdemokratiet's logo">
+        </a>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="button">Forside</a>
+        <a href="maerkesager.html" class="button visable_tablet" id="maerkesager">Mærkesager</a>
+        <a href="om_mig.html" class="button">Om Marie stærke</a>
+        <a href="https://www.socialdemokratiet.dk" target="_blank" class="button">Socialdemokratiet</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-align-justify" id="bar_tegn"></i>
+        </a>
+    </div>
+    <!-- ------------------------------------------------------------------------------------------------ -->
+
+    <script>
+        function cool_color(object, cirkel ){
+            const x = event.clientX;
+            const y = event.clientY;
+
+            const circle = document.getElementById(cirkel);
+            const box = document.querySelector('.' + object);
+            const boxRect = box.getBoundingClientRect();
+
+            const boxX = boxRect.left;
+            const boxY = boxRect.top;
+
+            const relativeX = x - boxX;
+            const relativeY = y - boxY;
+
+            circle.className = 'circle';
+            circle.style.top = `${relativeY}px`;
+            circle.style.left = `${relativeX}px`;
+        }
+        function no_color(object, cirkel){
+            const x = event.clientX;
+            const y = event.clientY;
+
+            const circle = document.getElementById(cirkel);
+            const box = document.querySelector('.'+ object);
+            const boxRect = box.getBoundingClientRect();
+
+            const boxX = boxRect.left;
+            const boxY = boxRect.top;
+
+            const relativeX = x - boxX;
+            const relativeY = y - boxY;
+
+            circle.className = 'circle_no';
+            circle.style.top = `${relativeY}px`;
+            circle.style.left = `${relativeX}px`;
+        }
+    </script>
+
+    <div class="maerkesager_3boxe">
+        <div class="maerkesag box1" onmouseenter="cool_color('box1','1')" onmouseleave="no_color('box1','1')">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h1>Det skal være nemt at blive ældre</h1>
+            <p>Vi skal lytte til og forstå, hvad der er vigtigt for den enkelte. Vi skal løse de små problemer i tid inden de vokser og ødelægger livskvaliteten for de ældre medborgere, der har behov for hjælp og støtte!   Vi skal også bakke ældre op, der har masser af overskud og selv vil. Vi skal støtte frivillige, der på eget initiativ, med egne ressourcer og stort engagement skaber aktiviteter i kommunen</p>
+            <div id="1"></div>
+        </div>
+        <div class="maerkesag box2" onmouseenter="cool_color('box2','2')" onmouseleave="no_color('box2','2')">
+            <i class="fa-solid fa-heart"></i>
+            <h1>Mere tryghed</h1>
+            <p>Køge er generelt et trygt sted. Vi passer godt på hinanden, og vi respekterer vores medborgere.   Til gengæld er der overhovedet ikke plads til kriminalitet og bandeproblemer! Desværre har vi nogle få boligområder, hvor det ikke altid er trygt at færdes - og hvor nogle få beboere skaber frygt og utryghed. Men vi skal IKKE acceptere chikane, overfald eller handel med stoffer nogen steder i Køge</p>
+            <div id="2"></div>
+        </div>
+        <div class="maerkesag box3" onmouseenter="cool_color('box3', '3')" onmouseleave="no_color('box3','3')">
+            <i class="fa-solid fa-school-flag"></i>
+            <h1>Samarbejde mellem skoler og erhvervsliv</h1>
+            <p>En stor udfordringer er at skabe sammenhæng mellem lokale unge og lokale jobs. Vi har et erhvervsliv, der i den grad efterspørger ny arbejdskraft. Alligevel får op imod 20% af kommunens unge ikke en kvalificerende uddannelse. Den ubalance er vi ganske enkelt nødt til at rette op på. Det gør vi ved, at bringe skolerne og virksomhederne tættere sammen gennem erhvervspraktik, dels gennem vejledning.</p>
+            <div id="3"></div>
+        </div>
+    </div>
+
+    <!-- ------------------------------------------------------------------------------------------------ -->
+    <footer>
+        <div>
+            <h1>Socialdemokratiet</h1>
+            <br>
+            <p>Christiansborg, 1240 København K</p>
+            <br>
+            <p>Tlf. 72 30 08 00 <br> CVR 31368111</p>
+            <br>
+            <p>partikontoret@socialdemokratiet.dk</p>
+            <br>
+            <h2>Telefontid:</h2>
+            <p>Mandag og fredag: 10.00-14.00 <br>
+                Tirsdag - torsdag: 10.00-16.00 <br>
+                Lukket hver dag mellem 12.00-12.30</p>
+        </div>
+        <div class="footer_kontakt">
+            <h1>kontakt</h1>
+            <br>
+            <span class="flex">
+                <a href="https://www.facebook.com/staerkekoege/" target="_blank">
+                    <i class="fa fa-facebook-f"></i> 
+                    <p>Følg mig på Facebook</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="https://www.instagram.com/marie.staerke/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                    <p>Følg mig på twitter</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="https://twitter.com/mariestaerke" target="_blank">
+                    <i class="fa fa-twitter"></i> 
+                    <p>Følg mig på twitter</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="tel:56637998" target="_blank">
+                    <i class="fa fa-phone"></i> 
+                    <p>56 63 79 98</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="mailto:marie.staerke@koege.dk" target="_blank">
+                    <i class="fa fa-envelope"></i> 
+                    <p>marie.staerke@koege.dk</p>
+                </a>
+                <br>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

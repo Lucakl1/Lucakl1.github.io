@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Luca's Portfolie - Forside</title>
+        <!-- Font start -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+        <!-- 
+            font-family: 'Inconsolata', monospace;
+            font-family: 'Roboto', sans-serif; 
+        -->
+        <!-- Font slut -->
+    
+        <link rel="icon" href="Logo2.png">
+    
+        <!-- Font awesome -->
+        <script src="https://kit.fontawesome.com/f1ab3b6e20.js" crossorigin="anonymous"></script>
+        <!-- Font awesome -->
+    
+        <link rel="stylesheet" href="dok.css">
+        <script>
+
+            //bruges til min egen buger menu (variablen)
+            var is_shown = false;
+    
+            //taget kode herfra, og lavet om (start).
+            //https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+            window.onscroll = function() {
+                if(this.oldScroll > this.scrollY || this.scrollY < 20){
+                    document.getElementById("header").classList = "show";
+                }
+                else{
+                    document.getElementById("header").classList = "noshow";
+                    document.getElementById("menu").classList = "right_header";
+                    document.getElementById("menu_icon").classList = "fa-solid fa-bars";
+                    is_shown = false;
+                }
+                
+    
+                // print "false" if direction is down and "true" if up <-- tidligere kommentar (ikke gældende længere)
+                //gør at den kan se om du har skiftet retning for scrool
+                this.oldScroll = this.scrollY;
+            }
+            //taget kode herfra, og lavet om (slut).
+            //https://stackoverflow.com/questions/31223341/detecting-scroll-direction
+    
+            function open_menu(){
+                is_shown = !is_shown;
+    
+                if(is_shown){
+                    document.getElementById("menu").classList += " responsiv";
+                    document.getElementById("menu_icon").classList = "fa-solid fa-x";
+                }
+                else{
+                    document.getElementById("menu").classList = "right_header";
+                    document.getElementById("menu_icon").classList = "fa-solid fa-bars";
+                }
+            }
+    
+            function make_big(selectet_picture){
+                if(selectet_picture == "none"){
+                    document.getElementById("big_picture_position").classList = "bigger_img removed";
+                }
+                else{
+                    document.getElementById("big_picture_position").classList = "bigger_img"
+                    document.getElementById("midt_img").src = "Dok/" + selectet_picture;
+                }
+            }
+
+            function cool_color(cirkel,boxid){
+                const x = event.clientX;
+                const y = event.clientY;
+
+                const circle = document.getElementById(cirkel);
+                const box = document.getElementById(boxid);
+                //fra tidligere project -- tager og giver størrelsen/placeringen af boxen
+                const boxRect = box.getBoundingClientRect();
+
+                const boxX = boxRect.left;
+                const boxY = boxRect.top;
+
+                const relativeX = x - boxX;
+                const relativeY = y - boxY;
+
+                circle.classList = 'cir circle';
+                circle.style.top = `${relativeY}px`;
+                circle.style.left = `${relativeX}px`;
+            }
+            function no_color(){
+                const circle = document.querySelectorAll('.cir');
+                const box = document.querySelectorAll('.box');
+
+                for (let i = 0; i < box.length; i++) {
+                    const boxRect = box[i].getBoundingClientRect();
+                    const x = event.clientX;
+                    const y = event.clientY;
+                    const boxX = boxRect.left;
+                    const boxY = boxRect.top;
+                    const relativeX = x - boxX;
+                    const relativeY = y - boxY;
+
+                    circle[i].classList = 'cir circle_no';
+                    circle[i].style.top = `${relativeY}px`;
+                    circle[i].style.left = `${relativeX}px`;
+                }
+            }
+
+            let remeber = 0;
+            function AIDA(aida_nr){
+                if(aida_nr == 5){
+                    aida_nr = remeber + 1;
+
+                    if(aida_nr == 5){
+                        aida_nr = 1;
+                    }
+                }
+
+
+                if(aida_nr == remeber){
+                    if(document.querySelector(".vis")){
+                    const remove = document.querySelectorAll(".vis")
+                        for (let i = 0; i < remove.length; i++) {
+                            remove[i].classList = "no_vis";
+                        }
+                    }
+                    if(document.querySelector(".aida_ative")){
+                        document.querySelector(".aida_ative").classList = "";
+                    }
+                    document.getElementById("aidaimg").src = "Dok/AIDA.png";
+                    document.getElementById("vis_start").classList = "vis";
+                    remeber = 0;
+                }
+                else{
+                    if(document.querySelector(".vis")){
+                    const remove = document.querySelectorAll(".vis")
+                        for (let i = 0; i < remove.length; i++) {
+                            remove[i].classList = "no_vis";
+                        }
+                    }
+                    //aida website text
+                    document.getElementById("aida_content_" + aida_nr).classList = "content_sitemap vis";
+
+                    //aida text
+                    document.getElementById("aidatext_" + aida_nr).classList = "text vis";
+
+                    //indicator
+                    if(document.querySelector(".aida_ative")){
+                        document.querySelector(".aida_ative").classList = "";
+                    }
+                    document.getElementById("indicator_" + aida_nr).classList = "aida_ative";
+
+                    //aida img
+                    document.getElementById("aidaimg").src = "Dok/AIDA_" + aida_nr + ".png";
+                    remeber = aida_nr;
+                }
+            }
+        </script>
+
+    </head>
+<body>
+     <!-- Top left - header -->
+     <header id="header">
+        <div class="left_header">
+            <a href="index.html">
+                <img src="Logo2.png" alt="logo">
+            </a>
+            <!-- "&nbsp;" er et mellemrum -->
+            <h1 class="remove"> <a href="om_mig.html">Luca&nbsp;Klæø </a> &nbsp;</h1> 
+            <h1 class="remove">/&nbsp;</h1>
+            <h1><a href="index.html"> Forside </a> &nbsp;</h1>
+            <h1>/&nbsp;<a href="dok.html"> Dokumentation </a> &nbsp;</h1>
+        </div>
+        <div class="left_header">
+            <div class="right_header" id="menu">
+                <h1> <a href="#nul"> Idegenerering&nbsp;og&nbsp;målgruppe</a> &nbsp;</h1> 
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#et"> Skitsering </a> &nbsp;</h1> 
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#to"> Sitemaps </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#tre"> AIDA </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#fire"> Gestaltloven </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#fem"> Brugerens&nbsp;mentale&nbsp;model </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#seks"> Farver </a> &nbsp;</h1>
+                <h1 class="no_dash"> /&nbsp;</h1>
+                <h1> <a href="#syv"> Typografi </a> &nbsp;</h1>
+            </div>
+            <div onclick="open_menu()" class="buger_menu_icon"> 
+                <i id="menu_icon" class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <div class="bigger_img removed" id="big_picture_position" onclick="make_big('none')">
+        <img src="Dok/Figma ide.jpg" alt="gør et billed størrer" id="midt_img">
+    </div>
+
+    <!-- Space der gemmer sig under menubaren -->
+    <div class="empty_space"></div>
+
+    <div id="nul" class="theme">
+        <h1 class="overskrift">Idegenerering og målgruppe</h1>
+        <div class="content">
+            <div class="text_vertical_img">
+                <p class="text">Jeg påbegyndte min idegenerering med en kuglepen og en notesbog. En fordel ved dette var, at jeg kunne tegne og skrive på farten - uden at være afhængig af et program. Det var ligeledes en fordel at tegne og skrive i notesbogen, da det ikke blokerede for nye ideer, som kunne opstå under idegenereringsprocessen. </p>
+                <img src="Dok/notes_bog.png" alt="" onclick="make_big('notes_bog.png')">
+                <img src="Dok/skitse.jpg" alt="" onclick="make_big('skitse.jpg')">
+            </div>
+            <div class="text_vertical_img">
+                <p class="text">Det næste step i idégenerationen var at overføre mine skitser fra notesblokken til Figma. Her var mit fokus, at skabe en generel idé om, hvordan tingene fungerede sammen. Jeg brugte derfor ikke farver eller grafiske billeder, bare grå firkanter. </p>
+                <img src="Dok/Figma ide.jpg" alt="" onclick="make_big('Figma ide.jpg')">
+            </div>
+            <div class="text_vertical_img">
+                <p class="text">Under den indledende idegenerering havde jeg min målgruppe i mente. Min primære målgruppe er lærer/censor, men derudover har jeg også indtænkt en sekundær målgruppe – fremtidige arbejdsgivere. Da det er sandsynligt, at min målgruppe godt kan finde ud af at bruge – og potentielt også kode – en hjemmeside, har jeg valgt ikke at bruge et grid-system på forsiden. På trods af dette anvender elementerne på forsiden og undersiden stadig “guidelines”. Det betyder blot, at de ikke følger et “klassisk” 12-kolonners-grid-system.</p>
+                <img src="Dok/målgruppe.jpg" alt="" onclick="make_big('målgruppe.jpg')">
+            </div>
+        </div>
+        <div class="column">
+            <br>
+            <p class="text">Under idegenereringen lavede jeg desuden en tidsplan samt et storyboard til min video.</p>
+            <br>
+            <a class="text" href="https://drive.google.com/file/d/1deWp9aRCGtCT0VEyFd8th_Z_7GKPbUwM/view?usp=sharing" target="_blank">Se tidsplan i Google Drev</a>
+            <br>
+            <a class="text" href="https://drive.google.com/file/d/1vBLtD64bhRVFsTEIkPCk3CCDzFodTWcw/view?usp=sharing" target="_blank">Se storyboard i Google Drev</a>
+        </div>
+    </div>
+
+    <div id="et" class="theme">
+        <h1 class="overskrift">Skitsering</h1>
+        <div class="column">
+            <p class="text"> Klik på et billede for at se det udviklede design. <br><br></p>
+            <div class="pictures">
+                <div class="radial">
+                    <div class="box" id="skitse2" onclick="cool_color('skitse1','skitse2')">
+                        <div id="skitse1"></div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-rotate-right" onclick="no_color()"></i>
+                <div class="radial">
+                    <div class="box" id="skitse3" onclick="cool_color('skitse4','skitse3')">
+                        <div id="skitse4"></div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <p class="text center">Inden jeg gik i gang med at kode min hjemmeside, holdt jeg en pause og tænkte mig om. Det er nemlig vigtigt at have et konkret og velafgrænset design for øje og gå efter det. Jeg valgte derfor at fortsætte på tidligere idegenerering og designe hjemmesiden i Figma. Mit mål med dette var ikke at lave en 1 til-1 kopi af den endelige hjemmeside, men derimod at omdanne mit low-fidelity design til et medium-/high-fidelity design. Dette hjalp bl.a. med at visualisere kombinationen af farver samt placeringen af elementerne. Jeg var ikke nødsaget til at  ramme præcise pixels eller til at anvende guidelines, da jeg “bare” ville visualisere mit koncept.  Dette kunne jeg tillade mig, eftersom jeg ikke arbejder i en gruppe eller for et firma. Jeg skulle således ikke videreformidle mine tanker og kunne derfor holde detaljer i hovedet fremfor at bruge unødvendig tid på at lave dem.</p>
+            <br><br>
+            <a class="text" href="https://www.figma.com/file/1LnYs5eWsgtUgIqc5e8ABU/Front-page?type=design&node-id=0%3A1&mode=design&t=5O694p2vKXPptwdC-1" target="_blank">Se design i Figma</a>
+        </div>
+    </div>
+
+    <div id="to" class="theme">
+        <h1 class="overskrift">Sitemaps</h1>
+        <div class="content_sitemap underborder">
+            <img src="Dok/sitemap.JPG" alt="">
+            <p class="text">Jeg har lavet et sitemap, som skal illustrere, hvordan siden er forbundet. Med dette overblik virker det som om siden ikke er så kompliceret. Jeg vælger dog stadig at gøre siden let at navigere rundt på: </p>
+        </div>
+        <div class="content_sitemap">
+            <p class="text">For at hjælpe brugerne med at forstå sitemappet, har jeg i toppen til venstre altid en navigationsbar, der kan man se, hvor man er, og hvor man kommer fra; man kan klikke på alle elementerne i navigationsbaren: <br>
+                <br>Logo <i class="fa-solid fa-arrow-right"></i>Forside 
+                <br> Luca Klæø <i class="fa-solid fa-arrow-right"></i> om mig 
+                <br> Forside <i class="fa-solid fa-arrow-right"></i> Forside 
+                <br> Længst til højre <i class="fa-solid fa-arrow-right"></i> Siden du er på
+            </p>
+            <img src="Dok/nav-bar.jpg" alt="">
+        </div>
+        <div class="content_sitemap">
+            <p class="text">Til højre for navigationsbaren, har jeg lavet en “lokal” navigationsbar. Denne bliver, i modsætning til den anden, til en “burgermenu”, når skærmen nedskaleres. Teksten i den lokale navigationsbar hjælper med at finde rundt på nuværende side og ved at trykke på teksten, scrolles der ned på siden. Den er derfor meget brugbar på en mindre skærm, fx en mobil.
+            </p>
+            <img src="Dok/right-navbar.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="tre" class="theme">
+        <h1 class="overskrift">AIDA</h1>
+        <div class="column">
+            <div class="column">
+                <p class="text center">
+                    Når man benytter AIDA-modellen som skabelon for opbygning af hjemmesider og andre medieprodukter , er det vigtigt at have målet i tankerne. I dette tilfælde er mit mål at vise min primære målgruppe mine evner inde for design, kode og kreativitet, derudover vil jeg gerne vise min sekundære målgruppe, at jeg har styr på faget. Sidstnævnte er vigtigt, da det  potentielt kan udvikle sig til, at fremtidige arbejdsgivere tager kontakt og tilbyder et arbejde.
+                </p>
+                <p class="left kilde">Kilde fra bogen: Interfacedesign Fra idé til digital protorype, Side 53</p>
+            </div>
+            <br>
+            <div class="AIDA">
+                <h1 onclick="AIDA(1)" id="indicator_1">A</h1>
+                <h1 onclick="AIDA(2)" id="indicator_2">I</h1>
+                <h1 onclick="AIDA(3)" id="indicator_3">D</h1>
+                <h1 onclick="AIDA(4)" id="indicator_4">A</h1>
+            </div>
+            <div class="content_sitemap aida_box">
+                <p class="no_vis" id="aidatext_1">Attention handler om at fange brugerens opmærksomhed. Hovedreglen er, at man har ca. 3 sekunder til at gøre dette. Hvis det ikke lykkes, kan det betyde, at brugeren klikker væk fra hjemmesiden. Se hvordan jeg har gjort dette under.
+                </p>
+                <p class="no_vis" id="aidatext_2">Interest er det næste step i AIDA-modellen. Her har jeg fanget min målgruppes  opmærksomhed og skal nu vække deres interesse for, hvad hjemmesiden indeholder og tilbyder.Se hvordan jeg har gjort dette under </p>
+                <p class="no_vis" id="aidatext_3">Desire er det sidste store step fra brugerens side. Det er her, de ønsker produktet eller budskabet, som bliver solgt til dem. Se hvordan jeg har gjort dette under</p>
+                <p class="no_vis" id="aidatext_4">Action sker, når de tidligere tre steps er udført, og kunden har fundet "call to action"- knappen/linket. Se hvordan jeg har gjort dette under </p>
+                <img src="Dok/AIDA.png" alt="" class="aida_img" id="aidaimg" onclick="AIDA(5)">
+            </div>
+            <br>
+            <div class="column vis" id="vis_start">
+                <h1><i class="fa-solid fa-arrow-up"></i>Vælg et AIDA ved at klikke på  “A I D A” længere oppe.<i class="fa-solid fa-arrow-up"></i></h1>
+            </div>
+            <div class="content_sitemap no_vis" id="aida_content_1">
+                <p class="text">På min side ses "attention" hurtigt på forsiden: Teksten "Designer & udvikler" fanger brugerens opmærksomhed. Derefter er det intentionen, at øjnene føres videre til "kompetencer" og derefter over de forskellige knapper - i en v-bevægelse. Alternativt føres øjnenes til de forskellige knapper, og derefter til "kompetencer" - som en z-bevægelse. Endeligt er mit farvevalg samt tekst designet til at være blikfangende.</p>
+                <img src="Dok/attention.JPG" alt="">
+                <img src="Dok/attention_v.jpg" alt="">
+                <img src="Dok/attention_z.jpg" alt="">
+            </div>
+            <div class="content_sitemap no_vis" id="aida_content_2">
+                <p class="text">Jeg vækker brugerens "interest" vha. effekterne på min forside; åbning af mapper, bevægelse i tekst. Derudover håber jeg at vække deres interesse yderligere, når de surfer rundt på side og læser omkring mine kompetencer. </p>
+                <img src="Dok/interest1.JPG" alt="">
+            </div>
+            <div class="content_sitemap no_vis" id="aida_content_3">
+                <p class="text">Jeg har forsøgt at vække "lysten" for budskabet ved at lave effekter og tekster, som forklarer mine kompetencer og tidligere projekter. Hertil har jeg udviklet en hjemmeside, der er forholdsvis interaktiv. Årsagen til dette er, at brugervenlighed er designafhængigt - det afhænger ikke blot af, hvad der står på hjemmesiden. </p>
+            </div>
+            <div class="content_sitemap no_vis" id="aida_content_4">
+                <p class="text">Min "call to action"-knap er "kontaktknappen", som er lokaliseret footeren, der er tilgængelig på samtlige sider.  </p>
+                <img src="Dok/ation.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div id="fire" class="theme">
+        <h1 class="overskrift">Gestaltlove</h1>
+        <p class="text space halfspace">Jeg har udvalgt de tre mest markante gestaltlove, nemlig loven om nærhed, lighed og lukkethed.</p>
+        <p class="left kilde">Kilde fra bogen: Interfacedesign Fra idé til digital protorype, Side 122</p>
+        <div class="content_sitemap space">
+            <div class="column left">
+                <h1 class="text bigger">Loven om nærhed</h1>
+                <p class="text">Loven beskriver, hvordan elementer, som er tæt på hinanden, bliver opfattet sammen. Jeg har i høj grad udnyttet dette til at vise, hvilke elementer på forsiden, der hører sammen, og derigennem  hvilke elementer, der opfører sig på samme måde. Billedet illustrerer, hvordan det er tænkt, at man skal opfatte elementerne. Det vises ved hjælp af den røde boks.</p>
+            </div>
+            <img src="Dok/loven-om-close.jpg" alt="">
+        </div>
+        <div class="content_sitemap space">
+            <div class="column left">
+                <h1 class="text bigger">Loven om lighed</h1>
+                <p class="text">Loven beskriver, hvordan elementer med samme udseende opfattes som ens eller sammenhængende.</p>
+                <br>
+                <p class="text">Loven om lighed bliver særligt brugt tre steder på hjemmesiden: 
+                    <br> 1. Knapper, som konsekvent har en blå baggrund Dette ses på mine undersider. Derudover er  navigationsbaren også blå. 
+                    <br> 2. Tekst med streger, som fører et andet sted hen, men stadig på lucakl.dk-domainet. 
+                    <br> 3. Farveændring; når musen kører hen over elementer, fx knappen eller tekster med streger, ændres tekstfarven fra sort til orange(i få tilfælde blå).</p>
+            </div>
+            <img src="Dok/loven-om-ligehed.jpg" alt="">
+        </div>
+        <div class="content_sitemap space">
+            <div class="column left">
+                <h1 class="text bigger">Loven om lukkethed</h1>
+                <p class="text">Loven beskriver, hvordan elementer med en boks ses som hørende sammen.</p>
+                <br>
+                <p class="text">Denne lov ses mere eller mindre overalt på hjemmesiden: På forsiden bruges loven i skyerne og på undersiderne opdeles emner i bokse. Endeligt bruger Jeg også loven til at opdele footeren samt headeren (navigationsbaren), som altid findes det samme sted, henholdsvis bunden og toppen.</p>
+            </div>
+            <img src="Dok/lukkethed.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="fem" class="theme">
+        <h1 class="overskrift">Brugernes mentale model</h1>
+        <div class="mentale_model_img">
+            <img src="Dok/metale model.png" alt="">
+            <p class="kilde">Model fra bogen: Interfacedesign Fra idé til digital prototype, Side: 31</p>
+        </div>
+        <br><br>
+        <div class="content_sitemap">
+            <p class="text">Under udviklingen af hjemmesiden har jeg løbende tjekket mine interaktive systemer for at se, om dét, brugerne forventer, også ender med at ske. Det jeg har lagt mest vægt på, når det kommer til den mentale model, er systemerne, jeg har bygget ved hjælp af Javascript. Jeg har gjort mit bedste for at sikre at disse er naturlige at interagere med bl.a. ved; at gøre brugernes input så simple og selvforklarende som muligt. Dette kan fx ses i billedets røde bokse.</p>
+            <img src="Dok/mentale_model_pp.jpg" alt="">
+        </div>
+    </div>
+
+    <div id="seks" class="theme">
+        <h1 class="overskrift">Farver</h1>
+        <p class="text space halfspace">Farver er mega svære at ramme korrekt, i det følgende vil jeg redegøre for mit farvevalg.</p>
+        <div class="content_sitemap">
+            <p class="text">Min hjemmeside anvender sort samt fem farver:
+                <br><br>
+                - Blå - #2bd9d9 - hsl: 180 70% 51% - rgb: 43 218 218
+                <br>
+                - Pink - #f25781 - hsl: 344 86% 65% - rgb: 243 89 130
+                <br>
+                - Orange - #f2785c - hsl: 11 85% 65% - rgb: 242 117 89
+                <br>
+                - Beach - #f2ecd8 - hsl: 46 50% 90% - rgb: 242 236 217
+                <br>
+                - Hvid - #f2f2f2 - hsl: 0 0% 95% - rgb: 242 242 242
+                <br><br>
+                Billedet er vist i et RGB-color-space fra Adobe Illustrator.
+            </p>
+            <img src="Dok/farver2.JPG" alt="">
+        </div>
+        <div class="content_sitemap">
+            <p class="text">
+                Jeg udvalgte pink og blå, eftersom de er komplementærfarver. En fordel ved at bruge komplementærfarver er, at de fremhæver hinanden. Dette gør, at de skal bruges med hensigt, da det ligner de har en højere saturation, end de faktisk har. Når man kigger på hsl-farvekoden (hue, saturation, lightness),  kan man se, hvordan den blå og røde farve ikke har højere værdi i lightness – og i den blå farves tilfælde heller ikke saturation. Det kommer blot til at se sådan ud, når de anvendes i kombination.
+                <br>
+            </p>
+            <img src="Dok/farver.jpg" alt="">
+        </div>
+        <div class="content_sitemap">
+            <p class="text">
+                De tre andre farver spiller på kontrasten, som ses mellem de to farver komplementærfarver. Jeg går derfor op og rundt imod den grønne del i farvecirklen som ses på billedet, for at ramme de mere orange-gule farver, som cirklen indeholder. På samme tid bliver saturation sat længere ned i farverne. Det har jeg prøvet at illustrere med den buede sorte streg. Dette gør, at hjemmesiden hovedsageligt bruger varme farver. De varme farver arbejder godt sammen og “forlænger” hinanden.  Denne effekt bruges fx i kortene på forsiden, eller i baggrunden på næsten alle undersider. Udover dette kan man se i rgb-farvekoden (rød, grøn, blå), at alle farverne, med undtagelse af den blå, har en rød farve på 242~. Det betyder, at farverne er analoge for hinanden og giver et harmonisk udtryk. 
+                <br> 
+            </p>
+            <img src="Dok/farver1.JPG" alt="">
+        </div>
+    </div>
+
+    <div id="syv" class="theme">
+        <h1 class="overskrift">Typografi</h1>
+        <div class="content_sitemap">
+            <p class="text">Indledende havde jeg  valgt typografien "Inconsolata". Den er letlæselig, nem at se, sans-serif og kommer i forskellige tykkelser; alle krav, som jeg på daværende tidspunkt havde til min font. På trods af dette har jeg under udviklingen af hjemmesiden skiftet min skrifttype til "Roboto". Dette valgte jeg bevidst at gøre, da den opfylder de samme krav. Men i modsætning til "Inconsolata" er den ikke så "skarp" i tonen; “Roboto” er “blødere”, og det kan især ses, når man sætter dem ved siden af hinanden.
+                <br><br>
+                Roboto opfylder følgende krav:
+                <br>- Sans-serif 
+                <br>- Let læselige 
+                <br>- Let forståelige 
+                <br>- Blødt billede
+            </p>
+            <div class="column">
+                <p class="text Inconsolata">Dette er skrift med fonten "Inconsolata" i light</p>
+                <br>
+                <p class="text Inconsolata1">Dette er skrift med fonten "Inconsolata" i regular</p>
+                <br>
+                <p class="text Inconsolata2">Dette er skrift med fonten "Inconsolata" i bold</p>
+                <br>
+                <p class="text Roboto">Dette er skrift med fonten "Roboto" i light</p>
+                <br>
+                <p class="text Roboto1">Dette er skrift med fonten "Roboto" i regular</p>
+                <br>
+                <p class="text Roboto2">Dette er skrift med fonten "Roboto" i bold</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div>
+            <h1 id="Kontakt">Kontakt</h1>
+            <div class="flex_text">
+                <i class="fa-solid fa-envelope"></i> 
+                <p>&nbsp;Lucaklaeoe@gmail.com</p>
+            </div>
+
+            <div class="flex_text">
+                <i class="fa-solid fa-phone"></i> 
+                <p>&nbsp;42&nbsp;37&nbsp;87&nbsp;32</p>
+            </div>
+        </div>
+        <div>
+            <h1> Andet</h1>
+            <div class="flex_text">
+                <i class="fa-solid fa-user"></i> 
+                <p><a href="om_mig.html"> Om mig </a></p>
+            </div>
+            <div class="flex_text">
+                <i class="fa-solid fa-newspaper"></i> 
+                <p><a href="dok.html"> Dokumentation </a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

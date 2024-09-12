@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikea</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="icon" href="IKEA-Logo.png">
+
+    <!-- Link til icons -->
+    <script src="https://kit.fontawesome.com/f1ab3b6e20.js" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- making heart clickable -->
+    <script>
+        let is_liked = true;
+        function heart(){
+            is_liked = !is_liked;
+            element = document.getElementById("heart");
+
+            if(is_liked){
+                element.classList = "fa-regular fa-heart";
+            }
+            else{
+                element.classList = "fa-solid fa-heart";
+            }
+        }
+
+        let search_is_open = false;
+        function search(){
+            search_is_open = !search_is_open;
+            element = document.getElementById("search");
+            icons = document.getElementById("right_icons");
+            search_space = document.getElementById("search_space");
+
+            if(search_is_open){
+                icons.classList += " remove";
+                element.classList += "visable";
+                search_space.classList += " new_width";
+            }
+            else{
+                icons.classList = "header_icon";
+                element.classList = " ";
+                search_space.classList = "search";
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="ikea logo">
+        </a>
+        
+
+        <div class="search" id="search_space">
+            <i onclick="search()" class="fa-solid fa-magnifying-glass"></i>
+            <input id="search" type="search" placeholder="Hvad er du på udkig efter?"/>
+        </div>
+
+        <div class="header_icon" id="right_icons">
+            <div class="heart_cart">
+                <i onclick="heart()" id="heart" class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <div class="over_the_fold">
+            <div class="inside_text">
+                <p>En bæredygtig hverdag</p>
+                <p>Med klimavenlige møbler</p>
+                <button>Shop Nu</button>
+            </div>
+            <video autoplay muted loop>
+                <source src="Landing page.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <p class="Carusel_tekst">MERE BÆREDYGTIGE VALG</p>
+
+        <div class="Carusel">
+            <a href="#">
+                <img src="trae.png" alt="Træ">
+                <button>Træ</button>
+            </a>
+            <a href="#">
+                <img src="bambus.png" alt="Bambus">
+                <button>Bambus</button>
+            </a>
+            <a href="#">
+                <img src="bomuld.png" alt="Bomuld">
+                <button>Bomuld</button>
+            </a>
+            <a href="#">
+                <img src="metal.png" alt="Metal">
+                <button>Metal</button>
+            </a>
+            <a href="#">
+                <img src="plast.png" alt="Platik">
+                <button>Plast</button>
+            </a>
+        </div>
+        <div class="under_the_fold">
+            <video controls>
+                <source src="Ikea 30 sek.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="text">
+            <h1>Hvorfor skal du vælge at leve mere bæredygtigt?...</h1>
+            <p>
+                Planeten er vores eneste hjem og den har brug for os mere end <br> 
+                nogensinde før. Men hjem har altid været det, vi gør det til. Og vi er <br>
+                fastbesluttet på at hjælpe milliader af mennesker med at skabe en <br>
+                bedre hverdag inden for planetens begrænsninger.
+            </p>
+            <p>
+                Ved at vælge bæredygtige materialer i dit hjem, er du med til at <br>
+                reducerer drivhusgasemissioner, som skåner kloden og <br>
+                forlænger levetiden her på jorden.</p>
+        </div>
+
+        <div class="text baggrunds_farver">
+            <h1>Vores valg af IKEA</h1>
+            <p>
+                Vi har valgt IKEA på baggrund af vores brainstorm. <br>
+                Vi har været fascineret af deres grønne cirkulære økonomi <br>
+                og har derfor valgt dem til vores projekt.
+            </p>
+            <p>
+                Med det fokus tænkte vi, at det var oplagt at tage ind <br>
+                og filme deres produkter, hvor de bruger genanvendelige materialer. <br>
+                De videoer, vi vil få ud af dette, vil vi bruge til at lave en <br>
+                reklame for IKEA og deres bæredygtighed.
+            </p>
+        </div>
+    </main>
+    
+</body>
+</html>
