@@ -12,6 +12,7 @@
 html{
     overflow-x: hidden;
     width: 100vw;
+    scroll-behavior: smooth;
 }
 /* Reset */
 
@@ -23,22 +24,27 @@ html{
     --color_elements_blue: #5ce1e6;
     
     /* Text */
-    --text_color: black;
-    --text_color_hover: #545454;
+    --Bright_text_color: white;
+    --Dark_text_color: black;
+    --text_color_hover: #8d8d8d;
 
     --text_size_standard: 1.2em;
     --font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
-    /* Boxes */
-    --borders: 15px;
 }
 
 body{
     background-color: var(--color_ontop);
     height: fit-content;
     font-family: var(--font);
+    height: 200vh;
 }
 
+/* ----- header ----- */
+header{
+    position: sticky;
+    top: 0;
+}
 /* ----- Settings ----- */
 #settings{
     width: fit-content;
@@ -48,9 +54,9 @@ body{
     top: -350px;
     right: -200px;
     transform: rotate(45deg);
-    animation: forwards appear 1s ease-in-out;
+    animation: forwards appear_settings 1s ease-in-out;
 }
-@keyframes appear{
+@keyframes appear_settings{
     0%{
         top: -350px;
         right: -200px;
@@ -64,6 +70,25 @@ body{
         right: -70px;
         --setting_colors: var(--color_elements_blue);
     }
+}
+.switchs{
+    transform: rotate(-45deg);
+    position: absolute;
+    bottom: -20px;
+    left: -50px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.switchs div{
+    display: flex;
+    width: 100px;
+    gap: 10px;
+    cursor: pointer;
+}
+.switchs div p{
+    font-weight: 600;
+    color: var(--Dark_text_color);
 }
 .top_small{
     width: 15px;
@@ -88,15 +113,7 @@ body{
     right: 50%;
     transform: translate(50%,50%);
     transition: transform 0.5s;
-    animation: forwards appear_tandjuld 1s ease-in-out;
-}
-@keyframes appear_tandjuld{
-    0%{
-        filter: opacity(0);
-    }
-    100%{
-        filter: opacity(1);
-    }
+    animation: forwards appear_img 1s ease-in-out;
 }
 .big img:hover{
     transition: transform 0.5s;
@@ -111,7 +128,14 @@ body{
     margin-left: 13px;
 }
 /* ----- Settings ----- */
-
+@keyframes appear_img{
+    0%{
+        filter: opacity(0);
+    }
+    100%{
+        filter: opacity(1);
+    }
+}
 /* ----- Nav ----- */
 nav{
     width: fit-content;
@@ -120,36 +144,90 @@ nav{
     gap: 100px;
     position: absolute;
     top: -250px;
-    left: 50px;
+    left: -120px;
 }
-nav div{
-    background: var(--color_elements_pink);
-    border-bottom-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    width: 200px;
-    height: 500px;
+nav a{
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    width: 120px;
+    height: 450px;
     transform:  rotate(-45deg);
     position: relative;
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 
+    top: -120px;
+    left: -30px;
+    background: var(--color_ontop);
+    transition: 0.2s;
+
+}
+nav a:hover{
+    width: 135px;
+    height: 465px;
+    transition: 0.2s;
+}
+.nav_text{
+    color: var(--Bright_text_color);
+    font-weight: 800;
+    font-size: 1.4em;
+    transform: rotate(90deg);
+    position: absolute;
+    bottom: 50px;
+    text-decoration: none;
 }
 #logo{
     margin-right: 70px;
+    animation: forwards appear_navbar 1.5s
 }
 #logo div{
-    width: 160px;
-    height: 160px;
+    width: 100px; 
+    height: 100px;
     background: var(--color_baground);
     border-radius: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding: 15px;
+    transform: rotate(45deg);
 }
 #logo div img{
+    margin-top: 10px;
     width: 100%;
-    transform: rotate(90deg);
+    animation: forwards appear_img 1s ease-in-out;
+
+}
+nav a:nth-child(2){
+    animation: forwards appear_navbar 1.5s;
+    animation-delay: 0.2s;
+}
+nav a:nth-child(3){
+    animation: forwards appear_navbar 1.5s;
+    animation-delay: 0.4s;
+}
+nav a:nth-child(4){
+    animation: forwards appear_navbar 1.5s;
+    animation-delay: 0.6s;
+}
+nav a:nth-child(5){
+    animation: forwards appear_navbar 1.5s;
+    animation-delay: 0.8s;
+}
+@keyframes appear_navbar{
+    0%{
+        top: -120px;
+        left: -30px;
+        background: var(--color_ontop);
+    }
+    70%{
+        background: var(--color_elements_pink);
+    }
+    100%{
+        left: 50px;
+        top: 0px;
+        background: var(--color_elements_pink);
+    }
 }
 /* ----- Nav ----- */
+/* ----- header ----- */
