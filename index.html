@@ -36,20 +36,18 @@
                 </div>
             </a>
         </nav>
-        <div id="settings">
+        <div id="settings" onmouseleave="close_popup()">
             <div class="top_small"></div>
-            <div class="big"> 
-                <img src="tandjul.png" alt="settings">
-            </div>
+            <div class="big"><img src="tandjul.png" id="tandjul" alt="settings" onmouseenter="open_popup()"></div>
             <div class="bottom_small"></div>
-            <div class="switchs">
-                <div>
+            <div class="switchs" id="switchs">
+                <div onclick="switch_theme()">
                     <p>Colors: </p>
-                    <p>Auto</p>
+                    <p id="color_switcher">Auto</p>
                 </div>
-                <div>
+                <div onclick="switch_sprog()">
                     <p>Sprog: </p>
-                    <p>Dansk</p>
+                    <p id="sprog_switcher">Dansk</p>
                 </div>
             </div>
         </div>
