@@ -120,7 +120,7 @@ const cube_box = document.getElementById("cubes");
 const width = window.innerWidth;
 
 console.log(Math.round((width-30)/(100+20)))
-for (let i = 1; i < Math.round(((width-30)/(100+15))*3); i++) {
+for (let i = 1; i < Math.floor(((width-30)/(100+15))*3); i++) {
     cube_box.innerHTML += "<div></div>";
 }
 
@@ -131,8 +131,8 @@ window.onmousemove = function calc_distance(event) {
     
     for (let i = 0; i < cube_box.children.length; i++) {
         const element = cube_box.children[i].getBoundingClientRect();
-        const Elm_x = Math.round(element.left + element.width / 2); // Center of the element
-        const Elm_y = Math.round(element.top + element.height / 2); // Center of the element
+        const Elm_x = Math.round(element.left + element.width / 2);
+        const Elm_y = Math.round(element.top + element.height / 2);
 
         // Correct the distance condition logic
         if (Math.abs(Elm_x - mouseX) <= distance && Math.abs(Elm_y - mouseY) <= distance) {
