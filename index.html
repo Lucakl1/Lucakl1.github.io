@@ -41,9 +41,9 @@
                 </div>
             </a>
         </nav>
-        <div id="settings" onmouseleave="close_popup()" onclick="close_popup()">
+        <div id="settings" onmouseleave="close_popup()">
             <div class="top_small"></div>
-            <div class="big"><img src="tandjul.png" id="tandjul" alt="settings" onmouseenter="open_popup()"></div>
+            <div class="big"><img src="tandjul.png" id="tandjul" onclick="close_popup()" alt="settings" onmouseenter="open_popup()"></div>
             <div class="bottom_small"></div>
             <div class="switchs" id="switchs">
                 <div onclick="switch_theme()">
@@ -58,6 +58,9 @@
         </div>
     </header>
     
+    <section id="cubes">
+    </section>
+
 </body>
 <script src="script.js"></script>
 </html>

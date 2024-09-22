@@ -114,3 +114,33 @@ function switch_sprog(){
         sprog_switcher.innerText = "English";
     }
 }
+
+//Cubes
+const cube_box = document.getElementById("cubes");
+const width = window.innerWidth;
+
+console.log(Math.round((width-30)/(100+20)))
+for (let i = 1; i < Math.round(((width-30)/(100+15))*3); i++) {
+    cube_box.innerHTML += "<div></div>";
+}
+
+const distance = 115; // Tolerance distance
+window.onmousemove = function calc_distance(event) {
+    const mouseX = event.clientX;
+    const mouseY = event.clientY;
+    
+    for (let i = 0; i < cube_box.children.length; i++) {
+        const element = cube_box.children[i].getBoundingClientRect();
+        const Elm_x = Math.round(element.left + element.width / 2); // Center of the element
+        const Elm_y = Math.round(element.top + element.height / 2); // Center of the element
+
+        // Correct the distance condition logic
+        if (Math.abs(Elm_x - mouseX) <= distance && Math.abs(Elm_y - mouseY) <= distance) {
+            // If mouse is within the specified distance, shrink the element
+            cube_box.children[i].classList.add("smaller");
+        } else {
+            // Otherwise, remove the "smaller" class
+            cube_box.children[i].classList.remove("smaller");
+        }
+    }
+}
