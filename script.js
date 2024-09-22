@@ -13,8 +13,8 @@ function open_popup(){
 
 var is_Shown = false;
 const navbar = document.querySelectorAll(".toogle_navbar");
+const navbar_icon = document.getElementById("navbar_icon");
 window.onscroll = function() {
-    console.log(is_Shown)
     if(is_Shown){
         is_Shown = false;
         navbar.forEach(element => {
@@ -29,11 +29,14 @@ function toggle_navbar(){
         navbar.forEach(element => {
             element.style.display = "flex";
         });
+        navbar_icon.setAttribute("d","M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM64 256c0-17.7 14.3-32 32-32H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H96c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z");
+
     }
     else{
         navbar.forEach(element => {
             element.style.display = "none";
         });
+        navbar_icon.setAttribute("d","M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z");
     }
 }
 
