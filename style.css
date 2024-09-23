@@ -390,11 +390,15 @@ nav a:nth-child(5){
     transition: 0.2s;
 
 }
+.small{
+    width: 80px !important;
+    height: 80px !important;
+    margin: 10px; 
+}
 .smaller{
-    width: 75px !important;
-    height: 75px !important;
-    margin: 12.5px;
-    
+    width: 60px !important;
+    height: 60px !important;
+    margin: 20px; 
 }
 
 /* Cubes */
