@@ -119,9 +119,11 @@ function switch_sprog(){
 const cube_box = document.getElementById("cubes");
 const width = window.innerWidth;
 
-console.log(Math.floor((width-30)/(100+20)))
-for (let i = 1; i < Math.floor(((width-30)/(101+15))*3); i++) {
-    cube_box.innerHTML += "<div></div>";
+const amount_of_rows = 3;
+for (let i = 0; i < amount_of_rows; i++) {
+    for (let ii = 1; ii < Math.round((width-30)/(50+15)); ii++) {
+        cube_box.innerHTML += "<div></div>";
+    }
 }
 
 const small_distance = 250; // Tolerance distance
