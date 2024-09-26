@@ -6,70 +6,36 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="Portfolie logo.png">
     <title>Luca's portfolie</title>
+
+    <!-- Font from google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <!-- Font from google fonts -->
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="#logo" id="logo">
+    <nav>
+        <div class="navbar">
+            <div>
                 <div>
                     <img src="Portfolie logo.png" alt="Luca Portfolio Logo">
                 </div>
-                <div onclick="toggle_navbar()">
-                    <svg fill="currentColor" viewBox="0 0 512 512" title="Din DnD">
-                        <path id="navbar_icon" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-                    </svg>
-                </div>
-            </a>
-            <a href="Om mig" class="toogle_navbar">
-                <div class="nav_text">
-                    Om mig
-                </div>
-            </a>
-            <a href="Skole Projekter" class="toogle_navbar">
-                <div class="nav_text">
-                    Skole Projekter
-                </div>
-            </a>
-            <a href="Egne projekter" class="toogle_navbar">
-                <div class="nav_text">
-                    Egne projekter
-                </div>
-            </a>
-            <a href="kontakt" class="toogle_navbar">
-                <div class="nav_text">
-                    kontakt
-                </div>
-            </a>
-        </nav>
-        <div id="settings" onmouseleave="close_popup()">
-            <div class="top_small"></div>
-            <div class="big"><img src="tandjul.png" id="tandjul" onclick="close_popup()" alt="settings" onmouseenter="open_popup()"></div>
-            <div class="bottom_small"></div>
-            <div class="switchs" id="switchs">
-                <div onclick="switch_theme()">
-                    <p>Colors: </p>
-                    <p id="color_switcher">Auto</p>
-                </div>
-                <div onclick="switch_sprog()">
-                    <p>Sprog: </p>
-                    <p id="sprog_switcher">Dansk</p>
-                </div>
+                <h2>Luca E. klæø</h2>
             </div>
+            <ul>
+                <li><a href="om_mig">Om mig</a></li>
+                <li><a href="Skole Projekter">Skole Projekter</a></li>
+                <li><a href="Egne projekter">Egne projekter</a></li>
+                <li><a href="kontakt">Kontakt</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header">
+            <h1>Luca's portfolie</h1>
+            <p></p>
         </div>
     </header>
-    
-    <h1 class="title">Luca klæø</h1>
-    <section id="cubes">
-        <div class="cubes2">
-        </div>
-        <div class="cubes2">
-        </div>
-        <div class="cubes2">
-        </div>
-        <div class="cubes2">
-        </div>
-    </section>
-
 </body>
-<script src="script.js"></script>
 </html>
