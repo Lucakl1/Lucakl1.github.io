@@ -44,6 +44,9 @@ const root = document.querySelector(":root");
 const color_switcher = document.getElementById("color_switcher");
 
 var current_theme = 0;
+if(localStorage.getItem("theme") != null){
+    current_theme = localStorage.getItem("theme");
+}
 function switch_theme(){
     if(current_theme >= 3){
         current_theme = 1;
@@ -76,6 +79,7 @@ function switch_theme(){
         lightmode()
         color_switcher.innerText = "Lightmode";
     }
+    localStorage.setItem("theme", current_theme-1);
 }
 switch_theme()
 
