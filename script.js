@@ -115,38 +115,50 @@ function switch_sprog(){
     }
 }
 
+
 //Cubes
-const cube_box = document.getElementById("cubes");
+const cube_box = document.querySelectorAll(".cubes2");
 const width = window.innerWidth;
 
-const amount_of_rows = 3;
-for (let i = 0; i < amount_of_rows; i++) {
-    for (let ii = 1; ii < Math.round((width-30)/(50+15)); ii++) {
-        cube_box.innerHTML += "<div></div>";
+let cube_width = 100;
+let space_between = 15;
+if(width < 1024){
+    cube_width = 50;
+}
+else if(width < 1920){
+    cube_width = 75;
+    space_between = 10;
+}
+
+for (let i = 0; i < cube_box.length; i++) {
+    for (let ii = 1; ii < Math.floor((width-30)/(cube_width+space_between)); ii++) {
+        cube_box[i].innerHTML += '<div class="cube"></div>';
     }
 }
 
-const small_distance = 250; // Tolerance distance
-const smaller_distance = 105; // Tolerance distance
+const small_distance = 250;
+const smaller_distance = 105; 
+const mousemove = document.querySelectorAll(".cube");
+
 window.onmousemove = function calc_distance(event) {
     const mouseX = event.clientX;
     const mouseY = event.clientY;
     
-    for (let i = 0; i < cube_box.children.length; i++) {
-        const element = cube_box.children[i].getBoundingClientRect();
+    for (let i = 0; i < mousemove.length; i++) {
+        const element = mousemove[i].getBoundingClientRect();
         const Elm_x = Math.round(element.left + element.width / 2);
         const Elm_y = Math.round(element.top + element.height / 2);
 
         // Correct the distance condition logic
-        cube_box.children[i].classList.remove("smaller");
-        cube_box.children[i].classList.remove("small");
+        mousemove[i].classList.remove("smaller");
+        mousemove[i].classList.remove("small");
         if (Math.abs(Elm_x - mouseX) <= smaller_distance && Math.abs(Elm_y - mouseY) <= smaller_distance) {
             // If mouse is within the specified distance, shrink the element
-            cube_box.children[i].classList.add("smaller");
+            mousemove[i].classList.add("smaller");
         } 
         else if(Math.abs(Elm_x - mouseX) <= small_distance && Math.abs(Elm_y - mouseY) <= small_distance){
             // Otherwise, remove the "smaller" class
-            cube_box.children[i].classList.add("small");
+            mousemove[i].classList.add("small");
         }
     }
 }
