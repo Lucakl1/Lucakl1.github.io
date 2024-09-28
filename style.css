@@ -68,12 +68,19 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 .navbar div{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+.navbar svg{
+    height: 40px;
+    width: 40px;
+    color: var(--Bright_text_color);
+    display: none;
 }
 .navbar div div{
     height: 100px;
@@ -112,7 +119,37 @@ nav{
     color: var(--text_color_hover);
     text-decoration: underline;
 }
+@media screen and (max-width: 1230px){
+    .navbar svg{
+        display: block;
+    }
+    .navbar svg path{
+        transition: 0.4s;
+    }
+    .navbar ul{
+        cursor: pointer;
+        transition: right 0.4s;
+        top: 100px;
+        right: -300px;
+        position: absolute;
+        flex-direction: column;
+        height: 100vh;
+        background: var(--color_elements_blue);
+        padding: 30px;
+    }
+}
+@media screen and (max-width: 500px){
+    .navbar{
+        padding: 20px 10px;
+        justify-content: space-evenly;
+    }
+    .navbar div{
+        flex-direction: column;
+        gap: 0px;
+    }
+}
 
+/* Header */
 header{
     height: fit-content;
     width: 100%;
@@ -194,4 +231,40 @@ header{
     {
         margin: var(--margin_width) 0 0 0;
     }
+}
+@media screen and (max-width: 450px){
+    .header div{
+        justify-content: center;
+    }
+    .header div button{
+        width: 80%;
+    }
+}
+
+/* Om mig */
+section{
+    height: fit-content;
+    width: 100%;
+    max-width: 1300px;
+    padding-bottom: 200px;
+    margin: 0 auto;
+    background: var(--color_ontop);
+}
+.om_mig{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+}
+.om_mig h2{
+    font-family: var(--overskrift_font);
+    font-size: 35px;
+    letter-spacing: 2.5px;
+}
+.om_mig p{
+    font-size: var(--text_size_standard);
+    line-height: 1.5em;
 }
