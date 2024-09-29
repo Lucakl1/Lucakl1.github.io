@@ -75,6 +75,7 @@ nav{
     align-items: center;
     justify-content: center;
     gap: 20px;
+    z-index: 2;
 }
 .navbar svg{
     height: 40px;
@@ -129,13 +130,13 @@ nav{
     .navbar ul{
         cursor: pointer;
         transition: right 0.4s;
-        top: 100px;
+        top: 140px;
         right: -300px;
         position: absolute;
         flex-direction: column;
         height: 100vh;
         background: var(--color_elements_blue);
-        padding: 30px;
+        padding: 10px 30px;
     }
 }
 @media screen and (max-width: 500px){
@@ -146,6 +147,9 @@ nav{
     .navbar div{
         flex-direction: column;
         gap: 0px;
+    }
+    .navbar ul{
+        padding: 50px 30px;
     }
 }
 
@@ -253,18 +257,45 @@ section{
 .om_mig{
     margin: 0 auto;
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.om_mig div{
+    width: fit-content;
+    padding: 20px 40px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    padding: 0 10px;
 }
-.om_mig h2{
+.om_mig div h2{
     font-family: var(--overskrift_font);
     font-size: 35px;
     letter-spacing: 2.5px;
 }
-.om_mig p{
+.om_mig div p{
     font-size: var(--text_size_standard);
     line-height: 1.5em;
+}
+.om_mig div img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+@media screen and (max-width: 900px){
+    .om_mig{
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .om_mig div{
+        width: 100%;
+    }
+    .om_mig div:last-child{
+        display: flex;
+        align-items: center;
+    }
+    
 }
