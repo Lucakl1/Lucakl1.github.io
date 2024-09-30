@@ -21,3 +21,12 @@ window.onscroll = function() {
     }
 }
 //Navbar ----
+
+document.querySelectorAll(".card").forEach(function(card) {
+    card.addEventListener("click", function() {
+        const s = this.style;
+        s.width = "100%";
+        s.height = "fit-content";
+        s.boxShadow = "rgba(0, 0, 0) 0px 0px 0px";
+    });
+});
