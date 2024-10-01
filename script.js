@@ -22,11 +22,28 @@ window.onscroll = function() {
 }
 //Navbar ----
 
-document.querySelectorAll(".card").forEach(function(card) {
+var old_obj = null;
+document.querySelectorAll(".read_more").forEach(function(card) {
     card.addEventListener("click", function() {
-        const s = this.style;
-        s.width = "100%";
-        s.height = "fit-content";
-        s.boxShadow = "rgba(0, 0, 0) 0px 0px 0px";
+        const current_card = this.parentElement;
+
+        current_card.classList.toggle("big_card");
+        current_card.children[2].classList.toggle("hidden");
+        current_card.children[3].innerText  = "Close";
+
+        if (old_obj == current_card){
+            old_obj.children[3].innerText = "Read more";
+            old_obj = null;
+        } 
+        else{
+            if (old_obj){
+                old_obj.classList.toggle("big_card");
+                old_obj.children[2].classList.toggle("hidden");
+                old_obj.children[3].innerText  = "Read more";
+            }
+
+            old_obj = current_card;
+        }
+
     });
 });
