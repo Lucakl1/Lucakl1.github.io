@@ -14,8 +14,6 @@ html{
     width: 100vw;
     height: fit-content;
     scroll-behavior: smooth;
-    display: flex;
-    justify-content: center;
 }
 /* Reset */
 :root{
