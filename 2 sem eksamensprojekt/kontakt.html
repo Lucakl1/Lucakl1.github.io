@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Din DnD er en begynder guide til Dungeons & Dragons. Her finder du en begyndervenlig DnD guide til nye spillere. Din DnD tilbyder en dansk DnD guide.">
+    <title>Din DnD Guide for nybegyndere - Kontakt</title>
+
+    <!-- Link to Emil js -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <!-- Nav bar -->
+    <nav id="navbar">
+        <div class="navbar_indhold stop">
+            <div class="logo">
+                <a class="logo" href="index.html">
+                    <img src="Logo.png" alt="Din DnD guide - logo">
+                </a>
+            </div>
+            <div class="Nav_links">
+                <div class="nav_burgerbar_icon" onclick="chance_navbar()">
+                    <svg fill="currentColor" viewBox="0 0 512 512" title="Din DnD">
+                        <path id="navbar_icon" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </div>
+                <div id="nav_liste" class="nav_liste_box">
+                    <ul class="Nav_liste">
+                        <li><a href="index.html" title="Din DnD index side">Start</a></li>
+                        <li><a href="bygkarakter.html" title="Din DnD karakter guide side">Karakter guide</a></li>
+                        <li><a href="Spilleside.html" title="Din DnD spil side">Spil</a></li>
+                        <li><a href="voresvision.html" title="Din DnD vision side">Vores vision</a></li>
+                        <li class="Current_nav"><a href="kontakt.html" title="Din DnD kontakt side">kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav bar -->
+
+    <!-- Header -->
+    <header class="stop header_underside">
+        <div class="headerimg_underside stop_early">
+            <h1>Kontakt</h1>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Main content -->
+    <div class="kontaktside stop">
+        <div class="SoMe_iconer_kontaktside_top stop_early">
+            <a href="https://discord.gg/UKwvQ8Txv5" title="Din DnD discord"><img src="iconer/discord.png" alt="Din DnD discord ikon for nybegyndere til DnD guiden"></a>
+            <a href="https://www.facebook.com/groups/367769165851364" title="Din DnD facebook"><img src="iconer/facebook.png" alt="Din DnD facebook ikon for nybegyndere til DnD guiden"></a>
+            <a href="https://www.instagram.com/dindndguide/" title="Din DnD instagram"><img src="iconer/instagram.png" alt="Din DnD instagram ikon for nybegyndere til DnD guiden"></a>
+        </div>
+        <div class="formel stop_early">
+            <form id="contact-form">      
+                <label>Klik på et icon <br> Eller udfyld formen</label>
+                <input type="text" name="from_name" placeholder="Navn" id="Navn">
+
+                <input type="email" name="Email_name" placeholder="Eksempel@email.com" id="Email">
+    
+                <textarea name="message" placeholder="Din besked" id="Besked"></textarea>
+    
+                <input type="submit" value="Send" id="submit" class="submit">
+                <p id="info" class="message_to_user"></p>
+            </form>
+        </div>
+        <!-- Social icons -->
+        <div class="SoMe_iconer_kontaktside_bund stop_early">
+            <div class="kontaktside_icon">
+                <a href="">
+                    <img src="iconer/location.png" alt="Din DnD lokation ikon for nybegyndere til DnD guiden">
+                    <p>Nørgaardsvej 30 <br>
+                    2800 Lyngby</p>
+                </a>
+            </div>
+            <div class="kontaktside_icon">
+                <a href="">
+                    <img src="iconer/email.png" alt="Din DnD mail ikon for nybegyndere til DnD guiden">
+                    <p>Exempelmail@mail.com</p>
+                </a>
+            </div>
+            <div class="kontaktside_icon">
+                <a href="">
+                    <img src="iconer/telephone.png" alt="Din DnD telefon ikon for nybegyndere til DnD guiden">
+                    <p>12 23 45 67</p>
+                </a>
+            </div>
+        </div>
+        <!-- Social icons -->
+    </div>
+    <!-- Main content -->
+    
+    <script src="script.js"></script>
+</body>
+</html>

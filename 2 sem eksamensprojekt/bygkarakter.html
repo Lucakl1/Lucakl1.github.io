@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Din DnD er en begynder guide til Dungeons & Dragons. Her finder du en begyndervenlig DnD guide til nye spillere. Din DnD tilbyder en dansk DnD guide.">
+    <link rel="stylesheet" href="style.css">
+    <title>Din DnD Guide for nybegyndere - Karakterside</title>
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <!-- Popup -->
+    <aside class="popup" id="popup">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" onclick="popup('reset')" title="Din DnD begynder guide popup">
+            <path class="cls-1" d="M-3.77,24.79h57.97c0,1.03-.83,1.86-1.86,1.86H-5.64c0-1.03.83-1.86,1.86-1.86Z" transform="translate(25.72 -9.62) rotate(45.68)"/>
+            <path class="cls-1" d="M-5.3,24.79h57.97c1.03,0,1.86.83,1.86,1.86H-3.66c-.91,0-1.64-.74-1.64-1.64v-.22h0Z" transform="translate(60.2 26.5) rotate(135)"/>
+        </svg>
+        <h2 id="popup_overskrift">Terninger</h2>
+        <video alt="DnD begynder video" id="video" src="" controls></video>
+    </aside>
+    <!-- Popup -->
+
+    <!-- Nav bar -->
+    <nav id="navbar">
+        <div class="navbar_indhold stop">
+            <div class="logo">
+                <a class="logo" href="index.html" title="Din DnD guide logo">
+                    <img src="Logo.png" alt="Din DnD guide - logo">
+                </a>
+            </div>
+            <div class="Nav_links">
+                <div class="nav_burgerbar_icon" onclick="chance_navbar()">
+                    <svg fill="currentColor" viewBox="0 0 512 512" title="Din DnD">
+                        <path id="navbar_icon" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </div>
+                <div id="nav_liste" class="nav_liste_box">
+                    <ul class="Nav_liste">
+                        <li><a href="index.html" title="Din DnD index side">Start</a></li>
+                        <li class="Current_nav" title="Din DnD karakter guide side"><a href="bygkarakter.html">Karakter guide</a></li>
+                        <li><a href="Spilleside.html" title="Din DnD spil side">Spil</a></li>
+                        <li><a href="voresvision.html" title="Din DnD vision side">Vores vision</a></li>
+                        <li><a href="kontakt.html" title="Din DnD kontakt side">kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    <!-- Progressbar -->
+    <div id="progressbar" class="progressbar">
+        <div id="progress" class="filled"></div>
+    </div>
+    <!-- Progressbar -->
+    <!-- Nav bar -->
+  
+    <!-- Header -->
+    <header class="stop header_underside">
+        <div class="headerimg_underside stop_early">
+            <h1>Byg din DnD Karakter</h1>
+        </div>
+    </header>
+    <!-- Header -->  
+    
+    <!-- Main content --> 
+    <main>
+        <section class="pink_bagrund">
+            <div class="stop_early karakter"> 
+                <!-- race billeder + tekst swap -->
+                <div class="race">
+                    <div class="bygkarakter_overskrift">
+                        <h2 class="content_overskrift" >Vælg din race:</h2>
+                    </div>
+                    <div class="racebilleder">
+                        <div class="klasser ">
+                            <div onclick="swapText2('Gnom')" id="Gnom" class="ikon Gnom"><img src="iconer/racer/gnom.svg" alt="DnD gnom"><p>Gnom</p></div>
+                            <div onclick="swapText2('Hobbit')" id="Hobbit" class="ikon Hobbit"><img src="iconer/racer/hobbit.svg" alt="DnD hobbit"><p>Hobbit</p></div>
+                            <div onclick="swapText2('Tiefling')" id="Tiefling" class="ikon Tiefling"><img src="iconer/racer/tiefling.svg" alt="DnD tiefling"><p>Tiefling</p></div>
+                            
+                            <div onclick="swapText2('Dværg')" id="Dværg" class="ikon Dværg"><img src="iconer/racer/dverg.svg" alt="DnD dværg"><p>Dværg</p></div>
+                            <div onclick="swapText2('Menneske')" id="Menneske" class="ikon Menneske"><img src="iconer/racer/menneske.svg" alt="DnD menneske"><p>Menneske</p></div>
+                            <div onclick="swapText2('Elver')" id="Elver" class="ikon Elver"><img src="iconer/racer/elver.svg" alt="DnD elver"><p>Elver</p></div>
+                            
+                            <div onclick="swapText2('Halv_Elver')" id="Halv_Elver" class="ikon Halv_Elver"><img src="iconer/racer/halv_elver.svg" alt="DnD halv elver"><p>Halv Elver</p></div>
+                            <div onclick="swapText2('Halv_Ork')" id="Halv_Ork" class="ikon Halv_Ork"><img src="iconer/racer/halv_ork.svg" alt="DnD halv ork"><p>Halv Ork</p></div>
+                            <div class="bob"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Overskrift med tekst - race -->
+                        <div onclick="swapText2('reset')">
+                            <h3 id="race_overskrift">Racer</h3>
+                        </div>
+                        <div id="race_tekst" class="karaktertekst">
+                                <p>Der er flere racer at vælge imellem når man skal bygge en DnD karakter. Det gør ofte ikke den store forskel hvilken race man vælger. Din DnD har valgt de mest normale racer i DnD. Hvis du er tvivl - så spørg din DM om hvilke racer I spiller med.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- klasse billeder + tekst swap -->
+                <div class="hvad_er_klasser kasse">
+                    <div class="bygkarakter_overskrift">
+                        <h2 class="content_overskrift" >Vælg din klasse:</h2>
+                    </div>
+                    <div class="klasser  ">
+                        <div onclick="swapText('Barbarian')" id="Barbarian" class="ikon Barbarian"><img src="iconer/Classes/barbarian.svg" alt="DnD barbarian"><p>Barbarian</p></div>
+                        <div onclick="swapText('Bard')" id="Bard" class="ikon Bard"><img src="iconer/Classes/bard.svg" alt="DnD bard"><p>Bard</p></div>
+                        <div onclick="swapText('Cleric')" id="Cleric" class="ikon Cleric"><img src="iconer/Classes/cleric.svg" alt="DnD cleric"><p>Cleric</p></div>
+                        
+                        <div onclick="swapText('Druid')" id="Druid" class="ikon Druid"><img src="iconer/Classes/druid.svg" alt="DnD druid"><p>Druid</p></div>
+                        <div onclick="swapText('Fighter')" id="Fighter" class="ikon Fighter"><img src="iconer/Classes/fighter.svg" alt="DnD fighter"><p>Fighter</p></div>
+                        <div onclick="swapText('Munk')" id="Munk" class="ikon Monk"><img src="iconer/Classes/monk.svg" alt="DnD monk"><p>Munk</p></div>
+                        
+                        <div onclick="swapText('Paladin')" id="Paladin" class="ikon Paladin "><img src="iconer/Classes/paladin.svg" alt="DnD paladin"><p>Paladin</p></div>
+                        <div onclick="swapText('Ranger')" id="Ranger" class="ikon Ranger"><img src="iconer/Classes/ranger.svg" alt="DnD ranger"><p>Ranger</p></div>
+                        <div onclick="swapText('Rogue')" id="Rogue" class="ikon Rogue"><img src="iconer/Classes/rogue.svg" alt="DnD rogue"><p>Rogue</p></div>
+                        
+                        <div onclick="swapText('Sorcerer')" id="Sorcerer" class="ikon Sorcerer"><img src="iconer/Classes/sorcerer.svg" alt="DnD sorcerer"><p>Sorcerer</p></div>
+                        <div onclick="swapText('Warlock')" id="Warlock"  class="ikon Warlock"><img src="iconer/Classes/warlock.svg" alt="DnD warlock"><p>Warlock</p></div>
+                        <div onclick="swapText('Troldmand')" id="Troldmand" class="ikon Wizard"><img src="iconer/Classes/wizard.svg" alt="DnD troldmand"><p>Troldmand</p></div>
+                    </div>
+
+                    <!-- overskrift med tekst - klasser -->
+                    <div class="klasser_tekst">
+                        <div onclick="swapText('reset')">
+                            <h3 id="class_overskrift" >Hvad er classes i DnD?</h3>
+                        </div>
+                        <div id="class_tekst" class= "karaktertekst">
+                            <p>Det, der er vigtigst for din karakter, er hvilken "class" du vælger. En class er en slags arbejde, din karakter har. Din class bestemmer, hvilke evner du kan have. Det kan være alt fra at slå ekstra hårdt til være usynlig.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </section>           
+        <section>
+            <div class="stop_early">
+                <h2 class="content_overskrift">Hvad er stats</h2>
+                <div class="divider">
+                    <div class="images">
+                        <img src="img/stats.webp" alt="DnD begynder guide til stats">
+                    </div>
+                    <div class="main_content">
+                        <div class="main_text">
+                            <p>Stats i DnD, står for din karakters grundegenskaber. Der er seks stats i alt, som man kan dele stats op i to dele - fysiske og mentale stats <br> <b> De Fysiske: </b> styrke (strength), smidighed (dexterity) og Helbred (constitution) <br><b> De mentale:</b> intelligens (intelligence), visdom (wisdom) og karisma (charisma). </p>
+                        </div>
+                        <div class="forviret">
+                            <h3 class="forklare_overskrift">Forklaring</h3>
+                            <div class="forklarings_knapper">
+                                <a class="forklare_knap" onclick="popup('Racer.mp4','Racer')" title="DnD begynder video">
+                                    <p>Race</p>
+                                </a>
+                                <a class="forklare_knap" onclick="popup('Hvad er stats.mp4','Stats')" title="DnD begynder video">
+                                    <p>Stats</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pink_bagrund">
+            <div class="stop_early">
+                <h2 class="content_overskrift">Sådan laver du dine stats</h2>
+                <div class="divider">
+                    <div class="main_content">
+                        <div class="main_text">
+                            <p>For at få sine stats kaster man terninger. En standard metode kan være at kaste fire 6 sidet terninger(D6) og derefter fjerne den laveste terning fra puljen. Dette gentager du for hver af de seks stats du har. Spørg din DM om I spiller med faste stats eller andre regler.</p>
+                        </div>
+                        <div class="forviret">
+                            <h3 class="forklare_overskrift">Forklaring</h3>
+                            <div class="forklarings_knapper">
+                                <a class="forklare_knap" onclick="popup('Sådan laver du dine stats.mp4','Sådan laver du dine stats')" title="DnD begynder video">
+                                    <p>Sådan laver du dine stats</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images">
+                        <video src="forklarings_videoer/terning1.6.mp4" autoplay muted loop title="Din DnD tergning kast for nybegyndere"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section >
+            <div class="stop_early">
+                <h2 class="content_overskrift">Armor og våben</h2>
+                <div class="divider">
+                    <div class="images">
+                        <img src="img/amor_weapon.png" alt="Din DnD guide armor og våben">
+                    </div>
+                    <div class="main_content">
+                        <div class="main_text">
+                            <p>I DnD har hver class specifikke typer våben og rustning tildelt. Kig under “Class” for at se dine specifikke valgmuligheder. Under spillet kan jeres DM vælge at give jer muligheden for at få nye våben og rustninger. <br>Er du i tvivl, så spørg din DM.</p>
+                        </div>
+                        <div class="forviret">
+                            <h3 class="forklare_overskrift">Forklaring</h3>
+                            <div class="forklarings_knapper">
+                                <a class="forklare_knap" onclick="popup('Rustning_0g_våben.mov','Rustning og våben')" title="DnD begynder video">
+                                    <p>Rustning og våben</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="pink_bagrund">
+            <div class="stop_early">
+                <h2 class="content_overskrift">Magi og actions</h2>
+                <div class="divider">
+                    <div class="main_content">
+                        <div class="main_text">
+                            <p>Magi og fysiske handlinger fungerer forskelligt. Magi har begrænset brug igennem “spellslots” som repræsenterer det antal gange du kan bruge en bestemt type magi. Det er en smule avanceret i starten, hvor fysiske handlinger er lettere at forstå. <br><br> Fysiske handlinger har også et bestemt antal gange man kan bruge. Dette antal står som regel i ( ) efter navnet på handlingen. <br>Det anbefales at få hjælp hvis det er dit første spil</p>
+                        </div>
+                        <div class="forviret">
+                            <h3 class="forklare_overskrift">Forklaring</h3>
+                            <div class="forklarings_knapper">
+                                <a class="forklare_knap" onclick="popup('Angreb.mp4','Angreb')" title="DnD begynder video">
+                                    <p>Angreb</p>
+                                </a><a class="forklare_knap" onclick="popup('spellslots.mp4','Magi & Spellslots')" title="DnD begynder video">
+                                    <p>Magi & Spellslots</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images">
+                        <img src="img/magi.webp" alt="Din DnD guide magi og actions">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Main content -->
+
+    <!-- Videre knapper -->
+    <main class="pink_bagrund knap">
+        <a href="index.html" title="Din DnD start guide">
+            <p>< Tilbage til start</p>
+        </a>
+        <a href="Spilleside.html" title="Din DnD spilside">
+              <p>Nu skal Vi spille DnD! ></p>
+        </a>
+    </main>
+    <!-- Videre knapper -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="stop footer_content">
+            <div class="SoMe_iconer">
+                <a href="https://discord.gg/UKwvQ8Txv5" title="Din DnD discord"><img src="iconer/discord.png" alt="Din DnD discord ikon for nybegyndere til DnD guiden"></a>
+                <a href="https://www.facebook.com/groups/367769165851364" title="Din DnD facebook"><img src="iconer/facebook.png" alt="Din DnD facebook ikon for nybegyndere til DnD guiden"></a>
+                <a href="https://www.instagram.com/dindndguide/" title="Din DnD instagram"><img src="iconer/instagram.png" alt="Din DnD instagram ikon for nybegyndere til DnD guiden"></a>
+            </div>
+    
+            <div class="footer_kontakt">
+                <h4>Kontakt os:</h4>
+                <ul>
+                    <li><img src="iconer/telephone.png" alt="Din DnD telefon ikon for nybegyndere til DnD guiden">12 23 45 67</li>
+                    <li><img src="iconer/email.png" alt="Din DnD mail ikon for nybegyndere til DnD guiden">Exempelmail@mail.com</li>
+                    <li><img src="iconer/location.png" alt="Din DnD adresse ikon for nybegyndere til DnD guiden">Nørgaardsvej 30, 2800 Lyngby</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p> &copy; 2024 Cph Business All rights served.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="script.js"> </script>
+</body>
+</html>

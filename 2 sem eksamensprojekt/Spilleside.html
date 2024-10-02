@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Din DnD er en begynder guide til Dungeons & Dragons. Her finder du en begyndervenlig DnD guide til nye spillere. Din DnD tilbyder en dansk DnD guide.">
+    <title>Din DnD Guide for nybegyndere - Spilleside</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <!-- Nav bar -->
+     <nav id="navbar">
+        <div class="navbar_indhold stop">
+            <div class="logo">
+                <a class="logo" href="index.html">
+                    <img src="Logo.png" alt="Din DnD guide - logo">
+                </a>
+            </div>
+            <div class="Nav_links">
+                <div class="nav_burgerbar_icon" onclick="chance_navbar()">
+                    <svg fill="currentColor" viewBox="0 0 512 512" title="Din DnD">
+                        <path id="navbar_icon" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </div>
+                <div id="nav_liste" class="nav_liste_box">
+                    <ul class="Nav_liste">
+                        <li><a href="index.html" title="Din DnD index side">Start</a></li>
+                        <li><a href="bygkarakter.html" title="Din DnD karakter guide side">Karakter guide</a></li>
+                        <li class="Current_nav"><a href="Spilleside.html" title="Din DnD spil side">Spil</a></li>
+                        <li><a href="voresvision.html" title="Din DnD vision side">Vores vision</a></li>
+                        <li><a href="kontakt.html" title="Din DnD kontakt side">kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Progressbar -->
+    <div id="progressbar" class="progressbar">
+        <div id="progress" class="filled"></div>
+    </div>
+    <!-- Progressbar -->
+    <!-- Nav bar -->
+
+    <!-- Header -->
+    <header class="stop header_underside">
+        <div class="headerimg_underside stop_early">
+            <h1>Din DnD Spilleside</h1>
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Main content -->
+    <main>
+        <section class="stop">
+            <h2 class="stop_early terning_overskrift">Terninger - Tryk for at rulle</h2>
+            <div class="terninger">
+                <div onclick="Rolldice('D4')" class="terning">
+                    <img id="D4dice" src="terninger/D4.png" alt="Din DnD guide terninger D4">
+                    <p id="D4">4</p>
+                    <p class="terning_navn">D4</p>
+                </div>
+                <div onclick="Rolldice('D6')" class="terning">
+                    <img id="D6dice" src="terninger/D6.png" alt="Din DnD guide terninger D6">
+                    <p id="D6">6</p>
+                    <p class="terning_navn">D6</p>
+
+                </div>
+                <div onclick="Rolldice('D8')" class="terning">
+                    <img id="D8dice" src="terninger/D8.png" alt="Din DnD guide terninger D8">
+                    <p id="D8">8</p>
+                    <p class="terning_navn">D8</p>
+                </div>
+                <div onclick="Rolldice('D10')" class="terning">
+                    <img id="D10dice" src="terninger/D10.png" alt="Din DnD guide terninger D10">
+                    <p id="D10">10</p>
+                    <p class="terning_navn">D10</p>
+                </div>
+                <div onclick="Rolldice('D12')" class="terning">
+                    <img id="D12dice" src="terninger/D12.png" alt="Din DnD guide terninger D12">
+                    <p id="D12">12</p>
+                    <p class="terning_navn">D12</p>
+                </div>
+                <div onclick="Rolldice('D20')" class="terning">
+                    <img id="D20dice" src="terninger/D20.png" alt="Din DnD guide terninger D20">
+                    <p id="D20">20</p>
+                    <p class="terning_navn">D20</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Karater Ark -->
+        <section class="stop_early center">
+            <div class="karakterark_wrapper">
+                <div class="karakterark_container">
+                <h1>Character Sheet - Karakter Ark</h1>
+                <div class="karakter_kasse">
+                    
+                    <div class="hp">
+                        <label for="HP" class="label hp">HP</label>
+                        <input type="number" id="HP" class="input-box save_data"> 
+            
+                        <label for="GP" class="label gp">Guld</label>
+                        <input type="number" id="GP" class="input-box save_data"> 
+                    </div>
+            
+                   
+                    
+                    <div class="liste">
+                        <label for="name" class="label">Navn</label>
+                        <input type="text" id="name" class="input-box save_data">
+            
+                        <label for="class" class="label">Class</label>
+                        <input type="text" id="class" class="input-box save_data">
+            
+                        <label for="race" class="label">Race</label>
+                        <input type="text" id="race" class="input-box save_data">
+                    </div>
+                </div>
+            
+               <div class="karakter_kasse info amor">
+                    <div class="input-wrapper">
+                        <label for="amor" class="label">Amor</label>
+                        <input type="number" id="amor" class="input-box save_data">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="initiative" class="label">Initiative</label>
+                        <input type="number" id="initiative" class="input-box save_data">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="speed" class="label">Speed</label>
+                        <input type="number" id="speed" class="input-box save_data">
+                    </div>
+                </div>   
+            
+                <div class="basic_stats_container">
+                    <div class="basic_stats_kasse ">
+                        <div class="basic_stats info">
+                            <div class="input-wrapper basic_stats">
+                            <label class="label">Styrke (Str)</label>
+                            <input type="text" id="Styrke1" class="input-box basic_stats big save_data">
+                            <input type="text" id="Styrke2" class="input-box basic_stats small save_data">
+                            </div>
+                        </div> 
+                    </div>
+                
+                    <div class="basic_stats_kasse ">
+                        <div class="basic_stats info">
+                            <div class="input-wrapper basic_stats">
+                            <label class="label">Fingerfærdighed (Dex)</label>
+                            <input type="text" id="Fingerfærdighed1" class="input-box basic_stats big save_data">
+                            <input type="text" id="Fingerfærdighed2" class="input-box basic_stats small save_data">
+                            </div>
+                        </div> 
+                    </div>
+                
+                    <div class="basic_stats_kasse ">
+                        <div class="basic_stats info">
+                            <div class="input-wrapper basic_stats">
+                            <label class="label">Udholdenhed (Con)</label>
+                            <input type="text" id="konstitution1" class="input-box basic_stats big save_data">
+                            <input type="text" id="konstitution2" class="input-box basic_stats small save_data">
+                            </div>
+                        </div> 
+                    </div>
+                
+                    <div class="basic_stats_kasse ">
+                        <div class="basic_stats info">
+                            <div class="input-wrapper basic_stats">
+                            <label class="label">Intelligens (Int)</label>
+                            <input type="text" id="Intelligens1" class="input-box basic_stats big save_data">
+                            <input type="text" id="Intelligens2" class="input-box basic_stats small save_data">
+                            </div>
+                        </div> 
+                    </div>
+                
+                    <div class="basic_stats_kasse ">
+                        <div class="basic_stats info">
+                            <div class="input-wrapper basic_stats">
+                            <label class="label">Visdom (Wis)</label>
+                            <input type="text" id="visdom1" class="input-box basic_stats big save_data">
+                            <input type="text" id="visdom2" class="input-box basic_stats small save_data">
+                            </div>
+                        </div> 
+                    </div>
+                
+                    <div class="basic_stats_kasse ">
+                        <div class="basic_stats info">
+                            <div class="input-wrapper basic_stats">
+                            <label class="label">Karisma (Cha)</label>
+                            <input type="text" id="karisma1" class="input-box basic_stats big save_data">
+                            <input type="text" id="karisma2" class="input-box basic_stats small save_data">
+                            </div>
+                        </div> 
+                    </div>
+            
+                 
+                </div>  
+                    <div class="attack_spellcasting">
+                        <div class="input-wrapper">
+                            <label class="label">NAME</label>
+                            <input type="text" id="atk_input_name1" class="input-box save_data">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label">ATK BONUS</label>
+                            <input id="atk_input_bonus1" class="input-box save_data">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label">DAMAGE/TYPE</label>
+                            <input type="text" id="atk_input_dmg1" class="input-box save_data">
+                        </div>
+                    </div> 
+                    <div class="attack_spellcasting">
+                        <div class="input-wrapper">
+                            <label class="label">NAME</label>
+                            <input type="text" id="atk_input_name2" class="input-box save_data">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label">ATK BONUS</label>
+                            <input id="atk_input_bonus2" class="input-box save_data">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label">DAMAGE/TYPE</label>
+                            <input type="text" id="atk_input_dmg2" class="input-box save_data">
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="container listen">
+            
+                    <div class="boks-container">
+                        <div id="circle1" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Acrobatics" class="skill-input-box save_data">
+                            <span class="fixed-text">Acrobatics (Dex)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle2" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Animali" class="skill-input-box save_data">
+                            <span class="fixed-text">Animal Handling (Wis)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle3" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Arcana" class="skill-input-box save_data">
+                            <span class="fixed-text">Arcana (Int)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle4" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Athletics" class="skill-input-box save_data">
+                            <span class="fixed-text">Athletics (Str)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle5" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Deception" class="skill-input-box save_data">
+                            <span class="fixed-text">Deception (Cha)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle6" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="History" class="skill-input-box save_data">
+                            <span class="fixed-text">History (Int)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle7" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Insight" class="skill-input-box save_data">
+                            <span class="fixed-text">Insight (Wis)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle8" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Intimidation" class="skill-input-box save_data">
+                            <span class="fixed-text">Intimidation (Cha)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle9" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Investigation" class="skill-input-box save_data">
+                            <span class="fixed-text">Investigation (Int)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle10" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Medicin" class="skill-input-box save_data">
+                            <span class="fixed-text">Medicin (Wis)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle11" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Nature" class="skill-input-box save_data">
+                            <span class="fixed-text">Nature (Int)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle12" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Perception" class="skill-input-box save_data">
+                            <span class="fixed-text">Perception (Wis)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle13" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Performance" class="skill-input-box save_data">
+                            <span class="fixed-text">Performance (Cha)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle14" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Persuation" class="skill-input-box save_data">
+                            <span class="fixed-text">Persuation (Cha)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle515" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Religion" class="skill-input-box save_data">
+                            <span class="fixed-text">Religion (Int)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle16" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Sleight" class="skill-input-box save_data">
+                            <span class="fixed-text">Sleight of Hand (Dex)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle17" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Stealth" class="skill-input-box save_data">
+                            <span class="fixed-text">Stealth (Dex)</span>
+                        </div>
+                    </div>
+                    <div class="boks-container">
+                        <div id="circle18" class="circle" onclick="this.classList.toggle('filled'), save_karaktarark_data()"></div>
+                        <div class="input-container">
+                            <input type="number" id="Survival" class="skill-input-box save_data">
+                            <span class="fixed-text">Survival (Wis)</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section> 
+        <!-- Karater Ark --> 
+
+        <section class="pink_bagrund">
+            <div class="stop_early spilside_bund">
+                <div class="spilside_top">
+                    <h2>Brug af Terninger:</h2>
+                    <div>
+                        <p>I DnD bliver terninger refereret som D20, D12, D8 osv. D for “dice” og tallet for hvor mange sider terningen har. Der er 7 terninger i alt. Man bruger ikke alle terninger lige meget - ofte er det din class der viser hvilke terninger du skal bruge mest.</p>
+                        <p>Under spillet vil du komme til at kende den famøse D20. D20 terningen er den som I skal kaste for at finde ud af om en af jer er listig nok til at stjæle en pung - eller endnu vigtigere - om du rammer fjenden med dit sværd!</p>
+                    </div>
+                </div>
+
+                <div class="spilside_buttom">
+                    <div class="Buttom_img">
+                        <img src="img/how_to_play.webp" alt="Din DnD guide sådan spiller du">
+                    </div>
+                    <div class="Buttom_tekst">
+                        <h2>DM vs. dig:</h2>
+                        <p>Se på jeres DM som en altbestemmende dommer. Det er jeres DM som bestemmer spillereglerne, og det er dem som laver jeres historie. Derfor er det altid jeres DM I skal gå til hvis der er noget I er i tvivl om. Det er desuden en usagt regel at spillerne skal have snacks med til DM. 
+                            <br><br>
+                            Din rolle som spiller er ret simpel. Det er DIG og dine venner der skal give DM'ens historie fødder at gå på. Det er jer som er hovedpersonerne.
+                            <br><br>
+                            HUSK der er kun én regel! Ha' det SJOVT!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Main content -->
+
+    <!-- Videre knapper -->
+    <main class="pink_bagrund knap">
+        <a href="bygkarakter.html">
+            <p>< Karakter guide</p>
+        </a>
+        <a href="voresvision.html">
+            <p>Vores vision ></p>
+        </a>
+        <a href="kontakt.html">
+            <p>Kontakt os >></p>
+        </a>
+    </main>
+    <!-- Videre knapper -->
+    
+    <!-- Footer -->
+    <footer>
+        <div class="stop footer_content">
+            <div class="SoMe_iconer">
+                <a href="https://discord.gg/UKwvQ8Txv5" title="Din DnD discord"><img src="iconer/discord.png" alt="Din DnD discord ikon for nybegyndere til DnD guiden"></a>
+                <a href="https://www.facebook.com/groups/367769165851364" title="Din DnD facebook"><img src="iconer/facebook.png" alt="Din DnD facebook ikon for nybegyndere til DnD guiden"></a>
+                <a href="https://www.instagram.com/dindndguide/" title="Din DnD instagram"><img src="iconer/instagram.png" alt="Din DnD instagram ikon for nybegyndere til DnD guiden"></a>
+            </div>
+    
+            <div class="footer_kontakt">
+                <h4>Kontakt os:</h4>
+                <ul>
+                    <li><img src="iconer/telephone.png" alt="Din DnD telefon ikon for nybegyndere til DnD guiden">12 23 45 67</li>
+                    <li><img src="iconer/email.png" alt="Din DnD mail ikon for nybegyndere til DnD guiden">Exempelmail@mail.com</li>
+                    <li><img src="iconer/location.png" alt="Din DnD adresse ikon for nybegyndere til DnD guiden">Nørgaardsvej 30, 2800 Lyngby</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p> &copy; 2024 Cph Business All rights served.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+    
+    <script src="script.js"></script>
+</body>
+</html>
