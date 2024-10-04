@@ -29,17 +29,17 @@ document.querySelectorAll(".read_more").forEach(function(card) {
 
         current_card.classList.toggle("big_card");
         current_card.children[2].classList.toggle("hidden");
-        current_card.children[3].innerText  = "Close";
+        current_card.children[3].innerText  = "Luk";
 
         if (old_obj == current_card){
-            old_obj.children[3].innerText = "Read more";
+            old_obj.children[3].innerText = "Læs mere";
             old_obj = null;
         } 
         else{
             if (old_obj){
                 old_obj.classList.toggle("big_card");
                 old_obj.children[2].classList.toggle("hidden");
-                old_obj.children[3].innerText  = "Read more";
+                old_obj.children[3].innerText  = "Læs mere";
             }
 
             old_obj = current_card;
