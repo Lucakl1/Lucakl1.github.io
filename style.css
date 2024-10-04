@@ -187,31 +187,30 @@ header{
     max-width: 600px;
     flex-wrap: wrap;
 }
-.header div button{
+.header div a{
     background: var(--color_elements_pink);
     border-radius: 3px;
     cursor: pointer;
     padding: 15px 60px;
     transition: 0.5s;
+    text-decoration: none;
+    color: var(--Bright_text_color);
+    font-size: var(--text_size_standard);
+    font-weight: 600;
+    text-align: center;
 
     --margin_width: 7px;
     margin: var(--margin_width) 0 0 0;
     /* Animation duration delay iteration */
     animation: hop_animation 5s 5s 3;
 }
-.header div button:first-child{
+.header div a:first-child{
     background-color: var(--color_elements_blue);
     animation-delay: 4s;
 }
-.header div button:hover{
+.header div a:hover{
     transform: translate(0, calc(-1 * var(--margin_width)));
     margin: var(--margin_width) 0 0 0 !important; 
-}
-.header div button a{
-    text-decoration: none;
-    color: var(--Bright_text_color);
-    font-size: var(--text_size_standard);
-    font-weight: 600;
 }
 @keyframes hop_animation {
     0%
@@ -243,7 +242,7 @@ header{
     .header div{
         justify-content: center;
     }
-    .header div button{
+    .header div a{
         width: 80%;
     }
 }
