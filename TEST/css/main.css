@@ -422,3 +422,43 @@ body{
     }
 /* footer */
 
+@media screen and (min-width: 768px) {
+    body{
+        background: yellow;
+    }
+
+    /* Navbar */
+        header{
+            height: 10vh;
+            padding-bottom: 10vh;
+        }
+    /* Navbar */
+
+    /* first section */
+        .carousel-prev-icon, .carousel-next-icon{
+            filter: invert(1);
+        }
+        /* .carousel-control-next, .carousel-control-prev{
+            
+        } */
+        .carousel-item{
+            height: 80vw;
+        }
+        .carousel-item img{
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .kvote{
+            height: fit-content;
+            margin-top: -15%;
+            margin-left: -20%;
+            width: 80%;
+        }
+        h1{
+            font-size: 2em;
+            text-align: start;
+        }
+    /* first section */
+}
