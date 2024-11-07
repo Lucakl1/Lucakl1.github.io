@@ -130,7 +130,7 @@ nav{
     .navbar ul{
         cursor: pointer;
         transition: right 0.4s;
-        top: 140px;
+        top: 100px;
         right: -300px;
         position: absolute;
         flex-direction: column;
@@ -443,6 +443,11 @@ main{
 @media screen and (max-width: 700px){
     .big_card div div.custom_content{
         width: 75%;
+    }
+    .cards {
+        width: 100%;
+        overflow-x: auto; /* Use overflow-x for horizontal scrolling */
+        flex-wrap: nowrap; /* Prevent wrapping to enable horizontal scrolling */
     }
 }
 @media screen and (max-width: 550px){
