@@ -307,6 +307,7 @@ main{
     max-width: 1300px;
     padding-top: 200px;
     margin: 0 auto;
+    padding-bottom: 100px;
     background: var(--color_ontop);
 }
 .cards{
@@ -462,4 +463,49 @@ main{
     .big_card button{
         width: 80%;
     }
+}
+
+footer{
+    width: 100%;
+    background: var(--color_elements_blue);
+}
+
+.footer_kontakt{
+    padding: 40px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer_kontakt div{
+    display: flex;
+    flex-direction: column;
+}
+.footer_kontakt h4{
+    color: var(--Bright_text_color);
+    font-size: var(--text_size_overskrift);
+    font-family: var(--overskrift_font);
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+.footer_kontakt div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.footer_kontakt div svg{
+    width: 30px;
+    stroke: var(--Bright_text_color);
+    stroke-width: 2.2px;
+}
+.footer_kontakt div a, .footer_kontakt div p{
+    text-decoration: none;
+    color: var(--Bright_text_color);
+    font-family: var(--overskrift_font);
+    letter-spacing: 1.2px;
+    font-weight: 400;
 }
