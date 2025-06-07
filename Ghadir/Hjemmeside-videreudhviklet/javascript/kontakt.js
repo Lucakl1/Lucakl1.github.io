@@ -22,15 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
     // })
 });
 function activateSubmitButton() {
-        if(formIsFilled()) {
-            submitButton.classList.remove('disabled');
-        }
-        else {
-            if(submitButton.classList.contains('disabled')) return;
-            submitButton.classList.add('disabled');
-        }
+    const submitButton = document.getElementById("send-message");
+    if(formIsFilled()) {
+        submitButton.classList.remove('disabled');
     }
-console.log('test3');
+    else {
+        if(submitButton.classList.contains('disabled')) return;
+        submitButton.classList.add('disabled');
+    }
+}
+console.log('test4');
 function onRecaptchaSuccess() {
     if (formIsFilled()) {
         activateSubmitButton();
