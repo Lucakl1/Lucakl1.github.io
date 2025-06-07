@@ -23,12 +23,22 @@ document.addEventListener("DOMContentLoaded", () => {
         })
     })
 
+
     // const sammentygge = document.getElementById("send-message");
     // sammentygge.addEventListener('change', (event) => {
     //     event.preventDefault();
     //     activateSubmitButton();
     // })
 });
+function onRecaptchaSuccess() {
+    if (formIsFilled()) {
+        activateSubmitButton();
+    }
+}
+
+function onRecaptchaExpired() {
+    activateSubmitButton();
+}
 
 function formIsFilled() {
     const requiredFields = document.querySelectorAll('[required]');
