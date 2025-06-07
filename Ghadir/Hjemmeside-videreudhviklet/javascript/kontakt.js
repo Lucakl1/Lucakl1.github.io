@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //     activateSubmitButton();
     // })
 });
+console.log('test');
 function onRecaptchaSuccess() {
     if (formIsFilled()) {
         activateSubmitButton();
