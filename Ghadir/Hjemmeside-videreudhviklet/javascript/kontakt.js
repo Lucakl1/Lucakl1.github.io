@@ -6,15 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
         sendMail();
     })
 
-    function activateSubmitButton() {
-        if(formIsFilled()) {
-            submitButton.classList.remove('disabled');
-        }
-        else {
-            if(submitButton.classList.contains('disabled')) return;
-            submitButton.classList.add('disabled');
-        }
-    }
     const requiredFields = document.querySelectorAll('[required]');
     requiredFields.forEach(field => {
         field.addEventListener('change', (event) => {
@@ -30,7 +21,16 @@ document.addEventListener("DOMContentLoaded", () => {
     //     activateSubmitButton();
     // })
 });
-console.log('tes2');
+function activateSubmitButton() {
+        if(formIsFilled()) {
+            submitButton.classList.remove('disabled');
+        }
+        else {
+            if(submitButton.classList.contains('disabled')) return;
+            submitButton.classList.add('disabled');
+        }
+    }
+console.log('test3');
 function onRecaptchaSuccess() {
     if (formIsFilled()) {
         activateSubmitButton();
