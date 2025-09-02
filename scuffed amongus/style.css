@@ -1,0 +1,59 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body,html{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    background-color: rgb(84, 84, 84);
+}
+
+
+.players{
+    position: absolute;
+    margin: -75px 0 0 -75px;
+    top: 50%;
+    left: 50%;
+}
+.players img{
+    width: 150px;
+    position: absolute;
+    transition: left, top;
+    transition-duration: 0.1s;
+}
+
+.YouPlayer{
+    transition: none !important;
+    position: absolute;
+}
+
+.map{
+    overflow: hidden;
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.moveableMap{
+    width: 300%;
+    position: absolute;
+}
+
+.background{
+    width: 100%;
+    z-index: -1;
+}
+
+.background img{
+    width: 100%;
+}
