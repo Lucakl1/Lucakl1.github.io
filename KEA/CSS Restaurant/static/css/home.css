@@ -1,0 +1,44 @@
+@import "style.css";
+
+section {
+    padding-bottom: var(--standard-padding);
+
+    figure {
+        img{
+            border-radius: var(--standard-padding);
+            width: 100%;
+        }
+
+        @media screen and (min-width: 768px) {
+            & {
+                margin-left: var(--standard-padding);
+                width: 384px;
+                float: right;
+            }
+        }
+    }
+    
+    ul {
+        padding: var(--standard-padding) 0.2rem;
+        color: var(--ek-red);
+        list-style-type: none;
+        font-weight: 600;
+    }
+    
+    &.quote {
+        background: var(--gray);
+        border-radius: var(--standard-padding);
+        padding: var(--standard-padding);
+
+        footer {
+            margin-top: var(--standard-padding);
+            text-indent: 1rem;
+        }
+
+        @media screen and (min-width: 768px) {
+            & {
+                margin-left: var(--standard-padding);
+            }
+        }
+    }
+}

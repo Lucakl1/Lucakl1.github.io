@@ -1,0 +1,71 @@
+@import "style.css";
+
+section {
+    article {
+        display: block;
+        background: var(--main-color);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: var(--standard-padding);
+        position: relative;
+        height: fit-content;
+
+        figure {
+            img {
+                border-radius: var(--standard-padding);
+                width: 100%;
+            }
+
+            @media screen and (min-width: 768px) {
+                & {
+                    width: 320px;
+                    height: 213px;
+                    float: right;
+                    margin-left: 1rem;
+                }
+            }
+        }
+
+        section {
+            header {
+                text-align: center;
+                padding: 1rem;
+                color: var(--ek-blue);
+    
+                @media screen and (min-width: 768px) {
+                    & {
+                        text-align: left;
+                        padding-left: 0;
+                    }
+                }
+            }
+    
+            button {
+                background: var(--ek-red);
+                border-radius: var(--standard-padding);
+                border: 4px solid var(--menu-color);
+                padding: var(--standard-padding) 1rem;
+                color: var(--white);
+                margin-top: 1rem;
+                font-size: 1em;
+                font-weight: 600;
+            }
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        @media screen and (min-width: 1280px) {
+            & {
+                display: inline-block;
+                width: calc(50% - 1rem);
+                vertical-align: top;
+                margin-left: 0.4rem;
+                margin-right: 0.4rem;
+            }
+        }
+    }
+}

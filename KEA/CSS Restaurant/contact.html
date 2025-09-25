@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css resturant - Home</title>
+    <link rel="stylesheet" href="Static/css/contact.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant EK</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <figure>
+                <img src="static/img/map.jpg" alt="Ek Map">
+            </figure>
+            <address>
+                <div id="postal-address">
+                    <p>Guldbersgade 29N</p>
+                    <p>2200 Copenhagen</p>
+                </div>
+                <div>
+                    <p>Phone no.: <a href="tel:(+45) 20 83 53 70">20 83 53 70</a></p>
+                    <p>E-mail: <a href="mailto:info@restaurantek.dk">info@restaurantek.dk</a></p>
+                </div>
+            </address>
+            <form>
+                <fieldset>
+                    <legend>Contact form</legend>
+
+                    <div>
+                        <label for="name">Full name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone no.</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div>
+                        <label for="persons">Persons</label>
+                        <input type="number" id="persons" name="persons" required>
+                    </div>
+
+                    <div>
+                        <label for="datetime">Date and time</label>
+                        <input type="datetime-local" id="datetime" name="dateTime" required>
+                    </div>
+
+                    <div>
+                        <label for="further-information">Further information</label>
+                        <textarea name="furtherInformation" id="further-information" required></textarea>
+                    </div>
+                    
+                    <button type="submit">Send</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2021-2025 EK Development</p>
+    </footer>
+</body>
+</html>

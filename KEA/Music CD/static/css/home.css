@@ -1,0 +1,84 @@
+@import "style.css";
+
+main {
+    section {
+        max-width: 768px;
+        width: 100%;
+        margin: 0.5rem auto;
+
+        form {
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            gap: 0.5rem;
+
+            fieldset {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+
+                --label-width: 7rem;
+    
+                label {
+                    width: var(--label-width);
+                }
+
+                input {
+                    border: 1px solid grey;
+                    width: calc(100% - var(--label-width));
+
+                    &#year {
+                        width: calc(75% - var(--label-width));
+                    }
+                }
+            }
+
+            button {
+                border: 1px solid #222;
+                background: #ddd;
+                color: var(--color-main);
+                padding: 0.5rem;
+                align-self: flex-start;
+                border-radius: 0.2rem;
+            }
+        }
+
+        table {
+            width: 100%;
+            border: var(--color-main) solid 1px;
+
+            thead {
+                text-align: left;
+
+                tr {
+                    background: var(--color-main);
+                    color: var(--color-white);
+
+                    th {
+                        padding: 0.1rem 0.3rem;
+                    }
+                }
+            }
+            
+            tbody {
+                td {
+                    padding: 0.1rem 0.2rem;
+
+                    &:last-of-type {
+                        width: 30px;
+
+                        img {
+                            width: 100%;
+                            height:  auto;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
