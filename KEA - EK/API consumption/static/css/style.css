@@ -1,0 +1,139 @@
+@import "variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--text);
+    font-size: var(--text-size);
+    min-height: 100vh;
+    position: relative;
+    max-width: var(--max-width);
+    margin: 0 auto;
+
+    /* Footer height */
+    padding-bottom: 2rem;
+
+    > header {
+        padding: var(--standard-padding);
+        color: var(--white);
+        background: var(--color-menu-footer);
+    
+        h1 {
+            font-family: var(--title);
+            font-size: var(--title-size-h1);
+        }
+    }
+    
+    > nav {
+        padding: var(--standard-padding);
+        background: var(--color-submenu);
+        
+        ul {
+            display: flex;
+            flex-flow: column nowrap;
+            gap: var(--halv-padding);
+
+            a {
+                color: var(--white);
+                text-decoration: none;
+    
+                &#active_site {
+                    color: var(--color-active-link-color);
+                    text-decoration: underline;
+                }
+            }
+
+        }
+
+        @media (width >= 768px) {
+            & {
+                padding: var(--halv-padding) var(--standard-padding);
+                
+                ul {
+                    flex-flow: row wrap;
+                }
+            }
+        }
+    }
+
+    > footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        color: var(--white);
+        background: var(--color-menu-footer);
+        padding: var(--halv-padding);
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    /* Template */
+    #movies-list {
+        padding: var(--standard-padding);
+        
+        article {
+            border-radius: 15px;
+            overflow: hidden;
+            border: var(--color-rose) 1px solid;
+            margin-bottom: 1rem;
+
+            header {
+                background: var(--color-rose);
+                padding: var(--halv-padding) var(--standard-padding);
+            
+                h2 {
+                    font-size: var(--title-size-h2);
+                    color: var(--white);
+                }
+
+            }
+
+            section {
+                display: flex;
+                flex-flow: column nowrap;
+                align-items: center;
+                padding-top: 0.2rem;
+
+                picture {
+                    height: 330px;
+                }
+
+                div {
+                    padding: var(--standard-padding);
+                }
+
+                p{
+                    margin-bottom: 1rem;
+                }
+
+                li {
+                    font-weight: 600;
+                    
+                    span {
+                        font-weight: 400;
+                    }
+                }
+
+                @media (width >= 768px) {
+                    & {
+                        padding: 0;
+                        align-items: flex-start;
+                        flex-flow: row nowrap;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

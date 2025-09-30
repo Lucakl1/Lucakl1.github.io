@@ -9,4 +9,10 @@
     --black: #000;
 
     --standard-padding: 0.5rem;
+
+    --max-width: 1280px;
+
+    --wide-screen-menu-picture-width: 320px;
+    --wide-screen-menu-picture-height: 213px;
+    --wide-screen-home-picture-height: 384px;
 }

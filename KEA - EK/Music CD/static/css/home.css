@@ -66,6 +66,7 @@ main {
 
                     &:last-of-type {
                         width: 30px;
+                        cursor: pointer;
 
                         img {
                             width: 100%;
