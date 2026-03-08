@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap&text=LucaKlæø');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap&text=WebdvloprLucaKæøTkngiEtsUOmAjhCPHBDX()SMRNFGy');
+
+:root {
+    /* Old Blue */
+    --color-main: #fbfaf9;
+    --color-box: #f6f5f3;
+    --color-text: #7c736a;
+    --color-text-overskrift: #232323;
+    --color-accent: #3c83f6;
+    --color-accent-background: hsl(40, 14%, 94%);
+    --color-accent-gradient: linear-gradient(135deg, #3c83f6 0%, #2b4bee 100%);
+
+    /* Orange */
+    --color-main: #faf9f7;
+    --color-box: #f0ede9;
+    --color-text: #6b6258;
+    --color-text-overskrift: #2a2623;
+    --color-accent: #c87f3a;
+    --color-accent-background: #f7efe6;
+    --color-accent-gradient: linear-gradient(135deg, #c87f3a 0%, #a85f22 100%);
+
+    /* Green */
+    --color-main: #ffffff;
+    --color-box: #f2f7f4;
+    --color-text: #6b7280;
+    --color-text-overskrift: #0f172a;
+    --color-accent: #22c55e;
+    --color-accent-background: #dcfce7;
+    --color-accent-gradient: linear-gradient(135deg, #22c55e 0%, #15803d 100%);
+
+    /* Blue */
+    --color-main: #f8fbff;
+    --color-box: #eef3f9;
+    --color-box-hover: #e4f0ff;
+    --color-text: #5b6b7a;
+    --color-text-overskrift: #1e293b;
+    --color-accent: #3c83f6;
+    --color-accent-background: #e8f1ff;
+    --color-accent-gradient: linear-gradient(135deg, #3c83f6 0%, #2b4bee 100%);
+
+    --font-main: "Lato", sans-serif;
+    --font-heading: "Inter", sans-serif
+}

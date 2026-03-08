@@ -1,0 +1,2 @@
+lato https://fonts.google.com/specimen/Lato 	text
+inter https://fonts.google.com/specimen/Inter 	overskrift
