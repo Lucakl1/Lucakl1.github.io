@@ -1,0 +1,132 @@
+:root{
+    --color-black: #000000;
+    --color-white: #fffdfa;
+    --color-secondary-white: #F4F5EB;
+    --color-header-footer: #e7e7de;
+    --color-accent-dark: #054346;
+    --color-accent-cta: #006635;
+    --color-cta-text: #ffffff;
+
+    --font-title: Seravek, Gill Sans Nova, Ubuntu, Calibri, DejaVu Sans, source-sans-pro, sans-serif;
+    --font-main: verdana, system-ui, sans-serif;
+    
+    --font-size-h1: clamp(1.6rem, 4vw, 2.5rem);
+    --font-size-h2: clamp(1.3rem, 2.5vw, 2.2rem);
+    --font-size-h3: clamp(1.2rem, 2vw, 2rem);
+    --font-size-h4: clamp(1.1rem, 2vw, 1.9rem);
+    --font-size-h5: clamp(1.1rem, 2vw, 1.3rem);
+    --font-size-h6: clamp(0.9rem, 2vw, 1.2rem);
+    --font-size-p: clamp(0.8rem, 2vw, 0.9rem);
+    --font-size-a: clamp(0.8rem, 2vw, 0.9rem);
+    
+    /* Custom Fonts */
+    --font-size-hero-h1: clamp(2rem, 8vw, 8rem);
+    --font-size-cart-h2: clamp(1.1rem, 2vw, 2rem);
+    --font-size-cart-h4: clamp(0.8rem, 2vw, 0.9rem);
+    --font-size-cart-p: clamp(1.1rem, 2vw, 1.9rem);
+    --font-size-label: clamp(0.9rem, 2vw, 1.2rem);
+
+    /* Font Weights */
+    --font-weight-bold: 800;
+    --font-weight-semibold: 600;
+    --font-weight-regular: 400;
+    --font-weight-light: 200;
+
+    --border-button: solid 1px var(--color-accent-dark);
+    --border-cta: solid 1px var(--color-accent-cta);
+    --border-radius: 1.2rem;
+    
+    /* Custom - White spaces */
+    --padding-titles: 1.2rem 0 0.8rem 0;
+    --padding-li: 0.6rem 0;
+    --padding-cta-button: 0.6rem 2.4rem;
+    --margin-top-fotter: 2rem;
+    
+    /* General - White spaces */
+    --gap: 1rem;
+    @media (min-width: 768px) {--gap: 2rem;}
+    
+    --gap-small: 0.5rem;
+    @media (min-width: 980px) {--gap-small: 1rem;}
+    
+    --padding: 1rem;
+    @media (min-width: 768px) {--padding: 2rem;}
+    
+    --padding-small: 0.5rem;
+    @media (min-width: 980px) {--padding-small: 1rem;}
+    
+    --padding-button: 0.5rem;
+    
+    --margin: 1rem;
+    @media (min-width: 768px) {--margin: 2rem;}
+    
+    --marign-small: 0.5rem;
+    @media (min-width: 980px) {--marign-small: 1rem;}
+    
+    /* Max widths / Break points */
+    --max-width-form: 400px;
+    --max-width-form-big: 700px;
+    --max-width-text: 768px;
+    --max-width-break-point: 1440px;
+
+    --center-with-margin: 0 auto;
+
+    --width-full: 100%;
+    --width-half: 50%;
+    --height-full: 100%;
+    --height-half: 50%;
+
+    /* Break points used in this project 
+    320 Phone -> 450px
+    450 Tablet -> 768px
+    768 Big tablet / Small desktop -> 1280px
+    1280 Desktop -> 1440px
+    */
+    
+    /* Images and px messures */
+
+    /* navbar */
+    --search-bar: 150px;
+    @media (min-width: 980px) {--search-bar: 250px;}
+    
+    --search-img-height: 50px;
+    --search-img-width: 50px;
+
+    --burger-menu-icon-height: 32px;
+    --burger-menu-icon-width: 32px;
+
+    --profile-modal-width: 225px;
+    
+    --max-logo-width: 200px;
+    --search-height: 500px;
+    /* navbar */
+
+    /* cart */
+    --cart-img-width: 250px;
+    --cart-img-height: 250px;
+    
+    --checkout-img-height: 50px;
+    --checkout-img-width: 50px;
+    /* cart */
+
+    /* Product img */
+    --card-height: 200px;
+    @media (min-width: 768px) {--card-height: 250px;}
+
+    --scroll-card-width: 75vw;
+    @media (min-width: 768px) {--scroll-card-width: 40vw;}
+    @media (min-width: 1024px) {--scroll-card-width: 330px;}
+
+    --scroll-card-height: 480px;
+     @media (min-width: 768px) {--scroll-card-height: 480px;}
+
+
+    /* icon img */
+    --icon-height: 39px;
+    --icon-width: 39px;
+
+    /* Other */
+    --transition-time: 0.5s;
+
+    
+}

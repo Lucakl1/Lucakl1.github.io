@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="shortcut icon" href="static/icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="static/css/home.css">
+    <script src="static/js/navbar.js" type="module"></script>
+    <script src="static/js/search.js" type="module"></script>
+    <script src="static/js/featuredProduct.js" type="module"></script>
+    <script src="static/js/horizontalScroll.js" type="module"></script>
+    <script src="static/js/welcomeMessage.js" type="module"></script>
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="static/images/logoDesk.svg">
+                    <img loading="lazy" src="static/images/logoMobile.svg" alt="Example image">
+                </picture>
+            </a>
+            <div class="navPhoneOnly">
+                <a href="pages/cart.html?dynamicBreadcrume=Cart" title="Cart" class="cartPhoneOnly">
+                    <img src="static/icons/cart.svg" alt="Your cart" loading="lazy">
+                </a>
+                <button id="burgerMenu" title="Menu" type="button">
+                    <img src="static/icons/burger.svg" alt="Menu" loading="lazy">
+                </button>
+            </div>
+            <ul class="navMain">
+                <li><a href="pages/shopCategory.html?category=Jewelery&dynamicBreadcrume=Jewelery" title="Jewelry"><strong>Jewelry</strong></a></li>
+                <li><a href="pages/shopCategory.html?category=Women's clothing&dynamicBreadcrume=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                <li><a href="pages/shopCategory.html?category=Men's clothing&dynamicBreadcrume=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                <li><a href="pages/shopCategory.html?category=Electronics&dynamicBreadcrume=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+            </ul>
+            <ul class="navUtility">
+                <li class="navSearch">
+                    <form id="navSearch">
+                        <div>
+                            <input type="search" placeholder="Search" id="searchProducts">
+                            <button type="submit">
+                                <picture>
+                                    <img src="static/icons/search.svg" alt="search" loading="lazy">
+                                </picture>
+                            </button>
+                        </div>
+                        <ul>
+
+                        </ul>
+                        <template>
+                            <li>
+                                <picture>
+                                    <a href="">
+                                        <img src="" alt="" loading="lazy">
+                                    </a>
+                                </picture>
+                                <div>
+                                    <h2>
+                                        <a href=""></a>
+                                    </h2>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </template>
+                    </form>
+                </li>
+                <li>
+                    <a href="pages/cart.html?dynamicBreadcrume=Cart" title="Cart">
+                        <img src="static/icons/cart.svg" alt="Your cart" loading="lazy">
+                    </a>
+                </li>
+                <li class="profileMenu">
+                    <button title="Profile">
+                        <img src="static/icons/profile.svg" alt="Your profile" loading="lazy">
+                    </button>
+                    <div>
+                        <p>You are not logged in</p>
+                        <div>
+                            <a href="pages/login.html">Log in</a>
+                            <a href="pages/signup.html">Sign up</a>
+                        </div>
+                        <template>
+                            <p>Hi <span class="userName"></span></p>
+                            
+                            <div>
+                                <button id="logout">Log out</button>
+                            </div>
+                        </template>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <h1>Trendsetting</h1>
+        <picture>
+            <source media="(min-width: 768px)" srcset="static/images/heroDesk.png">
+            <img src="static/images/heroMobile.png" alt="Example image" loading="lazy">
+        </picture>
+    </header>
+    
+    <main>
+        <section class="featuredProduct" id="featuredProduct">
+            <picture>
+                <img src="" alt="Product image" loading="lazy">
+            </picture>
+            <div>
+                <header>
+                    <h2 class="productName"></h2>
+                </header>
+                <div>
+                    <p class="productDescription"></p>
+                    <p class="productPrice"></p>
+                    <a href="">SEE PRODUCT</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="sectionHorizontalProductsScroll">
+            <header>
+                <h2>Our top products</h2>
+            </header>
+            <ul class="horizontalProducktScroll" scroll-category="electronics, men's clothing">
+
+                <template>
+                    <li>
+                        <article>
+                            <picture>
+                                <img src="" alt="" loading="lazy">
+                            </picture>
+                      <div>
+                        <header>
+                            <h3 class="productName"></h3>
+                        </header>
+                        <p class="productPrice"></p>
+                        <a href="" class="productLink">SEE PRODUCT INFO</a>
+                        <button class="addToCart"><img src="static/icons/shoppingBagAdd.svg" alt="" loading="lazy"></button>
+                    </div>
+                        </article>
+                    </li>
+                </template>
+            </ul>
+            <a class="seeProducts" href="pages/shop.html?dynamicBreadcrume=All products">SEE PRODUCTS</a>
+        </section>
+
+        <section class="forgotLogin removeOnLogin">
+            <div>
+                <header>
+                    <h2>Already a member?</h2>
+                </header>
+                <p>Log ind and we will save your personal cart!</p>
+                <a href="pages/login.html">LOGIN</a>
+            </div>
+        </section>
+
+        <section class="sectionHorizontalProductsScroll">
+            <header>
+                <h2>Everybody deserves something ekstra</h2>
+            </header>
+            <ul class="horizontalProducktScroll" scroll-category="jewelery">
+
+                <template>
+                    <li>
+                        <article>
+                            <picture>
+                                <img src="" alt="" loading="lazy">
+                            </picture>
+                      <div>
+                        <header>
+                            <h3 class="productName"></h3>
+                        </header>
+                        <p class="productPrice"></p>
+                        <a href="" class="productLink">SEE PRODUCT INFO</a>
+                        <button class="addToCart"><img src="static/icons/shoppingBagAdd.svg" alt="" loading="lazy"></button>
+                    </div>
+                        </article>
+                    </li>
+                </template>
+            </ul>
+            <a class="seeProducts" href="pages/shopCategory.html?category=Jewelery&dynamicBreadcrume=Jewelery">SEE ALL OUR JEWLERY</a>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <section id="trendsettingName">
+                <p><a href="index.html">Trendsetting Publishing, Inc.</a></p>
+            </section>
+            <section id="socialIcons">
+                <a href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZYyXvhYDGvELzYoXYpPLMg.png" target="_blank"><img src="static/icons/xLogo.svg" alt="X icon" loading="lazy"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="static/icons/linkedinLogo.svg" alt="Linkedin icon" loading="lazy"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="static/icons/facebookLogo.svg" alt="Facebook icon" loading="lazy"></a>
+            </section>
+            <section id="policies">
+                <p><a href="pages/aboutUs.html">About us</a></p>
+                <p><a href="pages/privacyPolicy.html">Privacy Policy</a></p>
+                <p><a href="pages/termsOfService.html">Tearms of Service</a></p>
+                <p><a href="pages/cookiePolicy.html">Cookie Policy</a></p>
+            </section>
+            <section id="categories">
+                <ul class="footerMain">
+                    <li><a href="pages/shopCategory.html?category=Jewelry" title="Jewelry"><strong>Jewelry</strong></a></li>
+                    <li><a href="pages/shopCategory.html?category=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                    <li><a href="pages/shopCategory.html?category=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                    <li><a href="pages/shopCategory.html?category=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+                </ul>
+            </section>
+            <p class="footerBottom">&copy; 2025 Trendsetting</p>
+        </div>
+    </footer>
+    
+    <dialog class="modalMessage">
+        <header>
+            <h2></h2>
+            <button type="button" class="close">&#x2715;</button>
+        </header>
+        <p></p>
+    </dialog>
+</body>
+</html>

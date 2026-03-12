@@ -1,0 +1,155 @@
+@import "styles.css";
+@import "checkout.css";
+@import "modal.css";
+
+body {
+  > header {
+    padding: var(--padding);
+    max-width: var(--max-width-break-point);
+    margin: var(--center-with-margin);
+  }
+
+  main {
+    .cartProducts {
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      justify-content: center;
+
+      .productImg {
+        width: var(--cart-img-width);
+        height: var(--cart-img-height);
+        object-fit: contain;
+
+        background-color: var(--color-white);
+        border-radius: var(--border-radius);
+        padding: var(--padding-small);
+      }
+
+      li {
+
+        article {
+          background-color: var(--color-secondary-white);
+          border-radius: var(--border-radius);
+          padding: var(--padding);
+          display: flex;
+          flex-direction: column;
+          gap: var(--gap);
+          max-width: var(--max-width-form);
+          margin: var(--center-with-margin);
+
+          .sec2 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--gap-small);
+
+            header h2 {
+              font-size: var(--font-size-cart-h2);
+              font-weight: var(--font-weight-semibold);
+            }
+
+            .amountControls {
+              width: var(--width-full);
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: var(--gap-small);
+              font-size: var(--font-size-p);
+
+              > div {
+                display: inline-flex;
+                align-items: center;
+                gap: var(--gap-small);
+                background-color: var(--color-white);
+                border-radius: var(--border-radius);
+              }
+
+              .decreaseAmount {
+                font-size: var(--font-size-p);
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                padding: var(--padding-small);
+                border-radius: var(--border-radius);
+              }
+            
+              .increaseAmount {
+                font-size: var(--font-size-p);
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                padding: var(--padding-small);
+                border-radius: var(--border-radius);
+              }
+            }
+
+            p {
+              font-size: var(--font-size-p);
+            }
+
+            .productTotalPrice {
+              font-size: var(--font-size-p);
+              text-decoration: underline;
+              width: var(--width-full);
+              text-align: right;
+              font-weight: var(--font-weight-bold);
+              margin-top: var(--gap-small);
+            }
+          }
+        }
+
+        article .sec1 button {
+          background-color: transparent;
+        }
+
+        @media (min-width: 768px) {
+          article {
+            max-width: var(--max-width-form-big);
+            display: flex;
+            flex-direction: row;
+
+            .sec1 {
+              display: flex;
+              flex-direction: column;
+              width: var(--width-half);
+
+              button {
+                text-align: left;
+                border: none;
+                cursor: pointer;
+                padding: var(--padding-small);
+                border-radius: var(--border-radius);
+              }
+            }
+
+            .sec2 {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              width: var(--width-half);
+            }
+          }
+        }
+      }
+
+      .checkout {
+        cursor: pointer;
+        margin: var(--center-with-margin);
+        background-color: var(--color-accent-cta);
+        border-radius: var(--border-radius);
+        padding: var(--padding-cta-button);
+        color: var(--color-cta-text);
+        font-size: var(--font-size-a);
+        width: fit-content;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .checkoutProductsForm {
+        display: flex;
+        flex-direction: row;
+      }
+    }
+  }
+}

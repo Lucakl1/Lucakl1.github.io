@@ -1,0 +1,136 @@
+@import "styles.css";
+@import "horizontalScroll.css";
+@import "modal.css";
+
+body {
+    > header {
+        padding: var(--padding);
+        max-width: var(--max-width-break-point);
+        margin: var(--center-with-margin);
+
+        
+    }
+    
+    main {
+    
+        .categoryProducts {
+            width: var(--width-full);
+            display: grid;
+            gap: var(--gap);
+            grid-template-columns: 1fr;
+            
+            @media (min-width: 450px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            @media (min-width: 980px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            
+            @media (min-width: 980px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            
+            @media (min-width: 1280px) {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+    
+            article {
+                display: flex;
+                flex-flow: column;
+                align-items: center; 
+                gap: var(--gap);
+                width: var(--width-full);
+                background-color: var(--color-secondary-white);
+                border-radius: var(--border-radius);
+                color: var(--color-accent-dark);
+                padding: var(--padding);
+                filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+
+                picture {
+                    width: var(--width-full);
+                    height: var(--card-height);
+                    display: block;
+                    
+                    padding: var(--padding-small);
+                    border-radius: var(--border-radius);
+                    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+
+                    img {
+                        width: var(--width-full);
+                        height:var(--height-full);
+                        object-fit: contain;
+                    }
+                }
+
+                > div {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: auto;
+                    grid-template-areas: 
+                    "header header header"
+                    "price price price"
+                    "link link link"
+                    "addToCart addToCart addToCart"
+                    ;
+                    width: var(--width-full);
+
+                    header {
+                        grid-area: header;
+
+                        h2 {
+                            font-weight: var(--font-weight-light);
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+                    }
+
+                    .productPrice {
+                        font-weight: var(--font-weight-bold);
+                        padding: var(--padding-titles);
+                        grid-area: price;
+                        font-size: var(--font-size-p);
+                    }
+
+                    .productLink {
+                        color: var(--color-accent-cta);
+                        font-weight: var(--font-weight-bold);
+                        grid-area: link;
+                        font-size: var(--font-size-a);
+                    }
+
+                    button {
+                        padding-top: var(--padding);
+                        grid-area: addToCart;
+                        place-self: end;
+                        background: none;
+                        cursor: pointer;
+
+                        > img {
+                            width: var(--icon-width);
+                            height: var(--icon-height);
+                        }
+                    }
+
+                    > div:first-child {
+                        flex-grow: 4;
+                    }
+                    
+                    > div:last-child {
+                        flex-grow: 1;
+                    }
+
+                    @media (min-width: 768px) {
+                        grid-template-areas: 
+                            "header header header"
+                            "price . ."
+                            "link link addToCart"
+                            ". . addToCart"
+                            ;
+                    }
+                }
+            }
+        }
+    }
+}

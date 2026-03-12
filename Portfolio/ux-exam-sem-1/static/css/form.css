@@ -1,0 +1,61 @@
+@import "styles.css";
+@import "modal.css";
+
+body main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: calc(var(--padding) * 3);
+
+    .formBox {
+        background-color: var(--color-secondary-white);
+        padding: var(--padding);
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        box-shadow: 12px 15px 44px -4px rgba(0,0,0,0.37);
+
+        h1 {
+            padding: var();
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+            max-width: var(--max-width-form);
+    
+            div {
+                display: flex;
+                flex-flow: column;
+
+                label {
+                    font-size: var(--font-size-label);
+                }
+    
+                input {
+                    border: var(--border-button);
+                    font: var(--font-size-p);
+                    padding: var(--padding-small);
+                    border-radius: var(--border-radius);
+                }
+            }
+
+            button {
+                cursor: pointer;
+                margin: var(--center-with-margin);
+                border: var(--border-cta);
+                color: var(--color-cta-text);
+                padding: var(--padding-cta-button);
+                border-radius: var(--border-radius);
+                background-color: var(--color-accent-cta);
+            }
+        }
+
+        a {
+            color: var(--color-accent-cta);
+        }
+    }
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="shortcut icon" href="../static/icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/cart.css">
+    <script src="../static/js/navbar.js" type="module"></script>
+    <script src="../static/js/search.js" type="module"></script>
+    <script src="../static/js/cartBuilder.js" type="module"></script>
+    <script src="../static/js/checkoutBuilder.js" type="module"></script>
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="../static/images/logoDesk.svg">
+                    <img loading="lazy" src="../static/images/logoMobile.svg" alt="Example image" loading="lazy">
+                </picture>
+            </a>
+            <div class="navPhoneOnly">
+                <a href="cart.html?dynamicBreadcrume=Cart" title="Cart">
+                    <img src="../static/icons/cart.svg" alt="Your cart" loading="lazy">
+                </a>
+                <button id="burgerMenu" title="Menu" type="button">
+                    <img src="../static/icons/burger.svg" alt="Menu" loading="lazy">
+                </button>
+            </div>
+            <ul class="navMain">
+                <li><a href="shopCategory.html?category=Jewelery&dynamicBreadcrume=Jewelery" title="Jewelry"><strong>Jewelry</strong></a></li>
+                <li><a href="shopCategory.html?category=Women's clothing&dynamicBreadcrume=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                <li><a href="shopCategory.html?category=Men's clothing&dynamicBreadcrume=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                <li><a href="shopCategory.html?category=Electronics&dynamicBreadcrume=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+            </ul>
+            <ul class="navUtility">
+                <li class="navSearch">
+                    <form id="navSearch">
+                        <div>
+                            <input type="search" placeholder="Search" id="searchProducts">
+                            <button type="submit">
+                                <picture>
+                                    <img src="../static/icons/search.svg" alt="search" loading="lazy">
+                                </picture>
+                            </button>
+                        </div>
+                        <ul>
+
+                        </ul>
+                        <template>
+                            <li>
+                                <picture>
+                                    <a href="">
+                                        <img src="" alt="" loading="lazy">
+                                    </a>
+                                </picture>
+                                <div>
+                                    <h2>
+                                        <a href=""></a>
+                                    </h2>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </template>
+                    </form>
+                </li>
+                <li>
+                    <a href="cart.html?dynamicBreadcrume=Cart" title="Cart">
+                        <img src="../static/icons/cart.svg" alt="Your cart" loading="lazy">
+                    </a>
+                </li>
+                <li class="profileMenu">
+                    <button title="Profile">
+                        <img src="../static/icons/profile.svg" alt="Your profile" loading="lazy">
+                    </button>
+                    <div>
+                        <p>You are not logged in</p>
+                        <div>
+                            <a href="login.html">Log in</a>
+                            <a href="signup.html">Sign up</a>
+                        </div>
+                        <template>
+                            <p>Hi <span class="userName"></span></p>
+                            
+                            <div>
+                                <button id="logout">Log out</button>
+                            </div>
+                        </template>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <p class="breadCrume"><a href="../index.html">Home</a> > <span class="dynamicBreadcrume"></span></p>
+    </nav>
+
+    <header>
+        <h1>Cart</h1>
+    </header>
+
+    <main>
+        <section class="cartProducts">
+            <ul>
+                <template>
+                    <li>
+                        <article>
+                            <div class="sec1">
+                                <picture>
+                                    <img class="productImg" src="" alt="">
+                                </picture>
+                                <button class="removeAmount">
+                                    <picture>
+                                        <img src="../static/icons/remove.svg" alt="Trashcan icon" aria-label="Delete item">
+                                    </picture>
+                                </button>
+                            </div>
+                            
+                            <div class="sec2">
+                                <header>
+                                    <h2 class="productName"><a href="" class="productLink"></a></h2>
+                                </header>
+                                <p>
+                                   Pr. item: <data class="productPrice" value=""></data>
+                                </p>      
+
+                                <div class="amountControls">
+                                    <p>Amount:</p>
+                                    <div>
+                                        <button class="decreaseAmount" aria-label="Decrease amount">&minus;</button>
+                                        <data class="productAmount" value=""></data>
+                                        <button class="increaseAmount" aria-label="Increase amount">&plus;</button>
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="productPriceTotal">
+                                    <data class="productTotalPrice" value=""></data>
+                                </div>
+                            </div>
+                        </article>
+                    </li>
+                </template>
+            </ul>
+
+            <p class="emptyCart hidden">Your card is empty.</p>
+            <button class="checkout" type="button">GO TO CHECKOUT</button>
+        </section>
+
+        <section class="checkoutProducts hidden">
+            <header>
+                <h2>Order checkout</h2>
+            </header>
+            <div class="checkoutProductsForm">
+                <section class="orderSummary">
+                    <header>
+                        <h3>Order summary</h3>
+                    </header>
+                    <ul>
+                        <template>
+                            <li>
+                                <article>
+                                    <picture>
+                                        <img class="productImg" src="" alt="">
+                                    </picture>
+                                    
+                                    <div>
+                                        <header>
+                                            <h4 class="productName"></h4>
+                                        </header>
+        
+                                        <data class="productPrice" value=""></data>
+    
+                                        <div>
+                                            <p>Amount:</p>
+                                            <data class="productAmount" value=""></data>
+                                        </div>
+                                        
+                                        <div class="productPriceTotal">
+                                            <p>Total:</p>
+                                            <data class="productTotalPrice" value=""></data>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
+                        </template>
+                        <li>
+                            <div class="allTotal">
+                                <p>Total:</p>
+                                <data class="allProductTotalPrice" value=""></data>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+    
+                <form class="checkoutForm">
+                    <fieldset class="delivery">
+                        <legend>Delivery address</legend>
+                        <div>
+                            <label for="deliveryName">Full name</label>
+                            <input name="deliveryName" type="text" id="deliveryName" placeholder="Full name" required>
+                        </div>
+                        <div>
+                            <label for="deliveryAddress">Address</label>
+                            <input name="deliveryAddress" type="text" id="deliveryAddress" placeholder="Street address" required>
+                        </div>
+                        <div>
+                            <label for="deliveryAddressExtra">Apartment, suite, etc.</label>
+                            <input name="deliveryAddressExtra" type="text" id="deliveryAddressExtra" placeholder="Apartment, suite, etc. (optional)">
+                        </div>
+                        <div>
+                            <label for="deliveryCity">City</label>
+                            <input name="deliveryCity" type="text" id="deliveryCity" placeholder="City" required>
+                        </div>
+                        <div>
+                            <label for="deliveryPostal">Postal code</label>
+                            <input name="deliveryPostal" type="text" id="deliveryPostal" placeholder="Postal code" required>
+                        </div>
+    
+                        <div class="addBillingAddressCheckbox">
+                            <label for="addBillingAddress">Use a different billing address</label>
+                            <input type="checkbox" name="addBillingAddress" id="addBillingAddress">
+                        </div>
+                    </fieldset>
+    
+                    <fieldset class="billing" hidden>
+                        <legend>Billing address</legend>
+                            <div>
+                                <label for="billingName">Full name</label>
+                                <input name="billingName" type="text" id="billingName" placeholder="Full name">
+                            </div>
+    
+                            <div>
+                                <label for="billingAddress">Address</label>
+                                <input name="billingAddress" type="text" id="billingAddress" placeholder="Street address">
+                            </div>
+    
+                            <div>
+                                <label for="billingAddressExtra">Apartment, suite, etc.</label>
+                                <input name="billingAddressExtra" type="text" id="billingAddressExtra" placeholder="Apartment, suite, etc. (optional)">
+                            </div>
+    
+                            <div>
+                                <label for="billingCity">City</label>
+                                <input name="billingCity" type="text" id="billingCity" placeholder="City">
+                            </div>
+    
+                            <div>
+                                <label for="billingPostal">Postal code</label>
+                                <input name="billingPostal" type="text" id="billingPostal" placeholder="Postal code">
+                            </div>                                     
+                    </fieldset>
+    
+                    <fieldset class="paymentMethod">
+                        <legend>Payment details</legend>                        
+                        <div>
+                            <label for="cardName">Name on card</label>
+                            <input name="cardName" id="cardName" type="text" placeholder="Name on card" required>
+                        </div>
+        
+                        <div>
+                            <label for="cardNumber">Card number</label>
+                            <input name="cardNumber" id="cardNumber" type="number" placeholder="xxxx xxxx xxxx xxxx" required>
+                        </div>
+        
+                        <div>
+                            <label for="cardExpiry">Expiration date (MM/YY)</label>
+                            <input name="cardExpiry" id="cardExpiry" type="number" placeholder="MM-YYYY" required>
+                        </div>
+        
+                        <div>
+                            <label for="cardCode">Security code</label>
+                            <input name="cardCode" id="cardCode" type="number" placeholder="CVV" required>
+                        </div>
+                    </fieldset>
+    
+                    <button class="placeOrder" type="submit">PLACE YOU ORDER</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <section id="trendsettingName">
+                <p><a href="../index.html">Trendsetting Publishing, Inc.</a></p>
+            </section>
+            <section id="socialIcons">
+                <a href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZYyXvhYDGvELzYoXYpPLMg.png" target="_blank"><img src="../static/icons/xLogo.svg" alt="X icon" loading="lazy"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="../static/icons/linkedinLogo.svg" alt="Linkedin icon" loading="lazy"></a>
+                <a href="https://miro.medium.com/v2/resize:fit:1400/0*7MV0mU64tNkPDX0B.jpg" target="_blank"><img src="../static/icons/facebookLogo.svg" alt="Facebook icon" loading="lazy"></a>
+            </section>
+            <section id="policies">
+                <p><a href="aboutUs.html">About us</a></p>
+                <p><a href="privacyPolicy.html">Privacy Policy</a></p>
+                <p><a href="termsOfService.html">Tearms of Service</a></p>
+                <p><a href="cookiePolicy.html">Cookie Policy</a></p>
+            </section>
+            <section id="categories">
+                <ul class="footerMain">
+                    <li><a href="shopCategory.html?category=Jewelry" title="Jewelry"><strong>Jewelry</strong></a></li>
+                    <li><a href="shopCategory.html?category=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                    <li><a href="shopCategory.html?category=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                    <li><a href="shopCategory.html?category=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+                </ul>
+            </section>
+            <p class="footerBottom">&copy; 2025 Trendsetting</p>
+        </div>
+    </footer>
+
+    <dialog class="modalMessage">
+        <header>
+            <h2></h2>
+            <button type="button" class="close">&#x2715;</button>
+        </header>
+        <p></p>
+    </dialog>
+</body>
+</html>

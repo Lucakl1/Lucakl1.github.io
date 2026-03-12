@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="shortcut icon" href="../static/icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/form.css">
+    <script src="../static/js/signup.js" type="module"></script>
+    <script src="../static/js/navbar.js" type="module"></script>
+    <script src="../static/js/search.js" type="module"></script>
+</head>
+<body>
+        <nav>
+        <div class="navigation">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="../static/images/logoDesk.svg">
+                    <img loading="lazy" src="../static/images/logoMobile.svg" alt="Example image" loading="lazy">
+                </picture>
+            </a>
+            <div class="navPhoneOnly">
+                <a href="cart.html?dynamicBreadcrume=Cart" title="Cart">
+                    <img src="../static/icons/cart.svg" alt="Your cart" loading="lazy">
+                </a>
+                <button id="burgerMenu" title="Menu" type="button">
+                    <img src="../static/icons/burger.svg" alt="Menu" loading="lazy">
+                </button>
+            </div>
+            <ul class="navMain">
+                <li><a href="shopCategory.html?category=Jewelery&dynamicBreadcrume=Jewelery" title="Jewelry"><strong>Jewelry</strong></a></li>
+                <li><a href="shopCategory.html?category=Women's clothing&dynamicBreadcrume=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                <li><a href="shopCategory.html?category=Men's clothing&dynamicBreadcrume=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                <li><a href="shopCategory.html?category=Electronics&dynamicBreadcrume=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+            </ul>
+            <ul class="navUtility">
+                <li class="navSearch">
+                    <form id="navSearch">
+                        <div>
+                            <input type="search" placeholder="Search" id="searchProducts">
+                            <button type="submit">
+                                <picture>
+                                    <img src="../static/icons/search.svg" alt="search" loading="lazy">
+                                </picture>
+                            </button>
+                        </div>
+                        <ul>
+
+                        </ul>
+                        <template>
+                            <li>
+                                <picture>
+                                    <a href="">
+                                        <img src="" alt="" loading="lazy">
+                                    </a>
+                                </picture>
+                                <div>
+                                    <h2>
+                                        <a href=""></a>
+                                    </h2>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </template>
+                    </form>
+                </li>
+                <li>
+                    <a href="cart.html?dynamicBreadcrume=Cart" title="Cart">
+                        <img src="../static/icons/cart.svg" alt="Your cart" loading="lazy">
+                    </a>
+                </li>
+                <li class="profileMenu">
+                    <button title="Profile">
+                        <img src="../static/icons/profile.svg" alt="Your profile" loading="lazy">
+                    </button>
+                    <div>
+                        <p>You are not logged in</p>
+                        <div>
+                            <a href="login.html">Log in</a>
+                            <a href="signup.html">Sign up</a>
+                        </div>
+                        <template>
+                            <p>Hi <span class="userName"></span></p>
+                            
+                            <div>
+                                <button id="logout">Log out</button>
+                            </div>
+                        </template>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="formBox">
+            <header>
+                <h1>Sign up</h1>
+            </header>
+            <form id="signupForm">
+                <div>
+                    <label for="txtFirstName">First name</label>
+                    <input type="text" id="txtFirstName" required>
+                </div>
+                <div>
+                    <label for="txtEmail">E-mail</label>
+                    <input type="email" id="txtEmail" pattern="[a-z0-9._%+\-]+@[a-z0-9.-]+\.[a-z]{2,}" required>
+                </div>
+                <div>
+                    <label for="txtPassword">Password</label>
+                    <input type="password" id="txtPassword" minlength="8" maxlength="20" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,20}" title="8-20 chars, 1 lowercase, 1 uppercase, 1 number, 1 special character" required>
+                </div>
+                <div>
+                    <label for="txtConfirmPassword">Confirm password</label>
+                    <input type="password" id="txtConfirmPassword" required>
+                </div>
+                <button type="submit">Sign up</button>
+            </form>
+            <p>
+                Already have an account? <a href="login.html">Log in!</a>
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <section id="trendsettingName">
+                <p><a href="../index.html">Trendsetting Publishing, Inc.</a></p>
+            </section>
+            <section id="socialIcons">
+                <a href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZYyXvhYDGvELzYoXYpPLMg.png" target="_blank"><img src="../static/icons/xLogo.svg" alt="X icon" loading="lazy"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="../static/icons/linkedinLogo.svg" alt="Linkedin icon" loading="lazy"></a>
+                <a href="https://miro.medium.com/v2/resize:fit:1400/0*7MV0mU64tNkPDX0B.jpg" target="_blank"><img src="../static/icons/facebookLogo.svg" alt="Facebook icon" loading="lazy"></a>
+            </section>
+            <section id="policies">
+                <p><a href="aboutUs.html">About us</a></p>
+                <p><a href="privacyPolicy.html">Privacy Policy</a></p>
+                <p><a href="termsOfService.html">Tearms of Service</a></p>
+                <p><a href="cookiePolicy.html">Cookie Policy</a></p>
+            </section>
+            <section id="categories">
+                <ul class="footerMain">
+                    <li><a href="shopCategory.html?category=Jewelry" title="Jewelry"><strong>Jewelry</strong></a></li>
+                    <li><a href="shopCategory.html?category=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                    <li><a href="shopCategory.html?category=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                    <li><a href="shopCategory.html?category=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+                </ul>
+            </section>
+            <p class="footerBottom">&copy; 2025 Trendsetting</p>
+        </div>
+    </footer>
+
+    <dialog class="modalMessage">
+        <header>
+            <h2></h2>
+            <button type="button" class="close">&#x2715;</button>
+        </header>
+        <p></p>
+    </dialog>
+</body>
+</html>

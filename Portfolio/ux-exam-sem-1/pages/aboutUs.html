@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="../static/icons/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/infoPages.css">
+    <script src="../static/js/navbar.js" type="module"></script>
+    <script src="../static/js/search.js" type="module"></script>
+</head>
+<body>
+    <nav>
+        <div class="navigation">
+            <a href="../index.html" class="logo">
+                <picture>
+                    <source media="(min-width: 768px)" srcset="../static/images/logoDesk.svg">
+                    <img loading="lazy" src="../static/images/logoMobile.svg" alt="Example image" loading="lazy">
+                </picture>
+            </a>
+            <div class="navPhoneOnly">
+                <a href="cart.html?dynamicBreadcrume=Cart" title="Cart">
+                    <img src="../static/icons/cart.svg" alt="Your cart" loading="lazy">
+                </a>
+                <button id="burgerMenu" title="Menu" type="button">
+                    <img src="../static/icons/burger.svg" alt="Menu" loading="lazy">
+                </button>
+            </div>
+            <ul class="navMain">
+                <li><a href="shopCategory.html?category=Jewelery&dynamicBreadcrume=Jewelery" title="Jewelry"><strong>Jewelry</strong></a></li>
+                <li><a href="shopCategory.html?category=Women's clothing&dynamicBreadcrume=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                <li><a href="shopCategory.html?category=Men's clothing&dynamicBreadcrume=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                <li><a href="shopCategory.html?category=Electronics&dynamicBreadcrume=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+            </ul>
+            <ul class="navUtility">
+                <li class="navSearch">
+                    <form id="navSearch">
+                        <div>
+                            <input type="search" placeholder="Search" id="searchProducts">
+                            <button type="submit">
+                                <picture>
+                                    <img src="../static/icons/search.svg" alt="search" loading="lazy">
+                                </picture>
+                            </button>
+                        </div>
+                        <ul>
+
+                        </ul>
+                        <template>
+                            <li>
+                                <picture>
+                                    <a href="">
+                                        <img src="" alt="" loading="lazy">
+                                    </a>
+                                </picture>
+                                <div>
+                                    <h2>
+                                        <a href=""></a>
+                                    </h2>
+                                    <p></p>
+                                </div>
+                            </li>
+                        </template>
+                    </form>
+                </li>
+                <li>
+                    <a href="cart.html?dynamicBreadcrume=Cart" title="Cart">
+                        <img src="../static/icons/cart.svg" alt="Your cart" loading="lazy">
+                    </a>
+                </li>
+                <li class="profileMenu">
+                    <button title="Profile">
+                        <img src="../static/icons/profile.svg" alt="Your profile" loading="lazy">
+                    </button>
+                    <div>
+                        <p>You are not logged in</p>
+                        <div>
+                            <a href="login.html">Log in</a>
+                            <a href="signup.html">Sign up</a>
+                        </div>
+                        <template>
+                            <p>Hi <span class="userName"></span></p>
+                            
+                            <div>
+                                <button id="logout">Log out</button>
+                            </div>
+                        </template>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <section>
+            <header>
+                <h1>About us</h1>
+            </header>
+            <p>
+                Welcome to Trendsetting — your destination for modern fashion, everyday essentials, and selected electronics. We believe shopping should be simple, stylish, and sustainable.
+            </p>
+        </section>
+        <section>
+            <header>
+                <h2>Our Mission</h2>
+            </header>
+            <p>
+                In an increasingly digital world, it's easy to forget that websites also consume energy and contribute to CO₂ emissions. Every time a page loads, data must travel through servers and networks that require electricity. On average, a single webpage produces about 0.8 grams of CO₂ per visit — a number that grows quickly as more users browse a webshop.
+            </p>
+            <p>
+                At Trendsetting, we want to make online shopping both enjoyable and responsible. By optimizing our website for efficiency and reducing unnecessary digital load, we aim to minimize our carbon footprint while still delivering a fast, modern, and seamless shopping experience.
+            </p>
+        </section>
+        <section>
+            <header>
+                <h2>What We Stand For</h2>
+            </header>
+            <ul>
+                <li>Sustainable Digital Practices: We continuously work to keep our site energy-efficient and low-impact.</li>
+                <li>Quality Products: Trendsetting offers curated clothing for men and women, along with selected electronics that meet everyday needs.</li>
+                <li>Transparency: We believe customers should feel confident not only in what they buy, but also in the digital environment they interact with.</li>
+                <li>Innovation: We embrace new technologies and solutions that make online shopping greener without compromising performance.</li>
+            </ul>
+        </section>
+        <section>
+            <header>
+                <h2>Our vision</h2>
+            </header>
+            <p>
+                We envision a future where e-commerce and sustainability go hand in hand — where online shops are not only convenient, but also conscious of the environmental footprint left behind. Trendsetting is dedicated to being part of that future by promoting responsible digital design and smarter online experiences.
+            </p>
+            <p>
+                Thank you for being part of our journey. Together, we can shape a more sustainable digital world, one page view at a time.
+            </p>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer">
+            <section id="trendsettingName">
+                <p><a href="../index.html">Trendsetting Publishing, Inc.</a></p>
+            </section>
+            <section id="socialIcons">
+                <a href="https://miro.medium.com/v2/resize:fit:640/format:webp/1*ZYyXvhYDGvELzYoXYpPLMg.png" target="_blank"><img src="../static/icons/xLogo.svg" alt="X icon" loading="lazy"></a>
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="../static/icons/linkedinLogo.svg" alt="Linkedin icon" loading="lazy"></a>
+                <a href="https://miro.medium.com/v2/resize:fit:1400/0*7MV0mU64tNkPDX0B.jpg" target="_blank"><img src="../static/icons/facebookLogo.svg" alt="Facebook icon" loading="lazy"></a>
+            </section>
+            <section id="policies">
+                <p><a href="aboutUs.html">About us</a></p>
+                <p><a href="privacyPolicy.html">Privacy Policy</a></p>
+                <p><a href="termsOfService.html">Tearms of Service</a></p>
+                <p><a href="cookiePolicy.html">Cookie Policy</a></p>
+            </section>
+            <section id="categories">
+                <ul class="footerMain">
+                    <li><a href="shopCategory.html?category=Jewelry" title="Jewelry"><strong>Jewelry</strong></a></li>
+                    <li><a href="shopCategory.html?category=Women's clothing" title="Women"><strong>Women</strong></a></li>
+                    <li><a href="shopCategory.html?category=Men's clothing" title="Men"><strong>Men</strong></a></li>
+                    <li><a href="shopCategory.html?category=Electronics" title="Electronics"><strong>Electronics</strong></a></li>
+                </ul>
+            </section>
+            <p class="footerBottom">&copy; 2025 Trendsetting</p>
+        </div>
+    </footer>
+    
+</body>
+</html>

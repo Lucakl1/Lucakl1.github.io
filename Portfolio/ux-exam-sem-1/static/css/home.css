@@ -1,0 +1,126 @@
+@import "styles.css";
+@import "horizontalScroll.css";
+@import "modal.css";
+
+
+.hero {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    max-width: var(--max-width-break-point);
+    margin: var(--center-with-margin);
+    filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.2));
+
+    h1 {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: var(--font-size-hero-h1);
+        text-shadow: 0 0 20px #ffffff61;
+    }
+
+    picture {
+        display: block;
+        width: 100%;
+        height: 100%;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.featuredProduct {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width-break-point);
+    margin: var(--center-with-margin);
+    padding: var(--padding);
+    width: 100%;
+    max-width: var(--max-width-text);
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        margin: var(--center-with-margin);
+        max-width: var(--max-width-form);
+    }
+
+    .productName {
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-h2);
+        font-family: var(--font-title);
+    }
+    
+    picture {
+        padding: var(--padding);
+        margin: var(--center-with-margin);
+        
+        img {
+            width: var(--width-full);
+        }
+    }
+
+    a {
+        margin: var(--center-with-margin);
+        border: var(--border-cta);
+        background-color: var(--color-accent-cta);
+        color: var(--color-white);
+        padding: var(--padding-cta-button);
+        border-radius: var(--border-radius);
+        font-weight: var(--font-weight-regular);
+        font-family: var(--font-main);
+        text-align: center;
+        font-size: var(--font-size-a);
+    }
+    
+    .productDescription {
+        margin: var(--center-with-margin);
+        font-weight: var(--font-weight-regular);
+        font-size: var(--font-size-p);
+        font-family: var(--font-main);
+    }
+
+    .productPrice {
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-p);
+        font-family: var(--font-main);
+        text-align: left;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: var(--padding);
+    }
+}
+
+.forgotLogin {
+    gap: var(--gap);
+    
+    div {
+        background-color: var(--color-secondary-white);
+        padding: var(--padding);
+        max-width: var(--max-width-text);
+        border-radius: var(--border-radius);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: var(--center-with-margin);
+        gap: var(--gap);
+    }
+
+    a {
+        margin: var(--center-with-margin);
+        border: var(--border-cta);
+        background-color: var(--color-accent-cta);
+        border-radius: var(--border-radius);
+        padding: var(--padding-cta-button);
+        color: var(--color-cta-text);
+    }
+}

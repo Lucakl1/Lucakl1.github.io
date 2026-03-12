@@ -1,0 +1,164 @@
+main {
+    .sectionHorizontalProductsScroll {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        user-select: none;
+        border-radius: var(--border-radius);
+        background-color: var(--color-secondary-white);
+        width: var(--width-full);
+        padding: var(--padding);
+
+        h2 {
+            font-size: var(--font-size-h2);
+        }
+
+        ul {
+            display: flex;
+            cursor: grab;
+            overflow: scroll hidden;
+            scroll-snap-type: x mandatory;
+            gap: var(--gap);
+            padding-bottom: var(--padding);
+
+            /* Only works on browsers who support -webkit- */
+            &::-webkit-scrollbar {
+                scrollbar-width: thin;
+                border-radius: var(--border-radius);
+                background-color: var(--color-white);
+            }
+
+            &::-webkit-scrollbar-thumb  {
+                background-color: var(--color-accent-cta);
+                border-radius: var(--border-radius);
+            }
+            /* Only works on browsers who support -webkit- */
+
+            li {
+                flex-shrink: 0; 
+                position: relative;
+                width: var(--scroll-card-width);
+                scroll-snap-align: center;
+                list-style-type: none;
+                border-radius: var(--border-radius);
+                
+                @media (min-width: 768px) {
+                    scroll-snap-align: start;
+                }
+
+                article {
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center; 
+                    justify-content: space-around;
+                    gap: var(--gap-small);
+                    width: var(--width-full);
+                    background-color: var(--color-secondary-white);
+                    border-radius: var(--border-radius);
+                    color: var(--color-accent-dark);
+                    padding: var(--padding);
+                    border: var(--border-button);
+    
+                    picture {
+                        width: var(--width-full);
+                        height: var(--card-height);
+                        display: block;
+    
+                        img {
+                            width: var(--width-full);
+                            height: var(--height-full);
+                            object-fit: contain;
+                            padding: var(--padding-small);
+                        }
+                    }
+    
+                    > div {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr 1fr;
+                        grid-template-rows: auto;
+                        grid-template-areas: 
+                        "header header header"
+                        "price price price"
+                        "link link link"
+                        "addToCart addToCart addToCart"
+                        ;
+                        width: var(--width-full);
+    
+                        header {
+                            grid-area: header;
+    
+                            .productName {
+                                font-weight: var(--font-weight-light);
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        
+                        .productPrice {
+                            font-weight: var(--font-weight-bold);
+                            padding: var(--padding-titles);
+                            grid-area: price;
+                            font-size: var(--font-size-p);
+                        }
+    
+                        .productLink {
+                            color: var(--color-accent-cta);
+                            font-weight: var(--font-weight-bold);
+                            grid-area: link;
+                            font-size: var(--font-size-a);
+                        }
+    
+                        button {
+                            grid-area: addToCart;
+                            background: none;
+                            cursor: pointer;
+                            place-self: end;
+                            padding-top: var(--padding);
+
+                            > img {
+                                width: var(--icon-width);
+                                height: var(--icon-height);
+                            }
+                        }
+    
+                        > div:first-child {
+                            flex-grow: 4;
+                        }
+                        
+                        > div:last-child {
+                            flex-grow: 1;
+                        }
+                    }
+    
+    
+                    @media (min-width: 768px) {
+                        > div {
+                            grid-template-areas: 
+                                "header header header"
+                                "price . ."
+                                "link link addToCart"
+                                ". . addToCart"
+                                ;
+                        }
+                    }
+                }
+            }
+        }
+
+        .seeProducts {
+            margin: var(--center-with-margin);
+            border: var(--border-button);
+            padding: var(--padding-cta-button);
+            border-radius: var(--border-radius);
+            text-align: center;
+            font-size: var(--font-size-a);
+        }
+
+        .dragging {
+            cursor: grabbing;
+            scroll-snap-type: none;
+            scroll-behavior: unset;
+        }
+    }
+}

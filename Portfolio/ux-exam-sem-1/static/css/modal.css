@@ -1,0 +1,36 @@
+.modalMessage {
+    margin: calc(var(--margin) * 4) auto;
+    border-radius: var(--border-radius);
+    background-color: var(--color-secondary-white);
+
+    p {
+        font-size: var(--font-size-p);
+        color: var(--color-accent-dark);
+        padding: var(--padding-small) var(--padding) var(--padding) var(--padding);
+    }
+
+    header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        gap: var(--gap);
+        padding: var(--padding) var(--padding) var(--padding-small) var(--padding);
+
+        h2 {
+            color: var(--color-accent-dark);
+            font-family: var(--font-title);
+            font-weight: var(--font-weight-bold);
+        }
+
+        button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            background-color: inherit;
+            line-height: var(--font-size-h2);
+            font-size: var(--font-size-h2);
+            color: var(--color-accent-dark);
+            font-weight: var(--font-weight-bold);
+        }
+    }
+}

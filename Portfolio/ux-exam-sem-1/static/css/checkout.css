@@ -1,0 +1,186 @@
+body {
+  main {
+
+    .checkoutProducts {
+      width: var(--width-full);
+      max-width: var(--max-width-break-point);
+      margin: var(--center-with-margin);
+
+      > header {
+          margin-bottom: var(--gap);
+
+        h2 {
+          font-size: var(--font-size-cart-h2);
+          font-weight: var(--font-weight-semibold);
+          color: var(--color-accent-dark);
+        }
+      }
+
+      .checkoutProductsForm {
+        display: grid;
+        gap: var(--gap);
+
+        @media (min-width: 768px) {
+          grid-template-columns: 1fr 1fr;
+          align-items: start;
+        }
+      }
+
+      .orderSummary {
+        background-color: var(--color-secondary-white);
+        border-radius: var(--border-radius);
+        padding: var(--padding);
+
+        > header {
+          margin-bottom: var(--gap-small);
+
+          h3 {
+            font-size: var(--font-size-h3);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-accent-dark);
+          }
+        }
+
+        ul {
+          li {
+            article {
+              display: grid;
+              grid-template-columns: var(--checkout-img-width) 1fr;
+              gap: var(--gap-small);
+              align-items: center;
+              padding: var(--padding-small);
+              border-radius: var(--border-radius);
+
+              picture {
+                .productImg {
+                  width: var(--checkout-img-width);
+                  height: var(--checkout-img-height);
+                }
+              }
+
+              > div {
+                display: grid;
+                gap: var(--gap-small);
+
+                header .productName {
+                  font-size: var(--font-size-cart-h4);
+                  font-weight: var(--font-weight-bold);
+                  color: var(--color-accent-dark);
+                }
+
+                .productPrice {
+                  font-weight: var(--font-weight-bold);
+                  color: var(--color-accent-dark);
+                  font-size: var(--font-size-p);
+                }
+                
+                .productAmount {
+                    font-weight: var(--font-weight-bold);
+                    color: var(--color-accent-dark);
+                    font-size: var(--font-size-p);
+                }
+                
+                .productTotalPrice {
+                    font-weight: var(--font-weight-bold);
+                    color: var(--color-accent-dark);
+                    font-size: var(--font-size-p);
+                }
+
+                > div {
+                  display: flex;
+                  justify-content: space-between;
+                  gap: var(--gap-small);
+
+                  p {
+                    font-size: var(--font-size-p);
+                    color: var(--color-accent-dark);
+                  }
+                }
+              }
+            }
+
+            .allTotal {
+              display: flex;
+              justify-content: space-between;
+              margin-top: var(--gap-small);
+              padding-top: var(--padding-small);
+              border-top: var(--border-cta);
+              font-size: var(--font-size-cart-p);
+              font-weight: var(--font-weight-bold);
+              color: var(--color-accent-dark);
+            }
+          }
+        }
+      }
+
+      .checkoutForm {
+        border-radius: var(--border-radius);
+        display: grid;
+        gap: var(--gap);
+
+        fieldset {
+          border: var(--border-cta);
+          border-radius: var(--border-radius);
+          padding: var(--padding);
+          display: grid;
+          gap: var(--gap-small);
+          background-color: var(--color-secondary-white);
+
+          &[hidden] {
+            display: none !important;
+          }
+
+          legend {
+            font-weight: var(--font-weight-bold);
+            color: var(--color-accent-dark);
+          }
+
+          > div {
+            display: grid;
+            gap: var(--gap-small);
+
+            label {
+              font-size: var(--font-size-p);
+              font-weight: var(--font-weight-bold);
+              color: var(--color-accent-dark);
+            }
+
+            input {
+              border: var(--border-cta);
+              border-radius: var(--border-radius);
+              padding: var(--padding-small);
+              background-color: var(--color-white);
+              font: var(--font-main);
+              font-size: var(--font-size-p);
+            }
+
+            &.addBillingAddressCheckbox {
+              display: flex;
+            }
+          }
+        }
+
+        input {
+          accent-color: var(--color-accent-cta);
+        }
+
+        .placeOrder {
+          border: var(--border-cta);
+          background-color: var(--color-accent-cta);
+          border-radius: var(--border-radius);
+          padding: var(--padding-cta-button);
+          color: var(--color-cta-text);
+          font-size: var(--font-size-a);
+          cursor: pointer;
+          width: var(--width-full);
+          margin-top: var(--margin-top-fotter);
+
+          @media (min-width: 768px) {
+            width: fit-content;
+            justify-self: end;
+          }
+        }
+      }
+    }
+  }
+}

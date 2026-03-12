@@ -1,0 +1,27 @@
+@import "styles.css";
+
+main {
+    max-width: var(--max-width-text);
+    padding: var(--padding);
+    margin: var(--center-with-margin);
+
+    h1, h2, h3 {
+        font-family: var(--font-title);
+        color: var(--color-accent-dark);
+        padding: var(--padding-titles);
+    }
+
+    .time {
+        padding:var(--padding-small) 0;
+    }
+
+    p, li {
+        font-family: var(--font-main);
+        font-size: var(--font-size-p);
+        color: var(--color-accent-dark);
+    }
+
+    li {
+        padding: var(--padding-li);
+    }
+}
