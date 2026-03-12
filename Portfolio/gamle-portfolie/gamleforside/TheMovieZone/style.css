@@ -1,0 +1,120 @@
+.top{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top div{
+    width: 100%;
+}
+
+.overskrift_header div{
+    width: 100%;
+}
+
+.full{
+    width: 100% !important;
+}
+
+/* Scroll bar */
+.Luca_overflow{
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    height: 500px;
+    scroll-snap-type: x mandatory;
+
+    scrollbar-color: #C252E1 rgba(0, 0, 0, 0);
+}
+html{
+    scrollbar-color: #C252E1 rgba(0, 0, 0, 0);
+}
+
+.scroll_snap{
+    scroll-snap-align: start;
+}
+/* Scroll bar */
+
+/* Color */
+body{
+    background: #2A2356;
+    color: #E0D9F6;
+}
+.card{
+    border: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 1%, rgba(110,189,245,1) 12%, rgba(110,203,245,1) 25%, rgba(231,246,253,1) 30%, rgba(255,255,255,1) 35%, rgba(110,189,245,1) 43%, rgba(110,189,245,1) 72%, rgba(215,237,252,1) 78%, rgba(255,255,255,1) 90%, rgba(110,189,245,1) 94%);    /* background: #6EcbF5; */
+}
+.btn-cyperpunk{
+    background: #C252E1;
+    font-weight: 600;
+}
+.btn-cyperpunk:hover{
+    background: #c43cea ;
+}
+nav{
+    background: #586AE2;
+}
+li a, .navbar-brand{
+    color: #E0D9F6 !important;
+}
+.dropdown-menu{
+    background: #586AE2;
+}
+/* Color */
+
+/* Footer */
+footer{
+    width: 100%;
+    margin-top: 75px !important;
+}
+
+footer div{
+    width: 100%;
+    background: #586AE2;
+    padding: 10px 30%;
+}
+
+footer div i{
+    font-size: 1.5em;
+}
+/* Footer */
+
+@media screen and (min-width: 520px) {
+    .top_tekst{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .top_tekst h1{
+        width: 100%;
+    }
+    .top_tekst p{
+        width: 49%;
+
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .top{
+        flex-direction: row-reverse;
+    }
+    
+    .overskrift_header{
+        padding: 16px;
+    }
+    .top div{
+        width: 50%;
+    }
+    .top_tekst p{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .stop{
+        width: 1440px;
+        margin: 0 auto;
+    }
+}

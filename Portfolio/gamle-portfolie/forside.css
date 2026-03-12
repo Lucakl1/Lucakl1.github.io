@@ -1,0 +1,515 @@
+/* Reset */
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --blue: #2bd9d9;
+    --rose: #f25781;
+    --orange: #f2785c;
+    --beach: #f2ecd8;
+    --white: #f2f2f2;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, var(--blue),var(--white));
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Skyer -------------------------------------------------------------------------- */
+.bagrunds_skyer{
+    width: 100%;
+    position: relative;
+}
+
+.bagrunds_skyer .sky{
+    position: absolute;
+    z-index: -1;
+}
+
+.sky1{
+    width: calc(100vw - 50%);
+    margin-top: -8vw;
+    margin-left: -14vw;
+}
+.sky2{
+    width: calc(100vw - 50%);
+    margin-top: -15vw;
+    margin-left: 30vw;
+}
+.sky3{
+    width: calc(100vw - 50%);
+    margin-top: -5vw;
+    margin-left: 73vw;
+}
+
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    .sky1{
+        width: calc(100vw - 40%);
+        margin-top: -13vw;
+        margin-left: -16vw;
+    }
+    .sky2{
+        width: calc(100vw - 40%);
+        margin-top: -15vw;
+        margin-left: 60vw;
+    }
+    .sky3{
+        display: none;
+    }
+}
+/* Når mindre end tablet */
+@media screen and (max-width: 530px){
+    .sky1{
+        width: calc(100vw + 26%);
+        margin-top: -40vw;
+        margin-left: -30vw;
+    }
+    .sky2{
+        display: none;
+    }
+    .sky3{
+        display: none;
+    }
+}
+/* Skyer -------------------------------------------------------------------------- */
+
+/* Header -------------------------------------------------------------------------- */
+header{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2%;
+}
+header a img{
+    width: 50px;
+    height: 50px;
+    transition: 1s;
+}
+header a img:hover{
+    transform: rotate(1turn);
+    transition: 5s;
+}
+header a{
+    padding-right: 1%;
+}
+header h1{
+    font-size: 26px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    display: flex;
+    width: fit-content;
+}
+header h1 a{
+    color: black;
+    border-bottom: solid 2px black;
+    text-decoration: none;
+}
+header h1 a:hover{
+    color: var(--orange);
+    border-bottom: solid 2px var(--orange);
+}
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    header h1{
+        font-size: 20px;
+        letter-spacing: -1px;
+    }
+}
+/* Header -------------------------------------------------------------------------- */
+
+/* Designer & udhvikler -------------------------------------------------------------------------- */
+section{
+    font-size: 4vw; /* tidligere standard (figma) 64px */
+    display: flex;
+    flex-wrap: wrap;
+    width: 40vw;
+    align-items: flex-end;
+    padding: 2%;
+}
+section p{
+    font-size: 30px;
+    padding-bottom: 3%;
+}
+.disguised{
+    text-decoration: none;
+    cursor: default;
+    color: black;
+}
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    section {
+        font-size: 5vw;
+    }
+    section p{
+        font-size: 15px;
+    }
+}
+/* Når mindre end tablet */
+@media screen and (max-width: 530px){
+    section {
+        font-size: 9vw;
+        width: 70vw;
+    }
+    section p{
+        font-size: 15px;
+    }
+}
+/* Designer & udhvikler -------------------------------------------------------------------------- */
+
+/* aside -------------------------------------------------------------------------- */
+aside{
+    display: flex;
+    justify-content: flex-end;
+    line-height: 180%;
+    padding: 2%;
+    font-weight: 500;
+    margin-top: -210px;
+    font-size: 1.7vw; /* tidligere standard (figma) 24px */
+}
+aside ul{
+    list-style-type: none;
+}
+aside ul li, aside ul li a{
+    transition: 0.4s;
+}
+aside ul li:hover, aside ul li a:hover{
+    color: var(--orange);
+    transform: translate(10px);
+    transition: 0.4s;
+}
+aside ul li a{
+    color: black;
+    text-decoration: none;
+}
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    aside{
+        font-size: 2vw; /* tidligere standard (figma) 24px */
+        margin-top: calc(-180px + 1.6%);
+    }
+}
+/* Når mindre end tablet */
+@media screen and (max-width: 530px){
+    aside{
+        display: none;
+    }
+}
+/* aside -------------------------------------------------------------------------- */
+
+/* Vælg rejse -------------------------------------------------------------------------- */
+.rejse{
+    margin-top: 3%;
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+}
+/* Når mindre end normal computer */
+@media screen and (max-width: 1000px){
+    .rejse{
+        margin-top: 20%;
+        font-size: 5vw;
+    }
+}
+/* Når mindre end tablet */
+@media screen and (max-width: 530px){
+    .rejse{
+        font-size: 6vw;
+    }
+}
+/* Vælg rejse -------------------------------------------------------------------------- */
+
+/* Mappe open standards */
+.card{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 140px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.card_stacks{
+    display: flex;
+    gap: 4vw;
+    margin: 0 10% 10% 10%;
+}
+
+.mappe{
+    position: relative;
+    width: 100px;
+    height: 120px;
+    margin: 20px 40px;
+    cursor: pointer;
+}
+
+.mappe_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+.mappe_navn{
+    color: black;
+    font-weight: 500;
+    transition: 0.5s;
+    font-size: 20px;
+    margin: 30px 20px 0 0;
+}
+/* Noget af følgende kode er taget med inspiration fra
+https://www.youtube.com/watch?v=3yfswsnD2sw Start*/
+@media screen and (min-width: 1000px){
+    .card_stacks{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .card_stacks{
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+        margin: 0 0 60px 0;
+        padding: 0 40px;
+        gap: 11vw;
+    }
+    /* Noget af følgende kode er taget med inspiration fra
+    https://www.youtube.com/watch?v=3yfswsnD2sw Slut*/
+
+    .card{
+        width: calc(80px - 20%);
+        height: calc(140px - 20%);
+        border-radius: calc(20px - 7%);
+    }
+
+    .mappe_navn{
+        margin: 0 20px 30px 0;
+    }
+}
+/* Mappe open standards */
+
+/* Mappe open pr. card stack ---------- stack */
+.mappe1 .card1{
+    background: var(--white) url(cards/unity.png);
+    background-size: 100%;
+}
+.mappe1 .card2{
+    background: var(--beach) url(cards/Chrome.png);
+    background-size: 100%;
+}
+.mappe1 .card3{
+    background: var(--orange) url(cards/Vr.png);
+    background-size: 100%;
+}
+.mappe1 .card4{
+    background: var(--rose) url(cards/Blender.png);
+    background-size: 100%;
+}
+/* Mappe open pr. card stack ---------- stack 1 */
+.mappe2 .card1{
+    background: var(--white) url(cards/photoshop.png);
+    background-size: 100%;
+}
+.mappe2 .card2{
+    background: var(--beach) url(cards/Figma.png);
+    background-size: 100%;
+}
+.mappe2 .card3{
+    background: var(--orange) url(cards/photo.png);
+    background-size: 100%;
+}
+.mappe2 .card4{
+    background: var(--rose) url(cards/Book.png);
+    background-size: 100%;
+}
+/* Mappe open pr. card stack ---------- stack 2 */
+.mappe3 .card1{
+    background: var(--white) url(cards/illustrator.png);
+    background-size: 100%;
+}
+.mappe3 .card2{
+    background: var(--beach) url(cards/Figjam.png);
+    background-size: 100%;
+}
+.mappe3 .card3{
+    background: var(--orange) url(cards/gruppearb.png);
+    background-size: 100%;
+}
+.mappe3 .card4{
+    background: var(--rose) url(cards/printer.png);
+    background-size: 100%;
+}
+/* Mappe open pr. card stack ---------- stack 3 */
+.mappe4 .card1{
+    background: var(--white) url(cards/html.png);
+    background-size: 100%;
+}
+.mappe4 .card2{
+    background: var(--beach) url(cards/css.png);
+    background-size: 100%;
+}
+.mappe4 .card3{
+    background: var(--orange) url(cards/responsive.png);
+    background-size: 100%;
+}
+.mappe4 .card4{
+    background: var(--rose) url(cards/javascript.png);
+    background-size: 100%;
+}
+/* Mappe open pr. card stack ---------- stack 4 */
+.mappe5 .card1{
+    background: var(--white) url(cards/prpro.png);
+    background-size: 100%;
+}
+.mappe5 .card2{
+    background: var(--beach) url(cards/research.png);
+    background-size: 100%;
+}
+.mappe5 .card3{
+    background: var(--orange) url(cards/kontrakt.png);
+    background-size: 100%;
+}
+.mappe5 .card4{
+    background: var(--rose) url(cards/film.png);
+    background-size: 100%;
+}
+/* Mappe open pr. card stack ---------- stack 5 */
+
+/* Movementm color standards */
+.card1{
+    transform: translate(0px) rotate(-0.00turn);
+    background: var(--white);
+    z-index: 4;
+}
+.card2{
+    transform: translate(-7px) rotate(-0.02turn);
+    background: var(--beach);
+    z-index: 3;
+}
+.card3{
+    transform: translate(-14px) rotate(-0.04turn);
+    background: var(--orange);
+    z-index: 2;
+}
+.card4{
+    transform: translate(-21px) rotate(-0.06turn);
+    background: var(--rose);
+    z-index: 1;
+}
+
+.mappe:hover .card1{
+    transform: translate(80px,20px) rotate(0.1turn);
+    transition: 0.5s;
+}
+.mappe:hover .card2{
+    transform: translate(30px) rotate(0.04turn);
+    transition: 0.5s;
+}
+.mappe:hover .card3{
+    transform: translate(-30px) rotate(-0.06turn);
+    transition: 0.5s;
+}
+.mappe:hover .card4{
+    transform: translate(-80px,20px) rotate(-0.1turn);
+    transition: 0.5s;
+}
+.mappe:hover + .mappe_navn{
+    transform: translate(0px,30px);
+    color: var(--orange);
+    transition: 0.5s;
+}
+/* Movementm color standards */
+@media screen and (max-width: 1000px){
+    .mappe .card1{
+        transform: translate(80px,20px) rotate(0.1turn);
+        transition: 0.5s;
+    }
+    .mappe .card2{
+        transform: translate(30px) rotate(0.04turn);
+        transition: 0.5s;
+    }
+    .mappe .card3{
+        transform: translate(-30px) rotate(-0.06turn);
+        transition: 0.5s;
+    }
+    .mappe .card4{
+        transform: translate(-80px,20px) rotate(-0.1turn);
+        transition: 0.5s;
+    }
+    .mappe + .mappe_navn{
+        transform: translate(0px,30px);
+        color: var(--orange);
+        transition: 0.5s;
+    }
+}
+/* Footer -------------------------------------------------------------------------- */
+footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 50px 20px 50px 20px;
+    flex-wrap: wrap;
+    background-color: var(--beach);
+    height: fit-content;
+}
+
+footer div{
+    width: 40vw;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1000px){
+    footer div{
+        font-size: 2.3vw;
+    }
+}
+
+@media screen and (max-width: 530px){
+    footer div{
+        font-size: 3vw;
+        width: 100%;
+    }
+}
+
+.flex_text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.flex_text p{
+    text-align: start;
+    font-weight: 500;
+}
+
+.flex_text p a{
+    text-decoration: none;
+    color: black;
+}
+
+.flex_text p a:hover{
+    text-decoration: none;
+    color:var(--blue);
+}
+
+i{
+    width: 40px;
+}
+@media screen and (max-width: 1000px){
+    i{
+        width: 15%;
+    }
+}
+/* Footer -------------------------------------------------------------------------- */

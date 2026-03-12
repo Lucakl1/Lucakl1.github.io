@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Din DnD er en begynder guide til Dungeons & Dragons. Her finder du en begyndervenlig DnD guide til nye spillere. Din DnD tilbyder en dansk DnD guide.">
+    <title>Din DnD Guide for nybegyndere - Start</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <!-- Popup -->
+    <aside class="popup" id="popup">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50" onclick="popup('reset')" title="Din DnD begynder guide popup">
+            <path class="cls-1" d="M-3.77,24.79h57.97c0,1.03-.83,1.86-1.86,1.86H-5.64c0-1.03.83-1.86,1.86-1.86Z" transform="translate(25.72 -9.62) rotate(45.68)"/>
+            <path class="cls-1" d="M-5.3,24.79h57.97c1.03,0,1.86.83,1.86,1.86H-3.66c-.91,0-1.64-.74-1.64-1.64v-.22h0Z" transform="translate(60.2 26.5) rotate(135)"/>
+        </svg>
+        <h2 id="popup_overskrift">Terninger</h2>
+        <video alt="DnD begynder video" id="video" src="" controls></video>
+    </aside>
+    <!-- Popup -->
+
+    <!-- Nav bar -->
+    <nav id="navbar">
+        <div class="navbar_indhold stop">
+            <div class="logo">
+                <a class="logo" href="index.html" title="Din DnD guide logo">
+                    <img src="Logo.png" alt="Din DnD guide - logo">
+                </a>
+            </div>
+            <div class="Nav_links">
+                <div class="nav_burgerbar_icon" onclick="chance_navbar()">
+                    <svg fill="currentColor" viewBox="0 0 512 512" title="Din DnD">
+                        <path id="navbar_icon" d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </div>
+                <div id="nav_liste" class="nav_liste_box">
+                    <ul class="Nav_liste">
+                        <li class="Current_nav" ><a href="index.html" title="Din DnD index side">Start</a></li>
+                        <li><a href="bygkarakter.html" title="Din DnD karakter guide">Karakter guide</a></li>
+                        <li><a href="Spilleside.html" title="Din DnD spil side">Spil</a></li>
+                        <li><a href="voresvision.html" title="Din DnD vision side">Vores vision</a></li>
+                        <li><a href="kontakt.html" title="Din DnD kontakt side">kontakt</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </nav>
+    <!-- Progressbar -->
+    <div id="progressbar" class="progressbar">
+        <div id="progress" class="filled"></div>
+    </div>
+    <!-- Progressbar -->
+    <!-- Nav bar -->
+
+    <!-- Header -->
+    <header class="stop stop_hight">
+        <div class="headerimg">
+            <h1 class="stop_early">Velkommen til <br> Din DnD Guide</h1>
+            <div>
+                <svg id="arrow" onclick="scrollPage()" fill="currentColor" viewBox="0 0 512 512" title="Videre til Din DnD">
+                    <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"/>
+                </svg>
+            </div>        
+        </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Main content -->
+    <main>
+        <div class="guide stop_early">
+            <div class="guide_side_empty">
+            
+            </div>
+            <div class="guide_text pink_bagrund">
+                <h2>Guide</h2>
+                <p>
+                    Hej! Jeg er Bob! 
+                    <br>
+                    - og jeg er her for at hjælpe dig
+                    <br> igennem denne guide til Dungeons and Dragons (DnD)!
+                    <br>  Dette kan du finde på siden:
+                    <ul class="guide_list">
+                        <li>Basal viden om Dungeons and Dragons.</li>
+                        <li>Begynder guide til at bygge din egen karakter.</li>
+                        <li>Begynder guide til at starte spillet.</li>
+                    </ul>
+                    Jeg har designet siden til at guide dig kronologisk gennem indholdet. Under menuen, er der en blå og grøn stribe som viser hvor langt du er på siden.
+                   
+                </p>
+                <img src="img/perfektbob.png" alt="Begynder guiden DnD Bob">
+            </div>
+            <div class="guide_side_img">
+                <img src="img/Bob_the_wizard.webp" alt="Begynder guiden DnD Bob">
+            </div>
+        </div>
+
+        <section>
+            <div class="stop_early">
+                <h2>Hvad er Dungeons and Dragons</h2>
+                <p class="column_2">
+                    Dungeons and Dragons (DnD) er et fantasifuldt rollespil, hvor du og dine venner opfinder historier og spiller roller i en imaginær verden. I udforsker sammen, kæmper mod monstre og løser mysterier. Spillet består af en Dungeon Master (DM) og 2 eller flere spillere. DM'en har en historie klar, som spillerne skal igennem, mens spillerne reagerer på DM'ens beskrivelser og scenarier ved at fortælle, hvad deres karakter gør og siger.
+                </p>
+            </div>
+        </section>
+
+        <section class="pink_bagrund">
+            <div class="stop_early">
+                <h2 class="content_overskrift">For at spille Dungeons and Dragons skal du bruge følgende redskaber:</h2>
+                <div class="divider">
+                    <div class="images">
+                        <img src="img/redskaber.png" alt="Din DnD redskaber for begyndere">
+                    </div>
+                    <div class="main_content">
+                        <div class="main_text">
+                            <ul class="main_lise">
+                                <li>Speciale terninger.</li>
+                                <li>Karakter Ark</li>
+                                <li>Blyant og papir</li>
+                                <li>mindst 2-3 venner at spille DnD med</li>
+                                <li>Dungeon Master (DM)</li>
+                                <li>Fantasien Den vigtigste ingrediens!</li>
+                            </ul>
+                        </div>
+                        <div class="forviret">
+                            <h3 class="forklare_overskrift">Forklaring</h3>
+                            <div class="forklarings_knapper">
+                                <a class="forklare_knap" onclick="popup('terninger.mp4', 'Terninger')" title="DnD begynder video">
+                                    <p>Speciale terninger</p>
+                                </a>
+                                <a class="forklare_knap" onclick="popup('karakter_ark.mp4', 'Karakter ark')" title="DnD begynder video">
+                                    <p>Karakter Ark</p>
+                                </a>
+                                <a class="forklare_knap" onclick="popup('dungeon_master.mp4', 'Dungeon master (DM)')" title="DnD begynder video">
+                                    <p>Dungeons master (DM)</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="stop_early">
+                <h2 class="content_overskrift">Hvordan man spiller DnD:</h2>
+                <div class="divider">
+                    <div class="main_content">
+                        <div class="main_text">
+                            <p>
+                                Jeres DM starter med at fortælle hvor I er, og stemningen omkring jer. Herfra, er det jeres tur til at bestemme, hvad I vil ud fra hvad I har fået fortalt. <br> Hvis I er i tvivl, så tænk over hvad jeres karakter ville gøre. Måske bliver I bedt om at slå med en terning. I skiftes en efter i med at slå terningen, og historien fortsætter i takt med hver spillers tur.
+                            </p>
+                        </div>
+                        <div class="forviret">
+                            <h3 class="forklare_overskrift">Forklaring</h3>
+                            <div class="forklarings_knapper">
+                                <a class="forklare_knap" onclick="popup('Ture.mp4','Turer')" title="DnD begynder video">
+                                    <p>Ture under kamp</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="images">
+                        <img src="img/how_to_play.webp" alt="Din DnD terninger for Begynder">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Main content -->
+
+    <!-- Videre knapper -->
+    <main class="pink_bagrund knap">
+        <a href="bygkarakter.html" title="Din DnD karakter guide">
+            <p>Lav din karakter! ></p>
+        </a>
+    </main>
+    <!-- Videre knapper -->
+
+    <!-- Footer -->
+    <footer>
+        <div class="stop footer_content">
+            <div class="SoMe_iconer">
+                <a href="https://discord.gg/UKwvQ8Txv5" title="Din DnD discord"><img src="iconer/discord.png" alt="Din DnD discord ikon for nybegyndere til DnD guiden"></a>
+                <a href="https://www.facebook.com/groups/367769165851364" title="Din DnD facebook"><img src="iconer/facebook.png" alt="Din DnD facebook ikon for nybegyndere til DnD guiden"></a>
+                <a href="https://www.instagram.com/dindndguide/" title="Din DnD Instagram"><img src="iconer/instagram.png" alt="Din DnD instagram ikon for nybegyndere til DnD guiden"></a>
+            </div>
+    
+            <div class="footer_kontakt">
+                <h4>Kontakt os:</h4>
+                <ul>
+                    <li><img src="iconer/telephone.png" alt="Din DnD telefon ikon for nybegyndere til DnD guiden">12 23 45 67</li>
+                    <li><img src="iconer/email.png" alt="Din DnD mail ikon for nybegyndere til DnD guiden">Exempelmail@mail.com</li>
+                    <li><img src="iconer/location.png" alt="Din DnD adresse ikon for nybegyndere til DnD guiden">Nørgaardsvej 30, 2800 Lyngby</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p> &copy; 2024 Cph Business All rights served.</p>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+    <script src="script.js"></script>
+</body>
+</html>

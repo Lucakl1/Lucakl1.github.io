@@ -72,11 +72,12 @@ main {
         grid-template-columns: 1fr;
     }
 
-    > div {
+    > section {
         background: var(--color-box);
         border-radius: 1rem;
         padding: 1.5rem;
         transition: background 0.5s, box-shadow 0.5s, transform 0.5s;
+        width: 100%;
 
         &:hover {
             background: var(--color-box-hover);
@@ -91,9 +92,25 @@ main {
 
         &.name {
             grid-column: span 2;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
 
             @media (width <= 768px) {
                 grid-column: span 1;
+                justify-content: center;
+
+                div {
+                    width: 100%;
+                }
+            }
+
+            img {
+                border-radius: 1rem;
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
             }
         }
 
@@ -181,12 +198,30 @@ main {
         &.projects {
             grid-column: span 2;
 
+            &:hover {
+                background: var(--color-box);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.1);
+                transform: scale(1);
+                z-index: 1;
+            }
+
             @media (width <= 768px) {
                 grid-column: span 1;
             }
 
-            div {
+            article {
                 margin-bottom: 1.5rem;
+                padding: 1rem;
+                background-color: var(--color-accent-background);
+                border-radius: 1rem;
+                transition: background 0.5s, box-shadow 0.5s, transform 0.5s;
+
+                &:hover {
+                    background: var(--color-box-hover);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25), 0 4px 8px rgba(0, 0, 0, 0.1);
+                    transform: scale(1.01);
+                    z-index: 2;
+                }
 
                 .space-under {
                     padding-bottom: 0.7rem;
@@ -206,6 +241,21 @@ main {
                 a {
                     display: block;
                     margin-top: 0.5rem;
+                }
+
+                ul {
+                    margin-top: 0.7rem;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-flow: wrap row;
+                    gap: 0.5rem;
+
+                    li {
+                        border-radius: 50px;
+                        list-style: none;
+                        padding: 0.2rem 0.5rem;
+                        background: var(--color-box);
+                    }
                 }
             }
         }

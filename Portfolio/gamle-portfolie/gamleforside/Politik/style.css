@@ -1,0 +1,495 @@
+:root{
+    --rose_red: #f04d46;
+    --rose_white: #f2f3f3;
+    --red: #c9002c;
+}
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Fonts */
+body{
+    font-family: "brandon-grotesque", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    background-color: var(--rose_white);
+}
+
+/* Navigation bar --------------------------------------------------------------------------------- */
+.topnav{
+    overflow: hidden;
+    background-color: var(--rose_red);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topnav a{
+    color: var(--rose_white);
+    padding: 15px;
+    text-decoration: none;
+    padding: 35px 15px 35px 15px;
+    transition: background-color 0.5s;
+}
+
+.topnav a:hover{
+    background-color: var(--rose_white);
+    color: var(--rose_red);
+}
+
+.topnav .icon{
+    display: none;
+}
+
+.logo{
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    z-index: 1;
+}
+/* Navigation bar --------------------------------------------------------------------------------- */
+
+/* Content --------------------------------------------------------------------------------- */
+.mine_maerkesager p{
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.rose{
+    width: 45px;
+    margin-right: 10px;
+}
+
+.content{
+    margin: 50px 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.flex p{
+    font-size: 20px;
+    font-weight: 1000;
+}
+
+.flex_center{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 20px 20px;
+    width: 500px;
+    padding: 10px;
+}
+
+.flex_center p, .flex_center button{
+    margin: 10px 10px;
+    color: var(--rose_white);
+    transition: 0.2s;
+}
+
+.flex_center button{
+    background: #00000000;
+    border-radius: 15px;
+    padding: 10px;
+    border: 2px solid var(--rose_white);
+}
+
+.box1 button:hover{
+    background: var(--rose_white);
+    color: var(--rose_red);
+    border-radius: 15px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.box2 button:hover{
+    background: var(--rose_white);
+    color: #32373e;
+    border-radius: 15px;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.read_more{
+    border-radius: 30px;
+    background: var(--rose_red);
+    padding: 20px;
+    color: var(--rose_white);
+    text-align: center;
+    border: 2px solid var(--rose_red);
+    transition: 0.3s;
+}
+
+.read_more:hover{
+    color: var(--rose_red);
+    background: var(--rose_white);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.box1{
+    background: var(--rose_red);
+}
+.box2{
+    background: #32373e;
+}
+
+.overskrift{
+    font-size: 20px;
+}
+
+button{
+    font-weight: 700;
+    cursor: pointer;
+}
+/* Content --------------------------------------------------------------------------------- */
+
+/* Marie billede --------------------------------------------------------------------------------- */
+.marie{
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.marie_start{
+    transition: transform 0.5s;
+}
+
+.marie_start:hover{
+    transition: transform 0.5s;
+    transform: scale(1.2);
+}
+
+.overlap{
+    background: var(--rose_red);
+    height: 50px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 240px;
+    left: 0;
+    text-align: center;
+    font-size: 20px;
+    color: var(--rose_white);
+}
+
+.overlap p{
+    padding: 10.5px;
+    margin: 0;
+}
+/* Marie billede --------------------------------------------------------------------------------- */
+
+/* Footer --------------------------------------------------------------------------------- */
+footer{
+    width: 100%;
+    background: var(--rose_red);
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--rose_white);
+    padding: 40px 10px;
+    overflow: hidden;
+}
+
+.footer_kontakt{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.footer_kontakt .flex{
+    margin: 10px 0px;
+}
+
+.flex a i{
+    width: 25px;
+}
+
+.flex a{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--rose_white);
+    margin: 0;
+}
+/* Footer --------------------------------------------------------------------------------- */
+
+/* Mærkesager ---------------------------------------------------------------------------------*/
+.maerkesager_3boxe{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 30px 30px;
+    flex-wrap: wrap;
+}
+
+.maerkesag{
+    background: #eeefef;
+    width: 400px;
+    color: #32373e;
+    padding: 20px;
+    text-align: center;
+    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 20px;
+    box-shadow: 2px 8px 10px #77777763;
+    flex-wrap: wrap;
+    margin: 30px 20px;
+    transition: 1s;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.maerkesag:hover{
+    margin: 15px 20px;
+    background: #d6dace;
+    transition: 1s;
+}
+
+.maerkesag h1{
+    font-size: 20px;
+    height: 70px;
+    z-index: 1;
+}
+
+.maerkesag p{
+    font-size: 15px;
+    text-align: left;
+    z-index: 1;
+}
+
+.maerkesag i{
+    z-index: 1;
+}
+/* Mærkesager ---------------------------------------------------------------------------------*/
+/* om mig ---------------------------------------------------------------------------------*/
+
+.borgmester{
+    margin: 40px 0px;
+}
+
+.om_flex{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin: 30px 5%;
+}
+
+.kvote{
+    color: var(--red);
+    font-size: 20px;
+    font-weight: 1000px;
+}
+
+.om_mig{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    border: 5px solid #d6dace;
+    border-radius: 40px;
+    padding: 20px;
+    margin: 20px 0;
+    background: #d6dace;
+}
+
+.om_mig div h1{
+    margin: 0 0 -20px 0;
+    font-size: 30px;
+}
+
+.om_mig div p{
+    margin: 0 0 20px 0;
+}
+
+
+/* om mig ---------------------------------------------------------------------------------*/
+/* Telefon */
+@media screen and (max-width: 550px){
+    /* Navigation bar --------------------------------------------------------------------------------- */
+    .topnav .visable_tablet{
+        display: none !important;
+        padding: auto;
+    }
+
+    .topnav .icon{
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .responsive a{
+        display: block;
+        font-size: 1.2rem;
+    }
+    /* Navigation bar --------------------------------------------------------------------------------- */
+
+    /* Content --------------------------------------------------------------------------------- */
+    .ekstra{
+        flex-direction: column;
+    }
+    /* Content --------------------------------------------------------------------------------- */
+
+    /* Footer --------------------------------------------------------------------------------- */
+    footer{
+        flex-wrap: wrap-reverse;
+    }
+
+    .footer_kontakt{
+        margin-bottom: 30px;
+    }
+    /* Footer --------------------------------------------------------------------------------- */
+}
+
+/* Tablet */
+@media screen and (max-width: 1080px){
+
+    /* Mærkesager ---------------------------------------------------------------------------------*/
+    .maerkesag:hover{
+        margin: 30px 20px;
+        background: #f2f3f3;
+    }
+    /* Mærkesager ---------------------------------------------------------------------------------*/
+
+
+    /* Content --------------------------------------------------------------------------------- */
+    .content{
+        flex-wrap: wrap;
+    }
+
+    .maerkesager{
+        margin: 50px 20px;
+    }
+
+    .ekstra{
+        margin: 50px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .flex_center{
+        width: 300px;
+    }
+    
+    .read_more:hover{
+        color: var(--rose_white);
+        background: var(--rose_red);
+    }
+
+    .box1 button:hover{
+        background: var(--rose_red);
+        color: var(--rose_white);
+    }
+    
+    .box2 button:hover{
+        background: #32373e;
+        color: var(--rose_white);
+    }
+    
+    /* Content --------------------------------------------------------------------------------- */    
+
+    /* Navigation bar --------------------------------------------------------------------------------- */
+    .topnav a:hover{
+        background-color: var(--rose_red);
+        color: var(--rose_white);
+    }
+
+    .topnav{
+        padding: 0px;
+    }
+
+    .topnav a{
+        display: none;
+        padding: 15px;
+    }
+
+    .topnav .visable_tablet{
+        display: block;
+    }
+
+    .topnav .icon{
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .responsive{
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 0 30px 0;
+        transition: 0.15s;
+    }
+
+    .responsive a{
+        display: block;
+        font-size: 1.2rem;
+    }
+
+    .responsive .icon{
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .responsive .button{
+        width: 100%;
+        text-align: center;
+    }
+    /* Navigation bar --------------------------------------------------------------------------------- */
+}
+
+.circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #d6dace;
+    border-radius: 50%;
+    animation: expandCircle 1s forwards;
+    transform: translate(-50%, -50%) scale(0); /* Initially scaled to 0 and centered */
+  }
+
+  .circle_no{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #d6dace;
+    border-radius: 50%;
+    animation: noCircle 0.5s forwards;
+    transform: translate(-50%, -50%) scale(0); /* Initially scaled to 0 and centered */
+  }
+
+@keyframes expandCircle {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(50); /* Scale it bigger within the box */
+    }
+  }
+  @keyframes noCircle {
+    100% {
+      transform: translate(-50%, -50%) scale(0);
+    }
+    0% {
+      transform: translate(-50%, -50%) scale(90); /* Scale it bigger within the box */
+    }
+}

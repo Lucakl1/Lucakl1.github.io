@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font awesome for bar w3 schools-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Font -->
+    <link rel="stylesheet" href="https://use.typekit.net/mvt5ukr.css">
+    <!-- Stylesheet (css) -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Logo -->
+    <link rel="icon" href="logo.png">
+    <title>Marie Stærke</title>
+
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          var y = document.getElementById("maerkesager");
+          var z = document.getElementById("bar_tegn");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+            y.className = "button";
+            z.className = "fa fa-align-right";
+          } else {
+            x.className = "topnav";
+            y.classList = "button visable_tablet";
+            z.className = "fa fa-align-justify";
+          }
+        }
+    </script>
+</head>
+<body>
+    <div class="logo">
+        <a href="index.html">
+            <img src="logo.png" alt="socialdemokratiet's logo">
+        </a>
+    </div>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="button">Forside</a>
+        <a href="maerkesager.html" class="button visable_tablet" id="maerkesager">Mærkesager</a>
+        <a href="om_mig.html" class="button">Om Marie stærke</a>
+        <a href="https://www.socialdemokratiet.dk" target="_blank" class="button">Socialdemokratiet</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-align-justify" id="bar_tegn"></i>
+        </a>
+    </div>
+
+    <div class="content">
+        <div class="marie">
+            <img class="marie_start" src="Marie.png" alt="Marie stærke">
+            <div class="overlap">
+                <p>Marie Stærke</p>
+            </div>
+        </div>
+    
+        <div class="maerkesager">
+            <div class="mine_maerkesager flex">
+                <p>Mine Mærkesager</p> 
+            </div>
+            <div class="flex">
+                <img class="rose" src="Rose_rød.png" alt="Socialdemokratiet's Rose">
+                <p>Det skal være nemt at blive ældre</p>
+            </div>
+            <div class="flex">
+                <img class="rose" src="Rose_rød.png" alt="Socialdemokratiet's Rose">
+                <p>Mere tryghed</p>
+            </div>
+            <div class="flex">
+                <img class="rose" src="Rose_rød.png" alt="Socialdemokratiet's Rose">
+                <p>Samarbejde mellem skoler og erhvervsliv</p>
+            </div>
+            <a href="maerkesager.html">
+                <div class="read_more">
+                    Alle mine mærkesager
+                </div>
+            </a>
+        </div>
+
+        <div class="ekstra">
+            <div class="flex_center box1">
+                <p class="overskrift">Socialdemokratiet</p>
+                <p>Her kan du blive klogere på, hvad Socialdemokratiet vil med Danmark.</p>
+                <a href="https://www.socialdemokratiet.dk" target="_blank">
+                    <button>Mere om social demokratiet</button>
+                </a>
+            </div>
+            <div class="flex_center box2">
+                <p class="overskrift">Om mig</p>
+                <p>Læs mere om mig, mine sociale medier og hvad jeg står inde for</p>
+                <a href="om_mig.html">
+                    <button>Mere om mig: Marie Stærke</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <h1>Socialdemokratiet</h1>
+            <br>
+            <p>Christiansborg, 1240 København K</p>
+            <br>
+            <p>Tlf. 72 30 08 00 <br> CVR 31368111</p>
+            <br>
+            <p>partikontoret@socialdemokratiet.dk</p>
+            <br>
+            <h2>Telefontid:</h2>
+            <p>Mandag og fredag: 10.00-14.00 <br>
+                Tirsdag - torsdag: 10.00-16.00 <br>
+                Lukket hver dag mellem 12.00-12.30</p>
+        </div>
+        <div class="footer_kontakt">
+            <h1>kontakt</h1>
+            <br>
+            <span class="flex">
+                <a href="https://www.facebook.com/staerkekoege/" target="_blank">
+                    <i class="fa fa-facebook-f"></i> 
+                    <p>Følg mig på facebook</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="https://www.instagram.com/marie.staerke/" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                    <p>Følg mig på instagram</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="https://twitter.com/mariestaerke" target="_blank">
+                    <i class="fa fa-twitter"></i> 
+                    <p>Følg mig på twitter</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="tel:56637998" target="_blank">
+                    <i class="fa fa-phone"></i> 
+                    <p>56 63 79 98</p>
+                </a>
+                <br>
+            </span>
+
+            <span class="flex">
+                <a href="mailto:marie.staerke@koege.dk" target="_blank">
+                    <i class="fa fa-envelope"></i> 
+                    <p>marie.staerke@koege.dk</p>
+                </a>
+                <br>
+            </span>
+        </div>
+    </footer>
+</body>
+</html>

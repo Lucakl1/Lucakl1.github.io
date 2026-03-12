@@ -1,0 +1,208 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: auto;
+    background-image: url("img/seamless-pattern-green-tea-flat-illustrations_1085-945.jpg");
+    margin: 0px;
+}
+
+header{
+    background: radial-gradient(circle, rgba(0,255,237,1) 6%, rgba(107,209,146,1) 100%);
+    text-align: center;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    border: 2px outset rgb(55, 128, 100);
+}
+
+.left{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.center{
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+.right{
+    display: flex;
+}
+
+.sidebars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.content{
+    width: 70%;
+    margin: auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+main{
+    width: 65%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+aside{
+    width: 20%;
+    margin: 10px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.aside_element{
+    background-color: rgb(136, 211, 186);
+    margin-bottom: 40px;
+    padding: 20px;
+
+    width: 100%;
+
+    border-radius: 20px;
+    border: 2px outset rgb(55, 128, 100);
+}
+
+li{
+    margin: 10px;
+}
+
+a{
+    cursor: pointer;
+}
+
+.liste_tea{
+    background-color: rgb(138, 209, 206);
+    border-radius: 20px;
+    border: 2px outset rgb(55, 128, 100);
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+}
+
+.liste_text{
+    padding: 10px;
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.tea_pic{
+
+    width: 50%;
+    border-radius: 10px;
+}
+
+button{
+    padding: 10px;
+
+    border: 2px outset rgb(55, 128, 100);
+    
+    border-radius: 20px;
+    background: rgb(107,209,146);
+    color: black;
+
+    font-size: 20px;
+}
+
+button:hover{
+    border: 2px outset rgb(130, 221, 186);
+    background: rgb(88, 173, 121);
+    color: white;
+    cursor: pointer;
+}
+
+.name_pris{
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+footer{
+    background: radial-gradient(circle, rgba(0,255,237,1) 6%, rgba(107,209,146,1) 100%);
+    text-align: center;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    width: 80%;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    border: 2px outset rgb(55, 128, 100);
+}
+
+.fot_info{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.beside{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.Spoon_pic{
+    width: 100%;
+    background: url('img/Tealeaf.jpg') no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    height: 500px;
+
+    display: flex;
+}
+
+.Text_Middle{
+    color: white;
+    margin: auto;
+    font-size: xx-large;
+}

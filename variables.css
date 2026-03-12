@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:opsz@14..32&display=swap&text=LucaKlæø');
-@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap&text=WebdvloprLucaKæøTkngiEtsUOmAjhCPHBDX()SMRNFGy');
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300&display=swap&text=WebdvloprLucaKæøTkngiEtsUOmAjhCPHBDX()SMRNFGyf');
 
 :root {
     /* Old Blue */
@@ -37,7 +37,7 @@
     --color-text: #5b6b7a;
     --color-text-overskrift: #1e293b;
     --color-accent: #3c83f6;
-    --color-accent-background: #e8f1ff;
+    --color-accent-background: #e3eeff;
     --color-accent-gradient: linear-gradient(135deg, #3c83f6 0%, #2b4bee 100%);
 
     --font-main: "Lato", sans-serif;

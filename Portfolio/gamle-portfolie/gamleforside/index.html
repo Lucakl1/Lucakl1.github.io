@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucakl.dk</title>
+    <link rel="icon" href="Luca.jpg">
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #your-target-id{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        #your-target-id a{
+            padding: 20px;
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+
+            border: 2px outset rgb(66, 66, 66);
+            border-radius: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #your-target-id a div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo{
+            width: 100px;
+            text-align: center;
+
+            color: black;
+            text-decoration: none;
+        }
+
+        .text{
+            text-align: center;
+            color: black;
+            font-size: 30px;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        h1{
+            text-align: center;
+        }
+        
+        .disclaimer{
+            margin: 0px;
+        }
+        
+    </style>
+
+    <script>
+        //tilføj all navnende på mappe navnet til din hjemmeside
+        const Filenames = [
+            "restaurant",
+            "Politik",
+            "Ikea",
+            "TheMovieZone"
+        ];
+
+        document.addEventListener("DOMContentLoaded", function () {
+            for (let i = 0; i < Filenames.length; i++) {
+                var Site = document.createElement("a");
+                Site.href = Filenames[i] + "/index.html";
+                Site.className = "Sites";
+
+                Site.innerHTML += "<div> <img src='" + Filenames[i] + "/img/logo.jpg' alt='Logo mangler' class='logo'> <p class='text'>" + Filenames[i] + "</p></div>";
+
+                var targetElement = document.getElementById("your-target-id");
+                targetElement.appendChild(Site);
+            }
+
+            const pics = document.querySelectorAll(".logo");
+
+
+            //fail safe
+            //leder efter et billed kaldt "logo" 
+            //logo'et kan enten være en png eller jpg
+            //logo'et kan enten være i en mappe kaldt img eller ved siden af index.html filen
+            for (let i = 0; i < pics.length; i++) {
+                
+                pics[i].onerror = function() {
+                if (pics[i].src.includes("logo.jpg")) {
+                    pics[i].src = pics[i].src.replace("logo.jpg", "logo.png");
+                } 
+                else if (pics[i].src.includes("img/logo.png")) {
+                    pics[i].src = pics[i].src.replace("img/logo.png", "logo.jpg");
+                }
+                else if (pics[i].src.includes("img/logo.png")) {
+                    pics[i].src = pics[i].src.replace("img/logo.png", "logo.jpg");
+                }
+                }
+            }});
+        
+    </script>
+</head>
+<body>
+    <p class="disclaimer">Norter at: Disse hjemmesider bliver brugt som skole projector</p>
+    <h1> Velkommen! <br> Klik på for at gå videre</h1>
+    <div id="your-target-id">
+
+    </div>
+</body>
+</html>
